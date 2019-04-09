@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<targetImage fileVersion="1.1">
+	<compilerSupport deviceFeatures="0x8EFEFDFF" extendedDeviceFeatures="0xFFFFFF"/>
+	<info targetID="0x8E45297B" memoryID="0xF0FE" fullMemoryID="0xC32A">
+		<features deviceFeatures="0x8E45297B" extendedDeviceFeatures="0xD038B"/>
+		<codeArea address="0x35000000" size="0x400000" addrArea1="0x35000000" addrArea2="0x35400000"/>
+		<dataArea address="0x31000000" size="0x40000"/>
+		<auxDataArea address="0x0" size="0x0"/>
+		<bitDataArea address="0x0" size="0x0"/>
+		<retainDataArea address="0x31040000" size="0x1000"/>
+		<debug address="0x35800000" size="0x400000" traceAreaAddress="0x0" traceAreaSize="0x0"/>
+		<stack limit="0x0"/>
+		<functionTable address="0x0"/>
+		<sourceCode supported="0" address="0x0" size="0x0"/>
+	</info>
+	<tasks controlBitsAddress="0xB6B59590">
+		<task index="0" name="Fast" flags="0x11C" period="10000"/>
+		<task index="1" name="Slow" flags="0x11C" period="20000"/>
+		<task index="2" name="Background" flags="0x118" period="100000"/>
+		<task index="3" name="Boot" flags="0x118" period="0"/>
+		<task index="4" name="Init" flags="0x118" period="0"/>
+	</tasks>
+	<dataBlocks address="0xB91D0" size="18">
+		<dataBlock index="60040" type="memory" address="0xB680A6A4" image="0" size="3" elementSize="1" access="read" flags="0x00"/>
+		<dataBlock index="60041" type="memory" address="0xB680A6A8" image="0" size="1" elementSize="2" access="read" flags="0x00"/>
+		<dataBlock index="60020" type="input" address="0x39000000" image="0" size="7936" elementSize="1" access="read" flags="0x00"/>
+		<dataBlock index="60021" type="input" address="0x39001F00" image="0" size="4" elementSize="1" access="read" flags="0x00"/>
+		<dataBlock index="0" type="input" address="0xAFD18" image="0" size="64" elementSize="1" access="read" flags="0x00"/>
+		<dataBlock index="0" type="output" address="0xAFD58" image="0" size="64" elementSize="1" access="readWrite" flags="0x00"/>
+		<dataBlock index="7" type="memory" address="0xAFD98" image="0" size="1" elementSize="4" access="readWrite" flags="0x00"/>
+		<dataBlock index="8" type="memory" address="0xAFD9C" image="0" size="1" elementSize="4" access="readWrite" flags="0x00"/>
+		<dataBlock index="60061" type="memory" address="0xB66BC354" image="0" size="4" elementSize="4" access="readWrite" flags="0x00"/>
+		<dataBlock index="60010" type="input" address="0x39001F04" image="0" size="2976" elementSize="1" access="read" flags="0x00"/>
+		<dataBlock index="60011" type="input" address="0x39002AA4" image="0" size="16" elementSize="1" access="read" flags="0x00"/>
+		<dataBlock index="60000" type="memory" address="0x39002AB4" image="0" size="36" elementSize="1" access="read" flags="0x00"/>
+		<dataBlock index="60001" type="memory" address="0x39002AD8" image="0" size="100" elementSize="536" access="read" flags="0x00"/>
+		<dataBlock index="60002" type="memory" address="0x3900FC38" image="0" size="12" elementSize="1" access="read" flags="0x00"/>
+		<dataBlock index="100" type="memory" address="0x3900FC44" image="0" size="20000" elementSize="1" access="readWrite" flags="0x01"/>
+		<dataBlock index="101" type="memory" address="0x39014A64" image="0" size="20000" elementSize="1" access="readWrite" flags="0x01"/>
+		<dataBlock index="200" type="memory" address="0x39019884" image="0" size="65536" elementSize="1" access="readWrite" flags="0x01"/>
+		<dataBlock index="201" type="memory" address="0x39029884" image="0" size="4096" elementSize="1" access="readWrite" flags="0x03"/>
+	</dataBlocks>
+	<functions address="0xB92F8" size="243" userSize="155">
+		<function name="Database_ReadParameter" address="0xB6856CC4"/>
+		<function name="Database_WriteParameter" address="0xB6856D30"/>
+		<function name="FS_FileExists" address="0xB6835724"/>
+		<function name="FS_DeleteFile" address="0xB68357F0"/>
+		<function name="FS_OpenFile" address="0xB6835C84"/>
+		<function name="FS_OpenFileSync" address="0xB6835CB8"/>
+		<function name="FS_CloseFile" address="0xB6835CEC"/>
+		<function name="FS_SeekFile" address="0xB6835E50"/>
+		<function name="FS_WriteFile" address="0xB6835F80"/>
+		<function name="FS_ReadFile" address="0xB68360AC"/>
+		<function name="FS_WriteString" address="0xB6836194"/>
+		<function name="FS_ReadString" address="0xB68362C8"/>
+		<function name="FS_FileEOF" address="0xB68363C4"/>
+		<function name="FS_FileTell" address="0xB68364A4"/>
+		<function name="FS_FindFirstFile" address="0xB6838724"/>
+		<function name="FS_FindNextFile" address="0xB6838964"/>
+		<function name="FS_FindClose" address="0xB6838B50"/>
+		<function name="FS_Find_GetFileName" address="0xB6838C24"/>
+		<function name="FS_Find_GetFileSize" address="0xB6838C64"/>
+		<function name="FS_Find_IsDirectory" address="0xB6838CBC"/>
+		<function name="FS_Find_IsWritable" address="0xB6838D0C"/>
+		<function name="FS_Find_GetFileTime" address="0xB6838D98"/>
+		<function name="FS_CopyFile" address="0xB683919C"/>
+		<function name="FS_CopyFileSync" address="0xB68391D0"/>
+		<function name="FS_MoveFile" address="0xB6839204"/>
+		<function name="FS_DirExists" address="0xB6836560"/>
+		<function name="FS_CreateDir" address="0xB683662C"/>
+		<function name="FS_Flush" address="0xB683672C"/>
+		<function name="FS_Sync" address="0xB68392A8"/>
+		<function name="Recipes_InitConfiguration" address="0xB681A660"/>
+		<function name="Recipes_EndConfiguration" address="0xB681A704"/>
+		<function name="Recipes_GetConfigurationName" address="0xB681A76C"/>
+		<function name="Recipes_CreateDefinition" address="0xB681A7D4"/>
+		<function name="Recipes_GetDefinition" address="0xB681A83C"/>
+		<function name="Recipes_AddVariable" address="0xB681A8A4"/>
+		<function name="Recipes_Load" address="0xB681AA7C"/>
+		<function name="Recipes_QueueLoadRequest" address="0xB681AE80"/>
+		<function name="Recipes_Save" address="0xB681AB7C"/>
+		<function name="Recipes_QueueSaveRequest" address="0xB681AF4C"/>
+		<function name="Recipes_Delete" address="0xB681AC78"/>
+		<function name="Recipes_QueueDeleteRequest" address="0xB681B018"/>
+		<function name="RecipeRequest_GetStatus" address="0xB681B0E4"/>
+		<function name="RecipeRequest_CloseHandle" address="0xB681B120"/>
+		<function name="RecipesDefs_First" address="0xB681B180"/>
+		<function name="RecipesDefs_Current" address="0xB681B1E8"/>
+		<function name="RecipesDefs_Next" address="0xB681B264"/>
+		<function name="RecipesDefs_GetHandle" address="0xB681B2E0"/>
+		<function name="Recipes_GetFileList" address="0xB681B374"/>
+		<function name="RecipeFileList_First" address="0xB681B44C"/>
+		<function name="RecipeFileList_Current" address="0xB681B4C4"/>
+		<function name="RecipeFileList_Next" address="0xB681B550"/>
+		<function name="RecipeFileList_GetFileName" address="0xB681B5DC"/>
+		<function name="RecipeFileList_CloseHandle" address="0xB681B67C"/>
+		<function name="Recipes_AddNewVariable" address="0xB681A95C"/>
+		<function name="Recipes_GetName" address="0xB681AA04"/>
+		<function name="Recipes_LoadPreview" address="0xB681AD74"/>
+		<function name="RecipeDef_First" address="0xB681B708"/>
+		<function name="RecipeDef_Current" address="0xB681B780"/>
+		<function name="RecipeDef_Next" address="0xB681B80C"/>
+		<function name="RecipeDef_GetVarName" address="0xB681B898"/>
+		<function name="RecipeDef_GetPreviewValue" address="0xB681B9D8"/>
+		<function name="RecipeDef_GetDescription" address="0xB681B938"/>
+		<function name="sysAlarm_InitConfiguration" address="0xB67D04B0"/>
+		<function name="sysAlarm_EndConfiguration" address="0xB67D0640"/>
+		<function name="sysAlarm_GlobalAck" address="0xB67D0730"/>
+		<function name="sysAlarm_AddAlarmGroup" address="0xB67D0850"/>
+		<function name="AlarmGroup_GetLabel" address="0xB67D0A20"/>
+		<function name="sysAlarm_AddBooleanFlagAlarm" address="0xB67D0AE8"/>
+		<function name="Alarm_GetLabel" address="0xB67D0F34"/>
+		<function name="Alarm_GetTime" address="0xB67D0FFC"/>
+		<function name="Alarm_GetGroup" address="0xB67D1260"/>
+		<function name="Alarm_GetLevel" address="0xB67D10F8"/>
+		<function name="Alarm_GetAckType" address="0xB67D11AC"/>
+		<function name="Alarm_Ack" address="0xB67D0DA4"/>
+		<function name="Alarm_IsWaitingForAck" address="0xB67D0E6C"/>
+		<function name="sysAlarm_CreateAlarmQuery" address="0xB67D1338"/>
+		<function name="AlarmQuery_FilterByGroup" address="0xB67D13B8"/>
+		<function name="AlarmQuery_FilterByLevel" address="0xB67D1490"/>
+		<function name="AlarmQuery_SortByTime" address="0xB67D1568"/>
+		<function name="AlarmQuery_SortByGroup" address="0xB67D1650"/>
+		<function name="AlarmQuery_SortByLevel" address="0xB67D1738"/>
+		<function name="AlarmQuery_Query" address="0xB67D1820"/>
+		<function name="AlarmQuery_Release" address="0xB67D1910"/>
+		<function name="AlarmQueryResult_GetCount" address="0xB67D19F0"/>
+		<function name="AlarmQueryResult_SetWindow" address="0xB67D1AB8"/>
+		<function name="AlarmQueryResult_First" address="0xB67D1B9C"/>
+		<function name="AlarmQueryResult_Current" address="0xB67D1C64"/>
+		<function name="AlarmQueryResult_Next" address="0xB67D1D40"/>
+		<function name="AlarmQueryResult_GetAlarm" address="0xB67D1E1C"/>
+		<function name="AlarmQueryResult_Release" address="0xB67D1EF0"/>
+		<function name="sysAlarm_EnableLog" address="0xB67D1FE0"/>
+		<function name="sysAlarm_ResetLog" address="0xB67D207C"/>
+		<function name="sysAlarm_CreateAlarmLogQuery" address="0xB67D20C4"/>
+		<function name="AlarmLogQuery_FilterByAlarm" address="0xB67D2164"/>
+		<function name="AlarmLogQuery_FilterByGroup" address="0xB67D223C"/>
+		<function name="AlarmLogQuery_Query" address="0xB67D2314"/>
+		<function name="AlarmLogQuery_Release" address="0xB67D2404"/>
+		<function name="AlarmLogQueryResult_GetCount" address="0xB67D24E4"/>
+		<function name="AlarmLogQueryResult_SetWindow" address="0xB67D25AC"/>
+		<function name="AlarmLogQueryResult_First" address="0xB67D2690"/>
+		<function name="AlarmLogQueryResult_Current" address="0xB67D2758"/>
+		<function name="AlarmLogQueryResult_Next" address="0xB67D2834"/>
+		<function name="AlarmLogQueryResult_GetEvent" address="0xB67D2910"/>
+		<function name="AlarmLogQueryResult_GetAlarm" address="0xB67D29E4"/>
+		<function name="AlarmLogQueryResult_GetTime" address="0xB67D2AB8"/>
+		<function name="AlarmLogQueryResult_Release" address="0xB67D2BD8"/>
+		<function name="ModbusTCP_ReadReg_RO" address="0xB6722484"/>
+		<function name="ModbusTCP_ReadReg_RW" address="0xB6722348"/>
+		<function name="ModbusTCP_WriteReg_S" address="0xB67225C0"/>
+		<function name="ModbusTCP_WriteReg_M" address="0xB6722894"/>
+		<function name="ModbusSlaveRTU_GetAddress" address="0xB66D4448"/>
+		<function name="ModbusSlaveRTU_SetAddress" address="0xB66D4670"/>
+		<function name="ModbusRTU_ReadReg_RO" address="0xB65E4EAC"/>
+		<function name="ModbusRTU_ReadReg_RW" address="0xB65E4D68"/>
+		<function name="ModbusRTU_WriteReg_S" address="0xB65E4FF0"/>
+		<function name="ModbusRTU_WriteReg_M" address="0xB65E52E4"/>
+		<function name="ModbusRTU_Active" address="0xB65E541C"/>
+		<function name="Serial_ConfigPort" address="0xB65BD06C"/>
+		<function name="Serial_ConfigPortByName" address="0xB65BD480"/>
+		<function name="Serial_SetOption" address="0xB65BCC80"/>
+		<function name="Serial_GetOption" address="0xB65BCF8C"/>
+		<function name="Serial_OpenPort" address="0xB65BD894"/>
+		<function name="Serial_ClosePort" address="0xB65BDAA8"/>
+		<function name="Serial_PutBuff" address="0xB65BE2D0"/>
+		<function name="Serial_GetBuff" address="0xB65BE310"/>
+		<function name="Serial_GetBuff_tmo" address="0xB65BE3C0"/>
+		<function name="Serial_PutString" address="0xB65BE410"/>
+		<function name="Serial_GetString" address="0xB65BE474"/>
+		<function name="Serial_GetString_tmo" address="0xB65BE56C"/>
+		<function name="Serial_PutByte" address="0xB65BE630"/>
+		<function name="Serial_GetByte" address="0xB65BE66C"/>
+		<function name="Serial_GetByte_tmo" address="0xB65BE714"/>
+		<function name="strncpy" address="0xC828"/>
+		<function name="_do_int_div" address="0xB6B4E818"/>
+		<function name="_do_mod" address="0xB6B4E848"/>
+		<function name="_do_uint_div" address="0xB6B4E87C"/>
+		<function name="_do_uint_mod" address="0xB6B4E8AC"/>
+		<function name="_ret_max_val" address="0xB6B4E8E0"/>
+		<function name="_ret_min_val" address="0xB6B4E954"/>
+		<function name="_ret_min_limit" address="0xB6B4EA3C"/>
+		<function name="_ret_max_limit" address="0xB6B4E9C8"/>
+		<function name="_ret_max_val_lreal" address="0xB6B4EAB0"/>
+		<function name="_ret_min_val_lreal" address="0xB6B4EB28"/>
+		<function name="_ret_min_limit_lreal" address="0xB6B4EC18"/>
+		<function name="_ret_max_limit_lreal" address="0xB6B4EBA0"/>
+		<function name="sysLogWriteMsg" address="0xB6B46FE4"/>
+		<function name="_plcerror" address="0x22158"/>
+		<function name="_checkptr" address="0x222B8"/>
+		<function name="GetDBAddress" address="0xF304"/>
+		<function name="GetTime_us" address="0x39C90"/>
+		<function name="SignalTask" address="0xF1D8"/>
+		<function name="sysGetTime" address="0x3A7C8"/>
+		<function name="sysSetTime" address="0x3A90C"/>
+		<function name="sysTraceLog" address="0xF52C"/>
+		<function name="GetTime_ms" address="0x39CFC"/>
+		<function name="UDINT_TO_REAL" address="0xB6B43DC0"/>
+		<function name="DINT_TO_REAL" address="0xB6B43DF8"/>
+		<function name="REAL_TO_UDINT" address="0xB6B43E30"/>
+		<function name="REAL_TO_DINT" address="0xB6B43E68"/>
+		<function name="ADD_REAL" address="0xB6B43EA0"/>
+		<function name="SUB_REAL" address="0xB6B43EF4"/>
+		<function name="MUL_REAL" address="0xB6B43F48"/>
+		<function name="DIV_REAL" address="0xB6B43F9C"/>
+		<function name="GT_REAL" address="0xB6B43FF0"/>
+		<function name="GE_REAL" address="0xB6B44048"/>
+		<function name="EQ_REAL" address="0xB6B440A0"/>
+		<function name="LT_REAL" address="0xB6B440F8"/>
+		<function name="LE_REAL" address="0xB6B44150"/>
+		<function name="NE_REAL" address="0xB6B441A8"/>
+		<function name="UDINT_TO_LREAL" address="0xB6B44200"/>
+		<function name="DINT_TO_LREAL" address="0xB6B4423C"/>
+		<function name="LREAL_TO_UDINT" address="0xB6B44278"/>
+		<function name="LREAL_TO_DINT" address="0xB6B442B0"/>
+		<function name="LREAL_TO_REAL" address="0xB6B4432C"/>
+		<function name="REAL_TO_LREAL" address="0xB6B442E8"/>
+		<function name="ADD_LREAL" address="0xB6B4436C"/>
+		<function name="SUB_LREAL" address="0xB6B443C4"/>
+		<function name="MUL_LREAL" address="0xB6B4441C"/>
+		<function name="DIV_LREAL" address="0xB6B44474"/>
+		<function name="GT_LREAL" address="0xB6B444CC"/>
+		<function name="GE_LREAL" address="0xB6B44524"/>
+		<function name="EQ_LREAL" address="0xB6B4457C"/>
+		<function name="LT_LREAL" address="0xB6B445D4"/>
+		<function name="LE_LREAL" address="0xB6B4462C"/>
+		<function name="NE_LREAL" address="0xB6B44684"/>
+		<function name="ST_STRING" address="0xB6B446DC"/>
+		<function name="EQ_STRING" address="0xB6B44814"/>
+		<function name="NE_STRING" address="0xB6B44848"/>
+		<function name="LE_STRING" address="0xB6B4487C"/>
+		<function name="LT_STRING" address="0xB6B448B0"/>
+		<function name="GE_STRING" address="0xB6B448E4"/>
+		<function name="GT_STRING" address="0xB6B44918"/>
+		<function name="LEN" address="0xB6B447CC"/>
+		<function name="LEFT" address="0xB6B4494C"/>
+		<function name="RIGHT" address="0xB6B449AC"/>
+		<function name="MID" address="0xB6B44A0C"/>
+		<function name="CONCAT" address="0xB6B44A78"/>
+		<function name="INSERT" address="0xB6B44AD4"/>
+		<function name="DELETE" address="0xB6B44B40"/>
+		<function name="REPLACE" address="0xB6B44BAC"/>
+		<function name="FIND" address="0xB6B44C28"/>
+		<function name="INT_TO_STRING" address="0xB6B45A38"/>
+		<function name="REAL_TO_STRING" address="0xB6B45C04"/>
+		<function name="STRING_TO_INT" address="0xB6B45D1C"/>
+		<function name="STRING_TO_UINT" address="0xB6B45E50"/>
+		<function name="STRING_TO_REAL" address="0xB6B460E0"/>
+		<function name="ST_STRING_SAFE" address="0xB6B44748"/>
+		<function name="ABS_REAL" address="0xB6B46240"/>
+		<function name="SQRT" address="0xB6B46288"/>
+		<function name="LN" address="0xB6B462CC"/>
+		<function name="LOG" address="0xB6B46310"/>
+		<function name="EXP" address="0xB6B46354"/>
+		<function name="POW" address="0xB6B46398"/>
+		<function name="SIN" address="0xB6B463F0"/>
+		<function name="COS" address="0xB6B46434"/>
+		<function name="TAN" address="0xB6B46478"/>
+		<function name="ASIN" address="0xB6B464BC"/>
+		<function name="ACOS" address="0xB6B46500"/>
+		<function name="ATAN" address="0xB6B46544"/>
+		<function name="ATAN2" address="0xB6B46588"/>
+		<function name="SINH" address="0xB6B465E0"/>
+		<function name="COSH" address="0xB6B46624"/>
+		<function name="TANH" address="0xB6B46668"/>
+		<function name="CEIL" address="0xB6B466AC"/>
+		<function name="FLOOR" address="0xB6B466F0"/>
+		<function name="ABS_LREAL" address="0xB6B46734"/>
+		<function name="SQRT_LREAL" address="0xB6B46780"/>
+		<function name="LN_LREAL" address="0xB6B467C8"/>
+		<function name="LOG_LREAL" address="0xB6B46810"/>
+		<function name="EXP_LREAL" address="0xB6B46858"/>
+		<function name="POW_LREAL" address="0xB6B468A0"/>
+		<function name="SIN_LREAL" address="0xB6B468FC"/>
+		<function name="COS_LREAL" address="0xB6B46944"/>
+		<function name="TAN_LREAL" address="0xB6B4698C"/>
+		<function name="ASIN_LREAL" address="0xB6B469D4"/>
+		<function name="ACOS_LREAL" address="0xB6B46A1C"/>
+		<function name="ATAN_LREAL" address="0xB6B46A64"/>
+		<function name="ATAN2_LREAL" address="0xB6B46AAC"/>
+		<function name="SINH_LREAL" address="0xB6B46B08"/>
+		<function name="COSH_LREAL" address="0xB6B46B50"/>
+		<function name="TANH_LREAL" address="0xB6B46B98"/>
+		<function name="CEIL_LREAL" address="0xB6B46BE0"/>
+		<function name="FLOOR_LREAL" address="0xB6B46C28"/>
+	</functions>
+</targetImage>
