@@ -1,0 +1,10 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}La representaci\IeC {\'o}n Denavit-Hartenberg }{2}% 
+\contentsline {subsection}{\numberline {1.1}Asignaci\IeC {\'o}n de Sistemas de Referencia}{2}% 
+\contentsline {subsubsection}{\numberline {1.1.1}Zi y Zi-1 no son paralelos}{3}% 
+\contentsline {subsubsection}{\numberline {1.1.2}Zi y Zi-1 son paralelos}{3}% 
+\contentsline {section}{\numberline {2}ALGORITMO}{4}% 
+\contentsline {subsection}{\numberline {2.1}paso 0}{4}% 
+\contentsline {subsection}{\numberline {2.2}paso 1}{5}% 
+\contentsline {subsection}{\numberline {2.3}Paso 2}{6}% 
+\contentsline {paragraph}{binliografia}{7}% 
