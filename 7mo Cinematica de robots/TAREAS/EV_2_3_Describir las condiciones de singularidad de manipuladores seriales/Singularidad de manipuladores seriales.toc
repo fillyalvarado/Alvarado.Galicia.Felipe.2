@@ -1,0 +1,4 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{2}% 
+\contentsline {section}{\numberline {2}Singularidad de manipuladores seriales redundantes }{2}% 
+\contentsline {section}{\numberline {3}Bibliografia:}{3}% 
