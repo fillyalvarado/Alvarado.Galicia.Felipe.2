@@ -1,0 +1,5 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Teorema de Euler sobre rotaci\IeC {\'o}n:}{2}% 
+\contentsline {section}{\numberline {2}Eje y \IeC {\'a}ngulo de Euler (vector de rotaci\IeC {\'o}n)}{3}% 
+\contentsline {section}{\numberline {3}Rotaciones de Euler}{4}% 
+\contentsline {section}{\numberline {4}Bibliograf\IeC {\'\i }a:}{6}% 
