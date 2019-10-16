@@ -1,0 +1,4 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}El Jacobiano de una funci\IeC {\'o}n}{2}% 
+\contentsline {section}{\numberline {2}Matriz jacobiana}{2}% 
+\contentsline {section}{\numberline {3}Bibliograf\IeC {\'\i }a:}{3}% 
