@@ -1,0 +1,8 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}CINEM\IeC {\'A}TICA DE POSICI\IeC {\'O}N }{2}% 
+\contentsline {subsection}{\numberline {1.1}Cinem\IeC {\'a}tica DIRECTA}{2}% 
+\contentsline {subsection}{\numberline {1.2}Cinem\IeC {\'a}tica INVERSA}{2}% 
+\contentsline {subsubsection}{\numberline {1.2.1}M\IeC {\'e}todos geometricos}{3}% 
+\contentsline {subsection}{\numberline {1.3}CINEM\IeC {\'A}TICA INVERSA}{4}% 
+\contentsline {subsubsection}{\numberline {1.3.1}Desacoplo cinem\IeC {\'a}tico}{4}% 
+\contentsline {paragraph}{binliografia}{5}% 
