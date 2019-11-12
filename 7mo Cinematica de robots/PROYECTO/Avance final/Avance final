@@ -1,0 +1,242 @@
+\documentclass[a4paper,10pt]{article}
+%\documentclass[a4paper,10pt]{scrartcl}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{cancel} % para tachar
+\usepackage{mathdots} % para el comando \iddots
+\usepackage{mathrsfs} % para formato de letra
+\usepackage{stackrel} % para el comando \stackbin
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\title{\begin{center}
+\includegraphics[width=\textwidth]{logoupzmg.png}
+\end{center}
+Avance Final \\ Prototivo Robot Cilindrico}
+\author{Alvarado Galicia Felipe \\
+Gutiérrez Muñoz José de Jesús \\ 
+Medina Rodríguez Francisco Javier \\
+Martínez Noyola Moisés Emanuel \\ 
+Pasillas Gonzáles Iván Pasillas \\ 
+7 - A \\ 
+Ing. Mecatrónica}
+\date{8 - Noviembre - 2019}
+
+\begin{document}
+\maketitle
+
+\break
+
+\begin{enumerate}
+\item Indice.
+\begin{itemize}
+ \item Indice.
+ \item Objetivo
+ \item Justificación
+ \item Marco teórico
+ \item Robot Cilíndrico
+ \item Desarrollo del proyecto
+ \item Diseño CAD
+ \item Selección del material
+ \item Análisis de elementos finitos
+ \item Simulación del análisis de tensión al robot
+ \item Armado del prototipo
+ \item Bibliografía
+\end{itemize}
+
+\break
+
+\item Objetivo.
+
+Construir un robot de tipo cilíndrico, capaz de realizar cordones de soldadura de 5cm en acero, contando con 3 grados de libertad y con dimensiones totales de 50 cm de largo x 30 cm de alto.
+
+\item Justificación.
+
+La exigencia de la construcción de un robot para el último ciclo de formación en la ingeniería Mecatrónica nos ha orillado a elegir este proyecto. Con la experiencia en el área de soldadura y herrería de dos integrantes del equipo hemos decidido construir este robot no para fines industriales, sino para uso del taller y como apoyo para el trabajador.
+
+\item Marco teórico
+
+¿Qué es un robot industrial?
+
+Primero, y de acuerdo con la Asociación de Industrias de Robótica (RIA, Robotic Industry Association), un robot industrial es “un manipulador multifuncional reprogramable, capaz de mover materias, piezas, herramientas, o dispositivos especiales, según trayectorias variables, programadas para realizar tareas diversas. O, en otras palabras, una máquina o mecanismo articulado entre sí, el cual tiene 3 distintivos esenciales:
+
+\begin{itemize}
+ \item Es internacional.
+ \item Puede ser controlado por un operador humano o dispositivo lógico.
+ \item Es reprogramable.
+\end{itemize}
+
+Y todo sin hacer modificaciones físicas al robot pues está diseñado, justamente, para realizar tareas variadas y cíclicas que pueden adaptarse.
+
+¿Cómo se conforma un robot industrial?
+
+Además de estas características que definen a los robots industriales, usted también podrá observar que los robots industriales se componen de una estructura parecida, la cual tiene 4 componentes esenciales:
+
+\begin{itemize}
+ \item Tienen un brazo mecánico con capacidad de manipulación, el cual puede ser controlado.
+ \item Se componen de elementos estructurales rígidos, llamados eslabones o enlaces.
+ \item Estos son conectados por articulaciones, las cuales pueden ser lineales o rotatorias.
+ \item Terminan en “manipuladores” los cuales pueden ser pinzas o herramientas.
+\end{itemize}
+
+Robot Cilíndrico.
+
+El robot tiene al menos una junta giratoria en la base y al menos una junta prismática para conectar los enlaces. La junta rotativa utiliza un movimiento de rotación a lo largo del eje de la junta, mientras que la junta prismática se mueve en un movimiento lineal. Los robots cilíndricos operan dentro de un sobre de trabajo de forma cilíndrica. Usado en operaciones de traslado de materiales, ensamblaje, manipulación de máquinas y herramientas, soldadura por punto y manipulación en máquinas de función a presión.
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{1.jpg} \\
+Figura 1. Imagen típica de un robot cilíndrico.
+\end{center}
+
+\item Desarrollo del proyecto.
+
+Para una administración de tiempo y optimización de las actividades fue necesario dividir las tareas de la siguiente forma:
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+Cronograma de actividades \\
+\hline \hline
+Descripción & Fecha & Integrante asignado \\ \hline
+Diseño inicial del robot (boceto). & 20 de septiembre & Javier Medina
+\\ \hline
+Dibujos CAD del robot (2d y 3d). & 22 de septiembre & Javier Medina, Iván Pasillas
+\\ \hline
+Selección de materiales y análisis de tensión. & 11 de octubre & Felipe Alvarado \\ \hline
+Determinación de costos. & 15 de octubre & José Gutiérrez\\ \hline
+Fabricado de piezas & 1 - 4 de noviembre & Moisés Martínez, Iván Pasillas\\ \hline
+Armado del robot & 8 de noviembre & Moisés Martínez, Felipe Alvarado \\ \hline
+Pruebas de movimiento & 8 – 10 de noviembre & Equipo completo \\ \hline
+Ajustes y detalles estéticos & 12 de octubre & Javier Medina\\ \hline
+\end{tabular}
+\label{tabla:sencilla}
+\end{center}
+\end{table}
+
+\item Diseño CAD.
+
+A continuación, se muestran imágenes de las vistas generales del robot en Inventor Professional® de Autodesk® 
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{2.jpg} \\
+Figura 2. Vista lateral derecha
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{3.jpg} \\
+Figura 3. Vista Frontal
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{4.jpg} \\
+Figura 4. Vista Superior
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{5.jpg} \\
+Figura 5. Vista angular
+\end{center}
+
+\item Selección del material
+
+Debido al uso para el que estará destinado el robot se llegó a la conclusión de utilizar aluminio para la estructura principal.
+
+Beneficios del aluminio.
+
+El aluminio es ligero, con una densidad de un tercio de la del acero: 2,700 kg/m3. 
+
+El aluminio presenta una resistencia a la tracción de entre 70 a 700 MPa dependiendo de la aleación y del proceso de elaboración. Los perles extruidos de aluminio con una aleación y un diseño apropiados pueden llegar a ser tan resistentes como el acero estructural.
+
+El módulo de elasticidad (módulo de Young) del aluminio es un tercio que el del acero (E=70.000 MPa). Esto significa que el momento de inercia debe ser tres veces mayor en una extrusión de aluminio para lograr la misma deflexión que un perfil de acero.
+
+El aluminio posee una facilidad de conformado óptima, una característica que se aprovecha al máximo en la extrusión. El aluminio también se puede soldar, curvar, estirar, punzonar y fresar.
+
+Reciclaje: El aluminio es un material con muy buenas propiedades de reciclado. Sólo el 5 por ciento de la energía requerida para producir el metal primario inicialmente es requerida para volverlo a fundir, manteniéndose las propiedades del metal durante el proceso.
+
+\item Análisis de elementos finitos.
+
+Definición.
+
+El análisis por elementos finitos (FEA, siglas en inglés de Finite Element Analysis) es una técnica de simulación por computador usada en ingeniería. Usa una técnica numérica llamada método de los elementos finitos (FEM).
+
+Existen muchos paquetes de software, tanto libres como no libres. El desarrollo de elementos finitos en estructuras, suele basarse en análisis energéticos como el principio de los trabajos virtuales.
+
+Aplicaciones.
+
+En estas aplicaciones, el objeto o sistema se representa por un modelo geométrica mente similar que consta de múltiples regiones discretas simplificadas y conectadas. Ecuaciones de equilibrio, junto con consideraciones físicas aplicables, así como relaciones constitutivas, se aplican a cada elemento, y se construye un sistema de varias ecuaciones. El sistema de ecuaciones se resuelve para los valores desconocidos usando técnicas de álgebra lineal o esquemas no lineales, dependiendo del problema. Siendo un método aproximado, la precisión de los métodos FEA puede ser mejorada refinando la discretización en el modelo, usando más elementos y nodos.
+
+Comúnmente se usa FEA en determinar los esfuerzos y desplazamientos en sistemas mecánicos. Es además usado de manera rutinaria en el análisis de muchos otros tipos de problemas, entre ellos Transferencia de calor, dinámica de fluidos, y electromagnetismo. Con FEA se pueden manejar sistemas complejos cuyas soluciones analíticas son difícilmente calculables.
+
+Análisis por elementos finitos.
+
+En general, hay tres fases en cualquier tarea asistida por computador:
+
+\begin{itemize}
+ \item Pre-procesamiento. Definir el modelo de elementos finitos y los factores ambientales que influyen en él.
+ \item Solución del análisis. Solucionar el modelo de elementos finitos.
+ \item Post-procesamiento de resultados usando herramientas de visualización.
+\end{itemize}
+
+Pre-procesamiento
+
+El primer paso en FEA, pre-procesamiento, es construir un modelo de elementos finitos de la estructura a ser analizada. En muchos paquetes de FEA se requiere de la entrada de una descripción topológica de las características geométricas de la estructura.3​ Ésta puede ser 1D, 2D, o 3D. El objetivo principal del modelo es replicar de manera realista los parámetros importantes y características del modelo real.3​ La manera más sencilla para conseguir similaridad en el análisis es utilizar planos pre existentes, modelos CAD, o datos importados de un ambiente FEA. Una vez se ha creado la geometría, se utiliza un procedimiento para definir y dividir el modelo en "pequeños" elementos. En general, un modelo de elementos finitos está definido por una malla, la cual está conformada por elementos y nodos. Los nodos representan puntos en los cuales se calcula el desplazamiento (análisis estructural). Los paquetes de FEA enumeran los nodos como una herramienta de identificación. Los elementos están determinados por conjuntos de nodos, y definen propiedades localizadas de masa y rigidez. Los elementos también están definidos por la numeración de la malla, la cual permite referenciar la correspondiente deflexión o esfuerzo (en análisis estructural) para una localización específica.
+
+Análisis (cómputo de la solución).
+
+En la siguiente etapa en el proceso de análisis de elementos finitos se lleva a cabo una serie de procesos computacionales que involucran fuerzas aplicadas, y las propiedades de los elementos de donde producir un modelo de solución. Tal análisis estructural permite la determinación de efectos como lo son las deformaciones, estiramiento o estrés que son causados por fuerzas estructurales aplicadas como lo son la fuerza, la presión y la gravedad.
+
+Post-procesamiento (visualización)
+
+Estos resultados entonces pueden ser estudiados utilizando herramientas visuales dentro del ambiente de FEA para ver y para identificar completamente las implicaciones del análisis. Herramientas numéricas y gráficas permiten la localización precisa de información como esfuerzos y deformaciones a ser identificadas.
+
+Simulación del análisis de tensión al robot.
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{6.png} \\
+Figura 6. Simulación: Aplicación de fuerza en el ultimo eslabón
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{7.png} \\
+Figura 7. Vista frontal de la simulación
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{8.png} \\
+Figura 8. Aplicación de fuerza con el elemento móvil en el punto más bajo.
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{9.png} \\
+Figura 9. Mallas en el robot.
+\end{center}
+
+\item Armado del prototipo.
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{10.jpg} \\
+Figura 10. Formado de la guía vertical
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{11.jpg} \\
+Figura 11. Guía con husillo y rodamiento inferior.
+\end{center}
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{12.jpg} \\
+Figura 12. Prueba del segundo grado de libertad del robot.
+\end{center}
+
+\item Bibliografía
+
+\end{enumerate}
+
+\url{https://es.wikipedia.org/wiki/An%C3%A1lisis_de_elementos_finitos}
+
+\url{https://sites.google.com/site/proyectosroboticos/cinematica-inversa-i/brazo-cilindrico}
+
+\end{document}
