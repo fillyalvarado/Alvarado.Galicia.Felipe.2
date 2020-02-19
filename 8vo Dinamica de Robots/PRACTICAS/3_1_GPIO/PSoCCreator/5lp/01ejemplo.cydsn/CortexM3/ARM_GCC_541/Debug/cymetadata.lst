@@ -1,0 +1,609 @@
+ARM GAS  C:\Users\Marcos\AppData\Local\Temp\cc5esb8O.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_metadata
+  20              		.global	cy_meta_flashprotect
+  21              		.global	cy_meta_wonvl
+  22              		.global	cy_meta_custnvl
+  23              		.global	cy_meta_configecc
+  24              		.section	.cyconfigecc,"a",%progbits
+  25              		.align	2
+  26              		.type	cy_meta_configecc, %object
+  27              		.size	cy_meta_configecc, 124
+  28              	cy_meta_configecc:
+  29 0000 01       		.byte	1
+  30 0001 52       		.byte	82
+  31 0002 00       		.byte	0
+  32 0003 40       		.byte	64
+  33 0004 01       		.byte	1
+  34 0005 09       		.byte	9
+  35 0006 01       		.byte	1
+  36 0007 40       		.byte	64
+  37 0008 05       		.byte	5
+  38 0009 0B       		.byte	11
+  39 000a 01       		.byte	1
+  40 000b 40       		.byte	64
+  41 000c 06       		.byte	6
+  42 000d 0C       		.byte	12
+  43 000e 01       		.byte	1
+  44 000f 40       		.byte	64
+  45 0010 05       		.byte	5
+  46 0011 0D       		.byte	13
+  47 0012 01       		.byte	1
+  48 0013 40       		.byte	64
+  49 0014 01       		.byte	1
+  50 0015 17       		.byte	23
+  51 0016 01       		.byte	1
+  52 0017 40       		.byte	64
+  53 0018 02       		.byte	2
+  54 0019 19       		.byte	25
+  55 001a 01       		.byte	1
+  56 001b 40       		.byte	64
+  57 001c 04       		.byte	4
+ARM GAS  C:\Users\Marcos\AppData\Local\Temp\cc5esb8O.s 			page 2
+
+
+  58 001d 45       		.byte	69
+  59 001e 01       		.byte	1
+  60 001f 40       		.byte	64
+  61 0020 02       		.byte	2
+  62 0021 46       		.byte	70
+  63 0022 01       		.byte	1
+  64 0023 40       		.byte	64
+  65 0024 04       		.byte	4
+  66 0025 48       		.byte	72
+  67 0026 01       		.byte	1
+  68 0027 40       		.byte	64
+  69 0028 11       		.byte	17
+  70 0029 02       		.byte	2
+  71 002a 9D       		.byte	-99
+  72 002b 80       		.byte	-128
+  73 002c 9D       		.byte	-99
+  74 002d 80       		.byte	-128
+  75 002e AB       		.byte	-85
+  76 002f 80       		.byte	-128
+  77 0030 AF       		.byte	-81
+  78 0031 10       		.byte	16
+  79 0032 EC       		.byte	-20
+  80 0033 04       		.byte	4
+  81 0034 EE       		.byte	-18
+  82 0035 02       		.byte	2
+  83 0036 8E       		.byte	-114
+  84 0037 01       		.byte	1
+  85 0038 96       		.byte	-106
+  86 0039 01       		.byte	1
+  87 003a B6       		.byte	-74
+  88 003b 01       		.byte	1
+  89 003c BE       		.byte	-66
+  90 003d 40       		.byte	64
+  91 003e D8       		.byte	-40
+  92 003f 04       		.byte	4
+  93 0040 DF       		.byte	-33
+  94 0041 01       		.byte	1
+  95 0042 01       		.byte	1
+  96 0043 80       		.byte	-128
+  97 0044 0B       		.byte	11
+  98 0045 20       		.byte	32
+  99 0046 1B       		.byte	27
+ 100 0047 80       		.byte	-128
+ 101 0048 C0       		.byte	-64
+ 102 0049 01       		.byte	1
+ 103 004a C2       		.byte	-62
+ 104 004b 04       		.byte	4
+ 105 004c E0       		.byte	-32
+ 106 004d 04       		.byte	4
+ 107 004e 81       		.byte	-127
+ 108 004f 80       		.byte	-128
+ 109 0050 9D       		.byte	-99
+ 110 0051 80       		.byte	-128
+ 111 0052 03       		.byte	3
+ 112 0053 08       		.byte	8
+ 113 0054 53       		.byte	83
+ 114 0055 01       		.byte	1
+ARM GAS  C:\Users\Marcos\AppData\Local\Temp\cc5esb8O.s 			page 3
+
+
+ 115 0056 C0       		.byte	-64
+ 116 0057 02       		.byte	2
+ 117 0058 D4       		.byte	-44
+ 118 0059 01       		.byte	1
+ 119 005a AB       		.byte	-85
+ 120 005b 01       		.byte	1
+ 121 005c AF       		.byte	-81
+ 122 005d 08       		.byte	8
+ 123 005e 27       		.byte	39
+ 124 005f 08       		.byte	8
+ 125 0060 83       		.byte	-125
+ 126 0061 08       		.byte	8
+ 127 0062 C8       		.byte	-56
+ 128 0063 20       		.byte	32
+ 129 0064 E0       		.byte	-32
+ 130 0065 20       		.byte	32
+ 131 0066 00       		.byte	0
+ 132 0067 00       		.byte	0
+ 133 0068 00       		.byte	0
+ 134 0069 0B       		.byte	11
+ 135 006a 0B       		.byte	11
+ 136 006b 00       		.byte	0
+ 137 006c 00       		.byte	0
+ 138 006d 00       		.byte	0
+ 139 006e 00       		.byte	0
+ 140 006f 00       		.byte	0
+ 141 0070 04       		.byte	4
+ 142 0071 00       		.byte	0
+ 143 0072 00       		.byte	0
+ 144 0073 06       		.byte	6
+ 145 0074 02       		.byte	2
+ 146 0075 00       		.byte	0
+ 147 0076 02       		.byte	2
+ 148 0077 00       		.byte	0
+ 149 0078 00       		.byte	0
+ 150 0079 00       		.byte	0
+ 151 007a 00       		.byte	0
+ 152 007b 00       		.byte	0
+ 153              		.section	.cywolatch,"a",%progbits
+ 154              		.align	2
+ 155              		.type	cy_meta_wonvl, %object
+ 156              		.size	cy_meta_wonvl, 4
+ 157              	cy_meta_wonvl:
+ 158 0000 BC       		.byte	-68
+ 159 0001 90       		.byte	-112
+ 160 0002 AC       		.byte	-84
+ 161 0003 AF       		.byte	-81
+ 162              		.section	.cycustnvl,"a",%progbits
+ 163              		.align	2
+ 164              		.type	cy_meta_custnvl, %object
+ 165              		.size	cy_meta_custnvl, 4
+ 166              	cy_meta_custnvl:
+ 167 0000 00       		.byte	0
+ 168 0001 00       		.byte	0
+ 169 0002 40       		.byte	64
+ 170 0003 05       		.byte	5
+ 171              		.section	.cymeta,"a",%progbits
+ARM GAS  C:\Users\Marcos\AppData\Local\Temp\cc5esb8O.s 			page 4
+
+
+ 172              		.align	2
+ 173              		.type	cy_metadata, %object
+ 174              		.size	cy_metadata, 12
+ 175              	cy_metadata:
+ 176 0000 00       		.byte	0
+ 177 0001 01       		.byte	1
+ 178 0002 2E       		.byte	46
+ 179 0003 16       		.byte	22
+ 180 0004 10       		.byte	16
+ 181 0005 69       		.byte	105
+ 182 0006 00       		.byte	0
+ 183 0007 01       		.byte	1
+ 184 0008 00       		.byte	0
+ 185 0009 00       		.byte	0
+ 186 000a 00       		.byte	0
+ 187 000b 00       		.byte	0
+ 188              		.section	.cyflashprotect,"a",%progbits
+ 189              		.align	2
+ 190              		.type	cy_meta_flashprotect, %object
+ 191              		.size	cy_meta_flashprotect, 256
+ 192              	cy_meta_flashprotect:
+ 193 0000 00000000 		.space	256
+ 193      00000000 
+ 193      00000000 
+ 193      00000000 
+ 193      00000000 
+ 194              		.text
+ 195              	.Letext0:
+ 196              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 197              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 198              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 199              		.section	.debug_info,"",%progbits
+ 200              	.Ldebug_info0:
+ 201 0000 30010000 		.4byte	0x130
+ 202 0004 0400     		.2byte	0x4
+ 203 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 204 000a 04       		.byte	0x4
+ 205 000b 01       		.uleb128 0x1
+ 206 000c 5E000000 		.4byte	.LASF17
+ 207 0010 0C       		.byte	0xc
+ 208 0011 B8010000 		.4byte	.LASF18
+ 209 0015 0A000000 		.4byte	.LASF19
+ 210 0019 00000000 		.4byte	.Ldebug_line0
+ 211 001d 02       		.uleb128 0x2
+ 212 001e 01       		.byte	0x1
+ 213 001f 06       		.byte	0x6
+ 214 0020 AC010000 		.4byte	.LASF0
+ 215 0024 03       		.uleb128 0x3
+ 216 0025 00000000 		.4byte	.LASF9
+ 217 0029 01       		.byte	0x1
+ 218 002a 1D       		.byte	0x1d
+ 219 002b 2F000000 		.4byte	0x2f
+ 220 002f 02       		.uleb128 0x2
+ 221 0030 01       		.byte	0x1
+ 222 0031 08       		.byte	0x8
+ 223 0032 50000000 		.4byte	.LASF1
+ 224 0036 02       		.uleb128 0x2
+ARM GAS  C:\Users\Marcos\AppData\Local\Temp\cc5esb8O.s 			page 5
+
+
+ 225 0037 02       		.byte	0x2
+ 226 0038 05       		.byte	0x5
+ 227 0039 99010000 		.4byte	.LASF2
+ 228 003d 02       		.uleb128 0x2
+ 229 003e 02       		.byte	0x2
+ 230 003f 07       		.byte	0x7
+ 231 0040 FE000000 		.4byte	.LASF3
+ 232 0044 02       		.uleb128 0x2
+ 233 0045 04       		.byte	0x4
+ 234 0046 05       		.byte	0x5
+ 235 0047 A3010000 		.4byte	.LASF4
+ 236 004b 02       		.uleb128 0x2
+ 237 004c 04       		.byte	0x4
+ 238 004d 07       		.byte	0x7
+ 239 004e EC000000 		.4byte	.LASF5
+ 240 0052 02       		.uleb128 0x2
+ 241 0053 08       		.byte	0x8
+ 242 0054 05       		.byte	0x5
+ 243 0055 8B010000 		.4byte	.LASF6
+ 244 0059 02       		.uleb128 0x2
+ 245 005a 08       		.byte	0x8
+ 246 005b 07       		.byte	0x7
+ 247 005c 40010000 		.4byte	.LASF7
+ 248 0060 04       		.uleb128 0x4
+ 249 0061 04       		.byte	0x4
+ 250 0062 05       		.byte	0x5
+ 251 0063 696E7400 		.ascii	"int\000"
+ 252 0067 02       		.uleb128 0x2
+ 253 0068 04       		.byte	0x4
+ 254 0069 07       		.byte	0x7
+ 255 006a 33010000 		.4byte	.LASF8
+ 256 006e 03       		.uleb128 0x3
+ 257 006f 57010000 		.4byte	.LASF10
+ 258 0073 02       		.byte	0x2
+ 259 0074 18       		.byte	0x18
+ 260 0075 24000000 		.4byte	0x24
+ 261 0079 05       		.uleb128 0x5
+ 262 007a 90000000 		.4byte	0x90
+ 263 007e 89000000 		.4byte	0x89
+ 264 0082 06       		.uleb128 0x6
+ 265 0083 89000000 		.4byte	0x89
+ 266 0087 7B       		.byte	0x7b
+ 267 0088 00       		.byte	0
+ 268 0089 02       		.uleb128 0x2
+ 269 008a 04       		.byte	0x4
+ 270 008b 07       		.byte	0x7
+ 271 008c 82010000 		.4byte	.LASF11
+ 272 0090 07       		.uleb128 0x7
+ 273 0091 6E000000 		.4byte	0x6e
+ 274 0095 08       		.uleb128 0x8
+ 275 0096 21010000 		.4byte	.LASF12
+ 276 009a 03       		.byte	0x3
+ 277 009b 1F       		.byte	0x1f
+ 278 009c A6000000 		.4byte	0xa6
+ 279 00a0 05       		.uleb128 0x5
+ 280 00a1 03       		.byte	0x3
+ 281 00a2 00000000 		.4byte	cy_meta_configecc
+ARM GAS  C:\Users\Marcos\AppData\Local\Temp\cc5esb8O.s 			page 6
+
+
+ 282 00a6 07       		.uleb128 0x7
+ 283 00a7 79000000 		.4byte	0x79
+ 284 00ab 05       		.uleb128 0x5
+ 285 00ac 90000000 		.4byte	0x90
+ 286 00b0 BB000000 		.4byte	0xbb
+ 287 00b4 06       		.uleb128 0x6
+ 288 00b5 89000000 		.4byte	0x89
+ 289 00b9 03       		.byte	0x3
+ 290 00ba 00       		.byte	0
+ 291 00bb 08       		.uleb128 0x8
+ 292 00bc 11010000 		.4byte	.LASF13
+ 293 00c0 03       		.byte	0x3
+ 294 00c1 3C       		.byte	0x3c
+ 295 00c2 CC000000 		.4byte	0xcc
+ 296 00c6 05       		.uleb128 0x5
+ 297 00c7 03       		.byte	0x3
+ 298 00c8 00000000 		.4byte	cy_meta_custnvl
+ 299 00cc 07       		.uleb128 0x7
+ 300 00cd AB000000 		.4byte	0xab
+ 301 00d1 08       		.uleb128 0x8
+ 302 00d2 74010000 		.4byte	.LASF14
+ 303 00d6 03       		.byte	0x3
+ 304 00d7 4A       		.byte	0x4a
+ 305 00d8 E2000000 		.4byte	0xe2
+ 306 00dc 05       		.uleb128 0x5
+ 307 00dd 03       		.byte	0x3
+ 308 00de 00000000 		.4byte	cy_meta_wonvl
+ 309 00e2 07       		.uleb128 0x7
+ 310 00e3 AB000000 		.4byte	0xab
+ 311 00e7 05       		.uleb128 0x5
+ 312 00e8 90000000 		.4byte	0x90
+ 313 00ec F7000000 		.4byte	0xf7
+ 314 00f0 06       		.uleb128 0x6
+ 315 00f1 89000000 		.4byte	0x89
+ 316 00f5 FF       		.byte	0xff
+ 317 00f6 00       		.byte	0
+ 318 00f7 08       		.uleb128 0x8
+ 319 00f8 5F010000 		.4byte	.LASF15
+ 320 00fc 03       		.byte	0x3
+ 321 00fd 58       		.byte	0x58
+ 322 00fe 08010000 		.4byte	0x108
+ 323 0102 05       		.uleb128 0x5
+ 324 0103 03       		.byte	0x3
+ 325 0104 00000000 		.4byte	cy_meta_flashprotect
+ 326 0108 07       		.uleb128 0x7
+ 327 0109 E7000000 		.4byte	0xe7
+ 328 010d 05       		.uleb128 0x5
+ 329 010e 90000000 		.4byte	0x90
+ 330 0112 1D010000 		.4byte	0x11d
+ 331 0116 06       		.uleb128 0x6
+ 332 0117 89000000 		.4byte	0x89
+ 333 011b 0B       		.byte	0xb
+ 334 011c 00       		.byte	0
+ 335 011d 08       		.uleb128 0x8
+ 336 011e 44000000 		.4byte	.LASF16
+ 337 0122 03       		.byte	0x3
+ 338 0123 85       		.byte	0x85
+ARM GAS  C:\Users\Marcos\AppData\Local\Temp\cc5esb8O.s 			page 7
+
+
+ 339 0124 2E010000 		.4byte	0x12e
+ 340 0128 05       		.uleb128 0x5
+ 341 0129 03       		.byte	0x3
+ 342 012a 00000000 		.4byte	cy_metadata
+ 343 012e 07       		.uleb128 0x7
+ 344 012f 0D010000 		.4byte	0x10d
+ 345 0133 00       		.byte	0
+ 346              		.section	.debug_abbrev,"",%progbits
+ 347              	.Ldebug_abbrev0:
+ 348 0000 01       		.uleb128 0x1
+ 349 0001 11       		.uleb128 0x11
+ 350 0002 01       		.byte	0x1
+ 351 0003 25       		.uleb128 0x25
+ 352 0004 0E       		.uleb128 0xe
+ 353 0005 13       		.uleb128 0x13
+ 354 0006 0B       		.uleb128 0xb
+ 355 0007 03       		.uleb128 0x3
+ 356 0008 0E       		.uleb128 0xe
+ 357 0009 1B       		.uleb128 0x1b
+ 358 000a 0E       		.uleb128 0xe
+ 359 000b 10       		.uleb128 0x10
+ 360 000c 17       		.uleb128 0x17
+ 361 000d 00       		.byte	0
+ 362 000e 00       		.byte	0
+ 363 000f 02       		.uleb128 0x2
+ 364 0010 24       		.uleb128 0x24
+ 365 0011 00       		.byte	0
+ 366 0012 0B       		.uleb128 0xb
+ 367 0013 0B       		.uleb128 0xb
+ 368 0014 3E       		.uleb128 0x3e
+ 369 0015 0B       		.uleb128 0xb
+ 370 0016 03       		.uleb128 0x3
+ 371 0017 0E       		.uleb128 0xe
+ 372 0018 00       		.byte	0
+ 373 0019 00       		.byte	0
+ 374 001a 03       		.uleb128 0x3
+ 375 001b 16       		.uleb128 0x16
+ 376 001c 00       		.byte	0
+ 377 001d 03       		.uleb128 0x3
+ 378 001e 0E       		.uleb128 0xe
+ 379 001f 3A       		.uleb128 0x3a
+ 380 0020 0B       		.uleb128 0xb
+ 381 0021 3B       		.uleb128 0x3b
+ 382 0022 0B       		.uleb128 0xb
+ 383 0023 49       		.uleb128 0x49
+ 384 0024 13       		.uleb128 0x13
+ 385 0025 00       		.byte	0
+ 386 0026 00       		.byte	0
+ 387 0027 04       		.uleb128 0x4
+ 388 0028 24       		.uleb128 0x24
+ 389 0029 00       		.byte	0
+ 390 002a 0B       		.uleb128 0xb
+ 391 002b 0B       		.uleb128 0xb
+ 392 002c 3E       		.uleb128 0x3e
+ 393 002d 0B       		.uleb128 0xb
+ 394 002e 03       		.uleb128 0x3
+ 395 002f 08       		.uleb128 0x8
+ARM GAS  C:\Users\Marcos\AppData\Local\Temp\cc5esb8O.s 			page 8
+
+
+ 396 0030 00       		.byte	0
+ 397 0031 00       		.byte	0
+ 398 0032 05       		.uleb128 0x5
+ 399 0033 01       		.uleb128 0x1
+ 400 0034 01       		.byte	0x1
+ 401 0035 49       		.uleb128 0x49
+ 402 0036 13       		.uleb128 0x13
+ 403 0037 01       		.uleb128 0x1
+ 404 0038 13       		.uleb128 0x13
+ 405 0039 00       		.byte	0
+ 406 003a 00       		.byte	0
+ 407 003b 06       		.uleb128 0x6
+ 408 003c 21       		.uleb128 0x21
+ 409 003d 00       		.byte	0
+ 410 003e 49       		.uleb128 0x49
+ 411 003f 13       		.uleb128 0x13
+ 412 0040 2F       		.uleb128 0x2f
+ 413 0041 0B       		.uleb128 0xb
+ 414 0042 00       		.byte	0
+ 415 0043 00       		.byte	0
+ 416 0044 07       		.uleb128 0x7
+ 417 0045 26       		.uleb128 0x26
+ 418 0046 00       		.byte	0
+ 419 0047 49       		.uleb128 0x49
+ 420 0048 13       		.uleb128 0x13
+ 421 0049 00       		.byte	0
+ 422 004a 00       		.byte	0
+ 423 004b 08       		.uleb128 0x8
+ 424 004c 34       		.uleb128 0x34
+ 425 004d 00       		.byte	0
+ 426 004e 03       		.uleb128 0x3
+ 427 004f 0E       		.uleb128 0xe
+ 428 0050 3A       		.uleb128 0x3a
+ 429 0051 0B       		.uleb128 0xb
+ 430 0052 3B       		.uleb128 0x3b
+ 431 0053 0B       		.uleb128 0xb
+ 432 0054 49       		.uleb128 0x49
+ 433 0055 13       		.uleb128 0x13
+ 434 0056 3F       		.uleb128 0x3f
+ 435 0057 19       		.uleb128 0x19
+ 436 0058 02       		.uleb128 0x2
+ 437 0059 18       		.uleb128 0x18
+ 438 005a 00       		.byte	0
+ 439 005b 00       		.byte	0
+ 440 005c 00       		.byte	0
+ 441              		.section	.debug_aranges,"",%progbits
+ 442 0000 14000000 		.4byte	0x14
+ 443 0004 0200     		.2byte	0x2
+ 444 0006 00000000 		.4byte	.Ldebug_info0
+ 445 000a 04       		.byte	0x4
+ 446 000b 00       		.byte	0
+ 447 000c 0000     		.2byte	0
+ 448 000e 0000     		.2byte	0
+ 449 0010 00000000 		.4byte	0
+ 450 0014 00000000 		.4byte	0
+ 451              		.section	.debug_line,"",%progbits
+ 452              	.Ldebug_line0:
+ARM GAS  C:\Users\Marcos\AppData\Local\Temp\cc5esb8O.s 			page 9
+
+
+ 453 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 453      02003701 
+ 453      00000201 
+ 453      FB0E0D00 
+ 453      01010101 
+ 454              	.LASF9:
+ 455 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 455      6E74385F 
+ 455      7400
+ 456              	.LASF19:
+ 457 000a 433A5C55 		.ascii	"C:\\Users\\Marcos\\Documents\\PSoCCreator\\5lp\\01e"
+ 457      73657273 
+ 457      5C4D6172 
+ 457      636F735C 
+ 457      446F6375 
+ 458 0037 6A656D70 		.ascii	"jemplo.cydsn\000"
+ 458      6C6F2E63 
+ 458      7964736E 
+ 458      00
+ 459              	.LASF16:
+ 460 0044 63795F6D 		.ascii	"cy_metadata\000"
+ 460      65746164 
+ 460      61746100 
+ 461              	.LASF1:
+ 462 0050 756E7369 		.ascii	"unsigned char\000"
+ 462      676E6564 
+ 462      20636861 
+ 462      7200
+ 463              	.LASF17:
+ 464 005e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 464      43313120 
+ 464      352E342E 
+ 464      31203230 
+ 464      31363036 
+ 465 0091 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 465      20726576 
+ 465      6973696F 
+ 465      6E203233 
+ 465      37373135 
+ 466 00c4 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 466      66756E63 
+ 466      74696F6E 
+ 466      2D736563 
+ 466      74696F6E 
+ 467              	.LASF5:
+ 468 00ec 6C6F6E67 		.ascii	"long unsigned int\000"
+ 468      20756E73 
+ 468      69676E65 
+ 468      6420696E 
+ 468      7400
+ 469              	.LASF3:
+ 470 00fe 73686F72 		.ascii	"short unsigned int\000"
+ 470      7420756E 
+ 470      7369676E 
+ 470      65642069 
+ 470      6E7400
+ 471              	.LASF13:
+ARM GAS  C:\Users\Marcos\AppData\Local\Temp\cc5esb8O.s 			page 10
+
+
+ 472 0111 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 472      6574615F 
+ 472      63757374 
+ 472      6E766C00 
+ 473              	.LASF12:
+ 474 0121 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 474      6574615F 
+ 474      636F6E66 
+ 474      69676563 
+ 474      6300
+ 475              	.LASF8:
+ 476 0133 756E7369 		.ascii	"unsigned int\000"
+ 476      676E6564 
+ 476      20696E74 
+ 476      00
+ 477              	.LASF7:
+ 478 0140 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 478      206C6F6E 
+ 478      6720756E 
+ 478      7369676E 
+ 478      65642069 
+ 479              	.LASF10:
+ 480 0157 75696E74 		.ascii	"uint8_t\000"
+ 480      385F7400 
+ 481              	.LASF15:
+ 482 015f 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 482      6574615F 
+ 482      666C6173 
+ 482      6870726F 
+ 482      74656374 
+ 483              	.LASF14:
+ 484 0174 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 484      6574615F 
+ 484      776F6E76 
+ 484      6C00
+ 485              	.LASF11:
+ 486 0182 73697A65 		.ascii	"sizetype\000"
+ 486      74797065 
+ 486      00
+ 487              	.LASF6:
+ 488 018b 6C6F6E67 		.ascii	"long long int\000"
+ 488      206C6F6E 
+ 488      6720696E 
+ 488      7400
+ 489              	.LASF2:
+ 490 0199 73686F72 		.ascii	"short int\000"
+ 490      7420696E 
+ 490      7400
+ 491              	.LASF4:
+ 492 01a3 6C6F6E67 		.ascii	"long int\000"
+ 492      20696E74 
+ 492      00
+ 493              	.LASF0:
+ 494 01ac 7369676E 		.ascii	"signed char\000"
+ 494      65642063 
+ 494      68617200 
+ 495              	.LASF18:
+ARM GAS  C:\Users\Marcos\AppData\Local\Temp\cc5esb8O.s 			page 11
+
+
+ 496 01b8 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 496      72617465 
+ 496      645F536F 
+ 496      75726365 
+ 496      5C50536F 
+ 497              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|14ace503-92b2-4f41-b4cd-6d61e15d6599
+C:\Users\acer\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|22dedcdd-50ca-45e6-a7aa-cafc67059563
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|62add9c8-2044-46c4-9fd6-cf523e336c78
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|3bd442d6-c14e-4a0b-b9b6-28407fecb4cc
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|ff3e4d04-db61-48a4-bc7f-c60f63528c78
+C:\Users\acer\Documents\Embebidos\Practica 3\practica tres Foco\Foco leds.cydsn\Foco leds.cyprj|c76fa0f7-ecc5-48b5-b2a6-199e49fe785d

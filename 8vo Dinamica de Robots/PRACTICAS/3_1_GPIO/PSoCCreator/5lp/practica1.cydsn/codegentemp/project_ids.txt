@@ -1,0 +1,8 @@
+C:\Users\acer\Documents\Embebidos\Practica 1\PSoCCreator\5lp\01ejemplo.cydsn\01ejemplo.cyprj|f3dcb27a-a7be-4c51-b41e-22a6c0ccc295
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|95add93a-8956-480b-b013-461ef9311171
+C:\Users\acer\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|f12df1d7-e829-4c01-9d7a-871364872057
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|fdc828ca-2281-4b61-a7c2-759ac47225b0
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|e7f5fe53-7343-4098-a14b-7c52f4f604e3
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|d3afe61b-17d0-4a85-8c6b-0ae0994b25cb
+C:\Users\acer\Documents\Embebidos\Practica 1\PSoCCreator\5lp\02_progamacion_de_pin.cydsn\02_progamacion_de_pin.cyprj|ddfee548-e0d9-4ebf-b335-e1580135e24e
+C:\Users\acer\Documents\Embebidos\Practica 1\PSoCCreator\5lp\practica1.cydsn\practica1.cyprj|304060f8-8f30-408a-a00f-db09f89d4b2e

@@ -1,0 +1,7 @@
+C:\Users\Marcos\Documents\PSoCCreator\5lp\01ejemplo.cydsn\01ejemplo.cyprj|61bbe70f-28e1-44d7-81a4-68ea78b59648
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|106fe616-b2ec-407e-80e9-dd4492937d4d
+C:\Users\Marcos\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|72e349cb-ff0b-4317-9e8f-c1ff037ce2bc
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|7f000d39-a3d8-43ed-98de-ced38993f426
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|1b0ef87c-c534-4c42-b308-eaec2f73f22c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|ac86d9ca-54e5-495b-a8db-aa0e832932b9
+C:\Users\Marcos\Documents\PSoCCreator\5lp\02_progamacion_de_pin.cydsn\02_progamacion_de_pin.cyprj|b736004e-dfeb-4968-ad9a-c00a95423167

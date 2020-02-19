@@ -1,0 +1,1268 @@
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"LCD_BarGraph.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.LCD_LoadCustomFonts,"ax",%progbits
+  20              		.align	2
+  21              		.global	LCD_LoadCustomFonts
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	LCD_LoadCustomFonts, %function
+  25              	LCD_LoadCustomFonts:
+  26              	.LFB0:
+  27              		.file 1 "Generated_Source\\PSoC5\\LCD_BarGraph.c"
+   1:Generated_Source\PSoC5/LCD_BarGraph.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/LCD_BarGraph.c **** * File Name: LCD_BarGraph.c
+   3:Generated_Source\PSoC5/LCD_BarGraph.c **** * Version 2.20
+   4:Generated_Source\PSoC5/LCD_BarGraph.c **** *
+   5:Generated_Source\PSoC5/LCD_BarGraph.c **** * Description:
+   6:Generated_Source\PSoC5/LCD_BarGraph.c **** *  This file provides the custom character data and API for creating and using
+   7:Generated_Source\PSoC5/LCD_BarGraph.c **** *  bar graphs with the Character LCD component.
+   8:Generated_Source\PSoC5/LCD_BarGraph.c **** *
+   9:Generated_Source\PSoC5/LCD_BarGraph.c **** * Note:
+  10:Generated_Source\PSoC5/LCD_BarGraph.c **** *
+  11:Generated_Source\PSoC5/LCD_BarGraph.c **** ********************************************************************************
+  12:Generated_Source\PSoC5/LCD_BarGraph.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
+  13:Generated_Source\PSoC5/LCD_BarGraph.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:Generated_Source\PSoC5/LCD_BarGraph.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:Generated_Source\PSoC5/LCD_BarGraph.c **** * the software package with which this file was provided.
+  16:Generated_Source\PSoC5/LCD_BarGraph.c **** *******************************************************************************/
+  17:Generated_Source\PSoC5/LCD_BarGraph.c **** 
+  18:Generated_Source\PSoC5/LCD_BarGraph.c **** #include "LCD.h"
+  19:Generated_Source\PSoC5/LCD_BarGraph.c **** 
+  20:Generated_Source\PSoC5/LCD_BarGraph.c **** 
+  21:Generated_Source\PSoC5/LCD_BarGraph.c **** uint8 const CYCODE LCD_customFonts[] = \
+  22:Generated_Source\PSoC5/LCD_BarGraph.c **** {
+  23:Generated_Source\PSoC5/LCD_BarGraph.c ****     /* Character LCD_CUSTOM_0   */
+  24:Generated_Source\PSoC5/LCD_BarGraph.c ****     0x00u,    0x00u,    0x00u,    0x00u,    0x00u,    0x00u,    0x00u,    0x00u, \
+  25:Generated_Source\PSoC5/LCD_BarGraph.c ****     /* Character LCD_CUSTOM_1   */
+  26:Generated_Source\PSoC5/LCD_BarGraph.c ****     0x10u,    0x10u,    0x10u,    0x10u,    0x10u,    0x10u,    0x10u,    0x10u, \
+  27:Generated_Source\PSoC5/LCD_BarGraph.c ****     /* Character LCD_CUSTOM_2   */
+  28:Generated_Source\PSoC5/LCD_BarGraph.c ****     0x18u,    0x18u,    0x18u,    0x18u,    0x18u,    0x18u,    0x18u,    0x18u, \
+  29:Generated_Source\PSoC5/LCD_BarGraph.c ****     /* Character LCD_CUSTOM_3   */
+  30:Generated_Source\PSoC5/LCD_BarGraph.c ****     0x1Cu,    0x1Cu,    0x1Cu,    0x1Cu,    0x1Cu,    0x1Cu,    0x1Cu,    0x1Cu, \
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 2
+
+
+  31:Generated_Source\PSoC5/LCD_BarGraph.c ****     /* Character LCD_CUSTOM_4   */
+  32:Generated_Source\PSoC5/LCD_BarGraph.c ****     0x1Eu,    0x1Eu,    0x1Eu,    0x1Eu,    0x1Eu,    0x1Eu,    0x1Eu,    0x1Eu, \
+  33:Generated_Source\PSoC5/LCD_BarGraph.c ****     /* Character LCD_CUSTOM_5   */
+  34:Generated_Source\PSoC5/LCD_BarGraph.c ****     0x1Fu,    0x1Fu,    0x1Fu,    0x1Fu,    0x1Fu,    0x1Fu,    0x1Fu,    0x1Fu, \
+  35:Generated_Source\PSoC5/LCD_BarGraph.c ****     /* Character LCD_CUSTOM_6   */
+  36:Generated_Source\PSoC5/LCD_BarGraph.c ****     0x00u,    0x00u,    0x00u,    0x00u,    0x00u,    0x00u,    0x00u,    0x00u, \
+  37:Generated_Source\PSoC5/LCD_BarGraph.c ****     /* Character LCD_CUSTOM_7   */
+  38:Generated_Source\PSoC5/LCD_BarGraph.c ****     0x00u,    0x00u,    0x00u,    0x00u,    0x00u,    0x00u,    0x00u,    0x00u \
+  39:Generated_Source\PSoC5/LCD_BarGraph.c **** };
+  40:Generated_Source\PSoC5/LCD_BarGraph.c **** 
+  41:Generated_Source\PSoC5/LCD_BarGraph.c **** 
+  42:Generated_Source\PSoC5/LCD_BarGraph.c **** /*******************************************************************************
+  43:Generated_Source\PSoC5/LCD_BarGraph.c **** * Function Name: LCD_LoadCustomFonts
+  44:Generated_Source\PSoC5/LCD_BarGraph.c **** ********************************************************************************
+  45:Generated_Source\PSoC5/LCD_BarGraph.c **** *
+  46:Generated_Source\PSoC5/LCD_BarGraph.c **** * Summary:
+  47:Generated_Source\PSoC5/LCD_BarGraph.c **** *  Loads 8 custom font characters into the LCD Module for use.  Cannot use
+  48:Generated_Source\PSoC5/LCD_BarGraph.c **** *  characters from two different font sets at once, but font sets can be
+  49:Generated_Source\PSoC5/LCD_BarGraph.c **** *  switched out during runtime.
+  50:Generated_Source\PSoC5/LCD_BarGraph.c **** *
+  51:Generated_Source\PSoC5/LCD_BarGraph.c **** * Parameters:
+  52:Generated_Source\PSoC5/LCD_BarGraph.c **** *  customData:  pointer to a constant array of 64 bytes representing 8 custom
+  53:Generated_Source\PSoC5/LCD_BarGraph.c **** *               font characters.
+  54:Generated_Source\PSoC5/LCD_BarGraph.c **** * Return:
+  55:Generated_Source\PSoC5/LCD_BarGraph.c **** *  None.
+  56:Generated_Source\PSoC5/LCD_BarGraph.c **** *
+  57:Generated_Source\PSoC5/LCD_BarGraph.c **** * Theory:
+  58:Generated_Source\PSoC5/LCD_BarGraph.c **** *  Prior to using this function user need to import the pointer to custom
+  59:Generated_Source\PSoC5/LCD_BarGraph.c **** *  font array to your project by writting the following in the source code file
+  60:Generated_Source\PSoC5/LCD_BarGraph.c **** *  where custom font will be used:
+  61:Generated_Source\PSoC5/LCD_BarGraph.c **** *       extern uint8 const CYCODE LCD_Char_customFonts[];
+  62:Generated_Source\PSoC5/LCD_BarGraph.c **** *  This function is not automatically called by the Start() routine and must be
+  63:Generated_Source\PSoC5/LCD_BarGraph.c **** *  called manually by the user.
+  64:Generated_Source\PSoC5/LCD_BarGraph.c **** *******************************************************************************/
+  65:Generated_Source\PSoC5/LCD_BarGraph.c **** void LCD_LoadCustomFonts(uint8 const customData[]) 
+  66:Generated_Source\PSoC5/LCD_BarGraph.c **** {
+  28              		.loc 1 66 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33 0000 38B5     		push	{r3, r4, r5, lr}
+  34              		.cfi_def_cfa_offset 16
+  35              		.cfi_offset 3, -16
+  36              		.cfi_offset 4, -12
+  37              		.cfi_offset 5, -8
+  38              		.cfi_offset 14, -4
+  39 0002 0546     		mov	r5, r0
+  67:Generated_Source\PSoC5/LCD_BarGraph.c ****     uint8 indexU8;
+  68:Generated_Source\PSoC5/LCD_BarGraph.c **** 
+  69:Generated_Source\PSoC5/LCD_BarGraph.c ****     LCD_IsReady();
+  40              		.loc 1 69 0
+  41 0004 FFF7FEFF 		bl	LCD_IsReady
+  42              	.LVL1:
+  70:Generated_Source\PSoC5/LCD_BarGraph.c ****     /* Set starting address in the LCD Module */
+  71:Generated_Source\PSoC5/LCD_BarGraph.c ****     /* Optionally: Read the current address to restore at a later time */
+  72:Generated_Source\PSoC5/LCD_BarGraph.c ****     LCD_WriteControl(LCD_CGRAM_0);
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 3
+
+
+  43              		.loc 1 72 0
+  44 0008 4020     		movs	r0, #64
+  45 000a FFF7FEFF 		bl	LCD_WriteControl
+  46              	.LVL2:
+  73:Generated_Source\PSoC5/LCD_BarGraph.c **** 
+  74:Generated_Source\PSoC5/LCD_BarGraph.c ****     /* Load in the 64 bytes of CustomChar Data */
+  75:Generated_Source\PSoC5/LCD_BarGraph.c ****     for(indexU8 = 0u; indexU8 < LCD_CUSTOM_CHAR_SET_LEN; indexU8++)
+  47              		.loc 1 75 0
+  48 000e 0024     		movs	r4, #0
+  49 0010 04E0     		b	.L2
+  50              	.LVL3:
+  51              	.L3:
+  76:Generated_Source\PSoC5/LCD_BarGraph.c ****     {
+  77:Generated_Source\PSoC5/LCD_BarGraph.c ****         /* Delay between each write */
+  78:Generated_Source\PSoC5/LCD_BarGraph.c ****         LCD_WriteData(customData[indexU8]);
+  52              		.loc 1 78 0 discriminator 3
+  53 0012 285D     		ldrb	r0, [r5, r4]	@ zero_extendqisi2
+  54 0014 FFF7FEFF 		bl	LCD_WriteData
+  55              	.LVL4:
+  75:Generated_Source\PSoC5/LCD_BarGraph.c ****     {
+  56              		.loc 1 75 0 discriminator 3
+  57 0018 0134     		adds	r4, r4, #1
+  58              	.LVL5:
+  59 001a E4B2     		uxtb	r4, r4
+  60              	.LVL6:
+  61              	.L2:
+  75:Generated_Source\PSoC5/LCD_BarGraph.c ****     {
+  62              		.loc 1 75 0 is_stmt 0 discriminator 1
+  63 001c 3F2C     		cmp	r4, #63
+  64 001e F8D9     		bls	.L3
+  79:Generated_Source\PSoC5/LCD_BarGraph.c ****     }
+  80:Generated_Source\PSoC5/LCD_BarGraph.c **** 
+  81:Generated_Source\PSoC5/LCD_BarGraph.c ****     LCD_IsReady();
+  65              		.loc 1 81 0 is_stmt 1
+  66 0020 FFF7FEFF 		bl	LCD_IsReady
+  67              	.LVL7:
+  82:Generated_Source\PSoC5/LCD_BarGraph.c ****     LCD_WriteControl(LCD_DDRAM_0);
+  68              		.loc 1 82 0
+  69 0024 8020     		movs	r0, #128
+  70 0026 FFF7FEFF 		bl	LCD_WriteControl
+  71              	.LVL8:
+  72 002a 38BD     		pop	{r3, r4, r5, pc}
+  73              		.cfi_endproc
+  74              	.LFE0:
+  75              		.size	LCD_LoadCustomFonts, .-LCD_LoadCustomFonts
+  76              		.section	.text.LCD_DrawHorizontalBG,"ax",%progbits
+  77              		.align	2
+  78              		.global	LCD_DrawHorizontalBG
+  79              		.thumb
+  80              		.thumb_func
+  81              		.type	LCD_DrawHorizontalBG, %function
+  82              	LCD_DrawHorizontalBG:
+  83              	.LFB1:
+  83:Generated_Source\PSoC5/LCD_BarGraph.c **** }
+  84:Generated_Source\PSoC5/LCD_BarGraph.c **** 
+  85:Generated_Source\PSoC5/LCD_BarGraph.c **** 
+  86:Generated_Source\PSoC5/LCD_BarGraph.c **** #if (LCD_CUSTOM_CHAR_SET == LCD_HORIZONTAL_BG)
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 4
+
+
+  87:Generated_Source\PSoC5/LCD_BarGraph.c **** 
+  88:Generated_Source\PSoC5/LCD_BarGraph.c ****     /*******************************************************************************
+  89:Generated_Source\PSoC5/LCD_BarGraph.c ****     * Function Name: LCD_DrawHorizontalBG
+  90:Generated_Source\PSoC5/LCD_BarGraph.c ****     ********************************************************************************
+  91:Generated_Source\PSoC5/LCD_BarGraph.c ****     *
+  92:Generated_Source\PSoC5/LCD_BarGraph.c ****     * Summary:
+  93:Generated_Source\PSoC5/LCD_BarGraph.c ****     *  Draws the horizontal bargraph.
+  94:Generated_Source\PSoC5/LCD_BarGraph.c ****     *
+  95:Generated_Source\PSoC5/LCD_BarGraph.c ****     * Parameters:
+  96:Generated_Source\PSoC5/LCD_BarGraph.c ****     *  row:            The row in which the bar graph starts.
+  97:Generated_Source\PSoC5/LCD_BarGraph.c ****     *  column:         The column in which the bar graph starts.
+  98:Generated_Source\PSoC5/LCD_BarGraph.c ****     *  maxCharacters:  The max length of the graph in whole characters.
+  99:Generated_Source\PSoC5/LCD_BarGraph.c ****     *  value:          The current length or height of the graph in pixels.
+ 100:Generated_Source\PSoC5/LCD_BarGraph.c ****     *
+ 101:Generated_Source\PSoC5/LCD_BarGraph.c ****     * Return:
+ 102:Generated_Source\PSoC5/LCD_BarGraph.c ****     *  void.
+ 103:Generated_Source\PSoC5/LCD_BarGraph.c ****     *
+ 104:Generated_Source\PSoC5/LCD_BarGraph.c ****     *******************************************************************************/
+ 105:Generated_Source\PSoC5/LCD_BarGraph.c ****     void LCD_DrawHorizontalBG(uint8 row, uint8 column, uint8 maxCharacters, uint8 value) \
+ 106:Generated_Source\PSoC5/LCD_BarGraph.c ****                                                             
+ 107:Generated_Source\PSoC5/LCD_BarGraph.c ****     {
+  84              		.loc 1 107 0
+  85              		.cfi_startproc
+  86              		@ args = 0, pretend = 0, frame = 0
+  87              		@ frame_needed = 0, uses_anonymous_args = 0
+  88              	.LVL9:
+  89 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  90              		.cfi_def_cfa_offset 24
+  91              		.cfi_offset 3, -24
+  92              		.cfi_offset 4, -20
+  93              		.cfi_offset 5, -16
+  94              		.cfi_offset 6, -12
+  95              		.cfi_offset 7, -8
+  96              		.cfi_offset 14, -4
+  97 0002 1646     		mov	r6, r2
+ 108:Generated_Source\PSoC5/LCD_BarGraph.c ****         /* 8-bit Counter */
+ 109:Generated_Source\PSoC5/LCD_BarGraph.c ****         uint8 count8;
+ 110:Generated_Source\PSoC5/LCD_BarGraph.c ****         uint8 fullChars;
+ 111:Generated_Source\PSoC5/LCD_BarGraph.c ****         uint8 remainingPixels;
+ 112:Generated_Source\PSoC5/LCD_BarGraph.c **** 
+ 113:Generated_Source\PSoC5/LCD_BarGraph.c ****         /* Number of full characters to draw */
+ 114:Generated_Source\PSoC5/LCD_BarGraph.c ****         fullChars = value / LCD_CHARACTER_WIDTH;
+  98              		.loc 1 114 0
+  99 0004 154A     		ldr	r2, .L15
+ 100              	.LVL10:
+ 101 0006 A2FB0342 		umull	r4, r2, r2, r3
+ 102 000a 9208     		lsrs	r2, r2, #2
+ 103 000c D5B2     		uxtb	r5, r2
+ 104              	.LVL11:
+ 115:Generated_Source\PSoC5/LCD_BarGraph.c **** 
+ 116:Generated_Source\PSoC5/LCD_BarGraph.c ****         /* Number of remaining pixels to draw */
+ 117:Generated_Source\PSoC5/LCD_BarGraph.c ****         remainingPixels = value % LCD_CHARACTER_WIDTH;
+ 105              		.loc 1 117 0
+ 106 000e 02EB8202 		add	r2, r2, r2, lsl #2
+ 107 0012 9A1A     		subs	r2, r3, r2
+ 108 0014 D7B2     		uxtb	r7, r2
+ 109              	.LVL12:
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 5
+
+
+ 118:Generated_Source\PSoC5/LCD_BarGraph.c **** 
+ 119:Generated_Source\PSoC5/LCD_BarGraph.c ****         /* Ensure that the maximum character limit is followed. */
+ 120:Generated_Source\PSoC5/LCD_BarGraph.c ****         if(fullChars >= maxCharacters)
+ 110              		.loc 1 120 0
+ 111 0016 B542     		cmp	r5, r6
+ 112 0018 00D3     		bcc	.L6
+ 121:Generated_Source\PSoC5/LCD_BarGraph.c ****         {
+ 122:Generated_Source\PSoC5/LCD_BarGraph.c ****             fullChars = maxCharacters;
+ 113              		.loc 1 122 0
+ 114 001a 3546     		mov	r5, r6
+ 115              	.LVL13:
+ 116              	.L6:
+ 123:Generated_Source\PSoC5/LCD_BarGraph.c ****         }
+ 124:Generated_Source\PSoC5/LCD_BarGraph.c **** 
+ 125:Generated_Source\PSoC5/LCD_BarGraph.c ****         /* Put Cursor at start position */
+ 126:Generated_Source\PSoC5/LCD_BarGraph.c ****         LCD_Position(row, column);
+ 117              		.loc 1 126 0
+ 118 001c FFF7FEFF 		bl	LCD_Position
+ 119              	.LVL14:
+ 127:Generated_Source\PSoC5/LCD_BarGraph.c **** 
+ 128:Generated_Source\PSoC5/LCD_BarGraph.c ****         /* Write full characters */
+ 129:Generated_Source\PSoC5/LCD_BarGraph.c ****         for(count8 = 0u; count8 < fullChars; count8++)
+ 120              		.loc 1 129 0
+ 121 0020 0024     		movs	r4, #0
+ 122 0022 04E0     		b	.L7
+ 123              	.LVL15:
+ 124              	.L8:
+ 130:Generated_Source\PSoC5/LCD_BarGraph.c ****         {
+ 131:Generated_Source\PSoC5/LCD_BarGraph.c ****             LCD_WriteData(LCD_CUSTOM_5);
+ 125              		.loc 1 131 0 discriminator 3
+ 126 0024 0520     		movs	r0, #5
+ 127 0026 FFF7FEFF 		bl	LCD_WriteData
+ 128              	.LVL16:
+ 129:Generated_Source\PSoC5/LCD_BarGraph.c ****         {
+ 129              		.loc 1 129 0 discriminator 3
+ 130 002a 0134     		adds	r4, r4, #1
+ 131              	.LVL17:
+ 132 002c E4B2     		uxtb	r4, r4
+ 133              	.LVL18:
+ 134              	.L7:
+ 129:Generated_Source\PSoC5/LCD_BarGraph.c ****         {
+ 135              		.loc 1 129 0 is_stmt 0 discriminator 1
+ 136 002e AC42     		cmp	r4, r5
+ 137 0030 F8D3     		bcc	.L8
+ 132:Generated_Source\PSoC5/LCD_BarGraph.c ****         }
+ 133:Generated_Source\PSoC5/LCD_BarGraph.c **** 
+ 134:Generated_Source\PSoC5/LCD_BarGraph.c ****         if(fullChars < maxCharacters)
+ 138              		.loc 1 134 0 is_stmt 1
+ 139 0032 B542     		cmp	r5, r6
+ 140 0034 11D2     		bcs	.L5
+ 135:Generated_Source\PSoC5/LCD_BarGraph.c ****         {
+ 136:Generated_Source\PSoC5/LCD_BarGraph.c ****             /* Write remaining pixels */
+ 137:Generated_Source\PSoC5/LCD_BarGraph.c ****             LCD_WriteData(remainingPixels);
+ 141              		.loc 1 137 0
+ 142 0036 3846     		mov	r0, r7
+ 143 0038 FFF7FEFF 		bl	LCD_WriteData
+ 144              	.LVL19:
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 6
+
+
+ 138:Generated_Source\PSoC5/LCD_BarGraph.c **** 
+ 139:Generated_Source\PSoC5/LCD_BarGraph.c ****             if(fullChars < (maxCharacters - 1u))
+ 145              		.loc 1 139 0
+ 146 003c 731E     		subs	r3, r6, #1
+ 147 003e 9D42     		cmp	r5, r3
+ 148 0040 06D3     		bcc	.L13
+ 149 0042 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 150              	.LVL20:
+ 151              	.L11:
+ 140:Generated_Source\PSoC5/LCD_BarGraph.c ****             {
+ 141:Generated_Source\PSoC5/LCD_BarGraph.c ****                 /* Fill with whitespace to end of bar graph */
+ 142:Generated_Source\PSoC5/LCD_BarGraph.c ****                 for(count8 = 0u; count8 < (maxCharacters - fullChars - 1u); count8++)
+ 143:Generated_Source\PSoC5/LCD_BarGraph.c ****                 {
+ 144:Generated_Source\PSoC5/LCD_BarGraph.c ****                     LCD_WriteData(LCD_CUSTOM_0);
+ 152              		.loc 1 144 0 discriminator 3
+ 153 0044 0020     		movs	r0, #0
+ 154 0046 FFF7FEFF 		bl	LCD_WriteData
+ 155              	.LVL21:
+ 142:Generated_Source\PSoC5/LCD_BarGraph.c ****                 {
+ 156              		.loc 1 142 0 discriminator 3
+ 157 004a 0134     		adds	r4, r4, #1
+ 158              	.LVL22:
+ 159 004c E4B2     		uxtb	r4, r4
+ 160              	.LVL23:
+ 161 004e 00E0     		b	.L10
+ 162              	.L13:
+ 163 0050 0024     		movs	r4, #0
+ 164              	.LVL24:
+ 165              	.L10:
+ 142:Generated_Source\PSoC5/LCD_BarGraph.c ****                 {
+ 166              		.loc 1 142 0 is_stmt 0 discriminator 1
+ 167 0052 731B     		subs	r3, r6, r5
+ 168 0054 013B     		subs	r3, r3, #1
+ 169 0056 9C42     		cmp	r4, r3
+ 170 0058 F4D3     		bcc	.L11
+ 171              	.L5:
+ 172 005a F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 173              	.LVL25:
+ 174              	.L16:
+ 175              		.align	2
+ 176              	.L15:
+ 177 005c CDCCCCCC 		.word	-858993459
+ 178              		.cfi_endproc
+ 179              	.LFE1:
+ 180              		.size	LCD_DrawHorizontalBG, .-LCD_DrawHorizontalBG
+ 181              		.global	LCD_customFonts
+ 182              		.section	.rodata
+ 183              		.align	2
+ 184              		.type	LCD_customFonts, %object
+ 185              		.size	LCD_customFonts, 64
+ 186              	LCD_customFonts:
+ 187 0000 00       		.byte	0
+ 188 0001 00       		.byte	0
+ 189 0002 00       		.byte	0
+ 190 0003 00       		.byte	0
+ 191 0004 00       		.byte	0
+ 192 0005 00       		.byte	0
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 7
+
+
+ 193 0006 00       		.byte	0
+ 194 0007 00       		.byte	0
+ 195 0008 10       		.byte	16
+ 196 0009 10       		.byte	16
+ 197 000a 10       		.byte	16
+ 198 000b 10       		.byte	16
+ 199 000c 10       		.byte	16
+ 200 000d 10       		.byte	16
+ 201 000e 10       		.byte	16
+ 202 000f 10       		.byte	16
+ 203 0010 18       		.byte	24
+ 204 0011 18       		.byte	24
+ 205 0012 18       		.byte	24
+ 206 0013 18       		.byte	24
+ 207 0014 18       		.byte	24
+ 208 0015 18       		.byte	24
+ 209 0016 18       		.byte	24
+ 210 0017 18       		.byte	24
+ 211 0018 1C       		.byte	28
+ 212 0019 1C       		.byte	28
+ 213 001a 1C       		.byte	28
+ 214 001b 1C       		.byte	28
+ 215 001c 1C       		.byte	28
+ 216 001d 1C       		.byte	28
+ 217 001e 1C       		.byte	28
+ 218 001f 1C       		.byte	28
+ 219 0020 1E       		.byte	30
+ 220 0021 1E       		.byte	30
+ 221 0022 1E       		.byte	30
+ 222 0023 1E       		.byte	30
+ 223 0024 1E       		.byte	30
+ 224 0025 1E       		.byte	30
+ 225 0026 1E       		.byte	30
+ 226 0027 1E       		.byte	30
+ 227 0028 1F       		.byte	31
+ 228 0029 1F       		.byte	31
+ 229 002a 1F       		.byte	31
+ 230 002b 1F       		.byte	31
+ 231 002c 1F       		.byte	31
+ 232 002d 1F       		.byte	31
+ 233 002e 1F       		.byte	31
+ 234 002f 1F       		.byte	31
+ 235 0030 00       		.byte	0
+ 236 0031 00       		.byte	0
+ 237 0032 00       		.byte	0
+ 238 0033 00       		.byte	0
+ 239 0034 00       		.byte	0
+ 240 0035 00       		.byte	0
+ 241 0036 00       		.byte	0
+ 242 0037 00       		.byte	0
+ 243 0038 00       		.byte	0
+ 244 0039 00       		.byte	0
+ 245 003a 00       		.byte	0
+ 246 003b 00       		.byte	0
+ 247 003c 00       		.byte	0
+ 248 003d 00       		.byte	0
+ 249 003e 00       		.byte	0
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 8
+
+
+ 250 003f 00       		.byte	0
+ 251              		.text
+ 252              	.Letext0:
+ 253              		.file 2 "Generated_Source\\PSoC5\\LCD.h"
+ 254              		.file 3 "Generated_Source\\PSoC5\\cytypes.h"
+ 255              		.section	.debug_info,"",%progbits
+ 256              	.Ldebug_info0:
+ 257 0000 1E020000 		.4byte	0x21e
+ 258 0004 0400     		.2byte	0x4
+ 259 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 260 000a 04       		.byte	0x4
+ 261 000b 01       		.uleb128 0x1
+ 262 000c CD010000 		.4byte	.LASF27
+ 263 0010 0C       		.byte	0xc
+ 264 0011 3C010000 		.4byte	.LASF28
+ 265 0015 62010000 		.4byte	.LASF29
+ 266 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 267 001d 00000000 		.4byte	0
+ 268 0021 00000000 		.4byte	.Ldebug_line0
+ 269 0025 02       		.uleb128 0x2
+ 270 0026 01       		.byte	0x1
+ 271 0027 06       		.byte	0x6
+ 272 0028 B8000000 		.4byte	.LASF0
+ 273 002c 02       		.uleb128 0x2
+ 274 002d 01       		.byte	0x1
+ 275 002e 08       		.byte	0x8
+ 276 002f 9A000000 		.4byte	.LASF1
+ 277 0033 02       		.uleb128 0x2
+ 278 0034 02       		.byte	0x2
+ 279 0035 05       		.byte	0x5
+ 280 0036 35000000 		.4byte	.LASF2
+ 281 003a 02       		.uleb128 0x2
+ 282 003b 02       		.byte	0x2
+ 283 003c 07       		.byte	0x7
+ 284 003d F6000000 		.4byte	.LASF3
+ 285 0041 02       		.uleb128 0x2
+ 286 0042 04       		.byte	0x4
+ 287 0043 05       		.byte	0x5
+ 288 0044 68000000 		.4byte	.LASF4
+ 289 0048 02       		.uleb128 0x2
+ 290 0049 04       		.byte	0x4
+ 291 004a 07       		.byte	0x7
+ 292 004b 2A010000 		.4byte	.LASF5
+ 293 004f 02       		.uleb128 0x2
+ 294 0050 08       		.byte	0x8
+ 295 0051 05       		.byte	0x5
+ 296 0052 5A000000 		.4byte	.LASF6
+ 297 0056 02       		.uleb128 0x2
+ 298 0057 08       		.byte	0x8
+ 299 0058 07       		.byte	0x7
+ 300 0059 C4000000 		.4byte	.LASF7
+ 301 005d 03       		.uleb128 0x3
+ 302 005e 04       		.byte	0x4
+ 303 005f 05       		.byte	0x5
+ 304 0060 696E7400 		.ascii	"int\000"
+ 305 0064 02       		.uleb128 0x2
+ 306 0065 04       		.byte	0x4
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 9
+
+
+ 307 0066 07       		.byte	0x7
+ 308 0067 DB000000 		.4byte	.LASF8
+ 309 006b 04       		.uleb128 0x4
+ 310 006c 4E000000 		.4byte	.LASF30
+ 311 0070 03       		.byte	0x3
+ 312 0071 E401     		.2byte	0x1e4
+ 313 0073 2C000000 		.4byte	0x2c
+ 314 0077 02       		.uleb128 0x2
+ 315 0078 04       		.byte	0x4
+ 316 0079 04       		.byte	0x4
+ 317 007a 54000000 		.4byte	.LASF9
+ 318 007e 02       		.uleb128 0x2
+ 319 007f 08       		.byte	0x8
+ 320 0080 04       		.byte	0x4
+ 321 0081 B2010000 		.4byte	.LASF10
+ 322 0085 02       		.uleb128 0x2
+ 323 0086 01       		.byte	0x1
+ 324 0087 08       		.byte	0x8
+ 325 0088 09010000 		.4byte	.LASF11
+ 326 008c 05       		.uleb128 0x5
+ 327 008d 7C000000 		.4byte	.LASF12
+ 328 0091 01       		.byte	0x1
+ 329 0092 41       		.byte	0x41
+ 330 0093 00000000 		.4byte	.LFB0
+ 331 0097 2C000000 		.4byte	.LFE0-.LFB0
+ 332 009b 01       		.uleb128 0x1
+ 333 009c 9C       		.byte	0x9c
+ 334 009d FF000000 		.4byte	0xff
+ 335 00a1 06       		.uleb128 0x6
+ 336 00a2 71000000 		.4byte	.LASF14
+ 337 00a6 01       		.byte	0x1
+ 338 00a7 41       		.byte	0x41
+ 339 00a8 FF000000 		.4byte	0xff
+ 340 00ac 00000000 		.4byte	.LLST0
+ 341 00b0 07       		.uleb128 0x7
+ 342 00b1 00000000 		.4byte	.LASF18
+ 343 00b5 01       		.byte	0x1
+ 344 00b6 43       		.byte	0x43
+ 345 00b7 6B000000 		.4byte	0x6b
+ 346 00bb 1E000000 		.4byte	.LLST1
+ 347 00bf 08       		.uleb128 0x8
+ 348 00c0 08000000 		.4byte	.LVL1
+ 349 00c4 F5010000 		.4byte	0x1f5
+ 350 00c8 09       		.uleb128 0x9
+ 351 00c9 0E000000 		.4byte	.LVL2
+ 352 00cd 00020000 		.4byte	0x200
+ 353 00d1 DC000000 		.4byte	0xdc
+ 354 00d5 0A       		.uleb128 0xa
+ 355 00d6 01       		.uleb128 0x1
+ 356 00d7 50       		.byte	0x50
+ 357 00d8 02       		.uleb128 0x2
+ 358 00d9 08       		.byte	0x8
+ 359 00da 40       		.byte	0x40
+ 360 00db 00       		.byte	0
+ 361 00dc 08       		.uleb128 0x8
+ 362 00dd 18000000 		.4byte	.LVL4
+ 363 00e1 0B020000 		.4byte	0x20b
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 10
+
+
+ 364 00e5 08       		.uleb128 0x8
+ 365 00e6 24000000 		.4byte	.LVL7
+ 366 00ea F5010000 		.4byte	0x1f5
+ 367 00ee 0B       		.uleb128 0xb
+ 368 00ef 2A000000 		.4byte	.LVL8
+ 369 00f3 00020000 		.4byte	0x200
+ 370 00f7 0A       		.uleb128 0xa
+ 371 00f8 01       		.uleb128 0x1
+ 372 00f9 50       		.byte	0x50
+ 373 00fa 02       		.uleb128 0x2
+ 374 00fb 09       		.byte	0x9
+ 375 00fc 80       		.byte	0x80
+ 376 00fd 00       		.byte	0
+ 377 00fe 00       		.byte	0
+ 378 00ff 0C       		.uleb128 0xc
+ 379 0100 04       		.byte	0x4
+ 380 0101 05010000 		.4byte	0x105
+ 381 0105 0D       		.uleb128 0xd
+ 382 0106 6B000000 		.4byte	0x6b
+ 383 010a 05       		.uleb128 0x5
+ 384 010b 08000000 		.4byte	.LASF13
+ 385 010f 01       		.byte	0x1
+ 386 0110 69       		.byte	0x69
+ 387 0111 00000000 		.4byte	.LFB1
+ 388 0115 60000000 		.4byte	.LFE1-.LFB1
+ 389 0119 01       		.uleb128 0x1
+ 390 011a 9C       		.byte	0x9c
+ 391 011b C8010000 		.4byte	0x1c8
+ 392 011f 0E       		.uleb128 0xe
+ 393 0120 726F7700 		.ascii	"row\000"
+ 394 0124 01       		.byte	0x1
+ 395 0125 69       		.byte	0x69
+ 396 0126 6B000000 		.4byte	0x6b
+ 397 012a 48000000 		.4byte	.LLST2
+ 398 012e 06       		.uleb128 0x6
+ 399 012f 1D000000 		.4byte	.LASF15
+ 400 0133 01       		.byte	0x1
+ 401 0134 69       		.byte	0x69
+ 402 0135 6B000000 		.4byte	0x6b
+ 403 0139 69000000 		.4byte	.LLST3
+ 404 013d 06       		.uleb128 0x6
+ 405 013e E8000000 		.4byte	.LASF16
+ 406 0142 01       		.byte	0x1
+ 407 0143 69       		.byte	0x69
+ 408 0144 6B000000 		.4byte	0x6b
+ 409 0148 8A000000 		.4byte	.LLST4
+ 410 014c 06       		.uleb128 0x6
+ 411 014d 48000000 		.4byte	.LASF17
+ 412 0151 01       		.byte	0x1
+ 413 0152 69       		.byte	0x69
+ 414 0153 6B000000 		.4byte	0x6b
+ 415 0157 AB000000 		.4byte	.LLST5
+ 416 015b 07       		.uleb128 0x7
+ 417 015c B9010000 		.4byte	.LASF19
+ 418 0160 01       		.byte	0x1
+ 419 0161 6D       		.byte	0x6d
+ 420 0162 6B000000 		.4byte	0x6b
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 11
+
+
+ 421 0166 CC000000 		.4byte	.LLST6
+ 422 016a 07       		.uleb128 0x7
+ 423 016b 90000000 		.4byte	.LASF20
+ 424 016f 01       		.byte	0x1
+ 425 0170 6E       		.byte	0x6e
+ 426 0171 6B000000 		.4byte	0x6b
+ 427 0175 01010000 		.4byte	.LLST7
+ 428 0179 07       		.uleb128 0x7
+ 429 017a A8000000 		.4byte	.LASF21
+ 430 017e 01       		.byte	0x1
+ 431 017f 6F       		.byte	0x6f
+ 432 0180 6B000000 		.4byte	0x6b
+ 433 0184 14010000 		.4byte	.LLST8
+ 434 0188 08       		.uleb128 0x8
+ 435 0189 20000000 		.4byte	.LVL14
+ 436 018d 16020000 		.4byte	0x216
+ 437 0191 09       		.uleb128 0x9
+ 438 0192 2A000000 		.4byte	.LVL16
+ 439 0196 0B020000 		.4byte	0x20b
+ 440 019a A4010000 		.4byte	0x1a4
+ 441 019e 0A       		.uleb128 0xa
+ 442 019f 01       		.uleb128 0x1
+ 443 01a0 50       		.byte	0x50
+ 444 01a1 01       		.uleb128 0x1
+ 445 01a2 35       		.byte	0x35
+ 446 01a3 00       		.byte	0
+ 447 01a4 09       		.uleb128 0x9
+ 448 01a5 3C000000 		.4byte	.LVL19
+ 449 01a9 0B020000 		.4byte	0x20b
+ 450 01ad B8010000 		.4byte	0x1b8
+ 451 01b1 0A       		.uleb128 0xa
+ 452 01b2 01       		.uleb128 0x1
+ 453 01b3 50       		.byte	0x50
+ 454 01b4 02       		.uleb128 0x2
+ 455 01b5 77       		.byte	0x77
+ 456 01b6 00       		.sleb128 0
+ 457 01b7 00       		.byte	0
+ 458 01b8 0B       		.uleb128 0xb
+ 459 01b9 4A000000 		.4byte	.LVL21
+ 460 01bd 0B020000 		.4byte	0x20b
+ 461 01c1 0A       		.uleb128 0xa
+ 462 01c2 01       		.uleb128 0x1
+ 463 01c3 50       		.byte	0x50
+ 464 01c4 01       		.uleb128 0x1
+ 465 01c5 30       		.byte	0x30
+ 466 01c6 00       		.byte	0
+ 467 01c7 00       		.byte	0
+ 468 01c8 0F       		.uleb128 0xf
+ 469 01c9 05010000 		.4byte	0x105
+ 470 01cd D8010000 		.4byte	0x1d8
+ 471 01d1 10       		.uleb128 0x10
+ 472 01d2 D8010000 		.4byte	0x1d8
+ 473 01d6 3F       		.byte	0x3f
+ 474 01d7 00       		.byte	0
+ 475 01d8 02       		.uleb128 0x2
+ 476 01d9 04       		.byte	0x4
+ 477 01da 07       		.byte	0x7
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 12
+
+
+ 478 01db 3F000000 		.4byte	.LASF22
+ 479 01df 11       		.uleb128 0x11
+ 480 01e0 0E010000 		.4byte	.LASF31
+ 481 01e4 01       		.byte	0x1
+ 482 01e5 15       		.byte	0x15
+ 483 01e6 F0010000 		.4byte	0x1f0
+ 484 01ea 05       		.uleb128 0x5
+ 485 01eb 03       		.byte	0x3
+ 486 01ec 00000000 		.4byte	LCD_customFonts
+ 487 01f0 0D       		.uleb128 0xd
+ 488 01f1 C8010000 		.4byte	0x1c8
+ 489 01f5 12       		.uleb128 0x12
+ 490 01f6 1E010000 		.4byte	.LASF23
+ 491 01fa 1E010000 		.4byte	.LASF23
+ 492 01fe 02       		.byte	0x2
+ 493 01ff 3F       		.byte	0x3f
+ 494 0200 12       		.uleb128 0x12
+ 495 0201 24000000 		.4byte	.LASF24
+ 496 0205 24000000 		.4byte	.LASF24
+ 497 0209 02       		.byte	0x2
+ 498 020a 3A       		.byte	0x3a
+ 499 020b 12       		.uleb128 0x12
+ 500 020c 5B020000 		.4byte	.LASF25
+ 501 0210 5B020000 		.4byte	.LASF25
+ 502 0214 02       		.byte	0x2
+ 503 0215 3B       		.byte	0x3b
+ 504 0216 12       		.uleb128 0x12
+ 505 0217 C0010000 		.4byte	.LASF26
+ 506 021b C0010000 		.4byte	.LASF26
+ 507 021f 02       		.byte	0x2
+ 508 0220 3D       		.byte	0x3d
+ 509 0221 00       		.byte	0
+ 510              		.section	.debug_abbrev,"",%progbits
+ 511              	.Ldebug_abbrev0:
+ 512 0000 01       		.uleb128 0x1
+ 513 0001 11       		.uleb128 0x11
+ 514 0002 01       		.byte	0x1
+ 515 0003 25       		.uleb128 0x25
+ 516 0004 0E       		.uleb128 0xe
+ 517 0005 13       		.uleb128 0x13
+ 518 0006 0B       		.uleb128 0xb
+ 519 0007 03       		.uleb128 0x3
+ 520 0008 0E       		.uleb128 0xe
+ 521 0009 1B       		.uleb128 0x1b
+ 522 000a 0E       		.uleb128 0xe
+ 523 000b 55       		.uleb128 0x55
+ 524 000c 17       		.uleb128 0x17
+ 525 000d 11       		.uleb128 0x11
+ 526 000e 01       		.uleb128 0x1
+ 527 000f 10       		.uleb128 0x10
+ 528 0010 17       		.uleb128 0x17
+ 529 0011 00       		.byte	0
+ 530 0012 00       		.byte	0
+ 531 0013 02       		.uleb128 0x2
+ 532 0014 24       		.uleb128 0x24
+ 533 0015 00       		.byte	0
+ 534 0016 0B       		.uleb128 0xb
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 13
+
+
+ 535 0017 0B       		.uleb128 0xb
+ 536 0018 3E       		.uleb128 0x3e
+ 537 0019 0B       		.uleb128 0xb
+ 538 001a 03       		.uleb128 0x3
+ 539 001b 0E       		.uleb128 0xe
+ 540 001c 00       		.byte	0
+ 541 001d 00       		.byte	0
+ 542 001e 03       		.uleb128 0x3
+ 543 001f 24       		.uleb128 0x24
+ 544 0020 00       		.byte	0
+ 545 0021 0B       		.uleb128 0xb
+ 546 0022 0B       		.uleb128 0xb
+ 547 0023 3E       		.uleb128 0x3e
+ 548 0024 0B       		.uleb128 0xb
+ 549 0025 03       		.uleb128 0x3
+ 550 0026 08       		.uleb128 0x8
+ 551 0027 00       		.byte	0
+ 552 0028 00       		.byte	0
+ 553 0029 04       		.uleb128 0x4
+ 554 002a 16       		.uleb128 0x16
+ 555 002b 00       		.byte	0
+ 556 002c 03       		.uleb128 0x3
+ 557 002d 0E       		.uleb128 0xe
+ 558 002e 3A       		.uleb128 0x3a
+ 559 002f 0B       		.uleb128 0xb
+ 560 0030 3B       		.uleb128 0x3b
+ 561 0031 05       		.uleb128 0x5
+ 562 0032 49       		.uleb128 0x49
+ 563 0033 13       		.uleb128 0x13
+ 564 0034 00       		.byte	0
+ 565 0035 00       		.byte	0
+ 566 0036 05       		.uleb128 0x5
+ 567 0037 2E       		.uleb128 0x2e
+ 568 0038 01       		.byte	0x1
+ 569 0039 3F       		.uleb128 0x3f
+ 570 003a 19       		.uleb128 0x19
+ 571 003b 03       		.uleb128 0x3
+ 572 003c 0E       		.uleb128 0xe
+ 573 003d 3A       		.uleb128 0x3a
+ 574 003e 0B       		.uleb128 0xb
+ 575 003f 3B       		.uleb128 0x3b
+ 576 0040 0B       		.uleb128 0xb
+ 577 0041 27       		.uleb128 0x27
+ 578 0042 19       		.uleb128 0x19
+ 579 0043 11       		.uleb128 0x11
+ 580 0044 01       		.uleb128 0x1
+ 581 0045 12       		.uleb128 0x12
+ 582 0046 06       		.uleb128 0x6
+ 583 0047 40       		.uleb128 0x40
+ 584 0048 18       		.uleb128 0x18
+ 585 0049 9742     		.uleb128 0x2117
+ 586 004b 19       		.uleb128 0x19
+ 587 004c 01       		.uleb128 0x1
+ 588 004d 13       		.uleb128 0x13
+ 589 004e 00       		.byte	0
+ 590 004f 00       		.byte	0
+ 591 0050 06       		.uleb128 0x6
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 14
+
+
+ 592 0051 05       		.uleb128 0x5
+ 593 0052 00       		.byte	0
+ 594 0053 03       		.uleb128 0x3
+ 595 0054 0E       		.uleb128 0xe
+ 596 0055 3A       		.uleb128 0x3a
+ 597 0056 0B       		.uleb128 0xb
+ 598 0057 3B       		.uleb128 0x3b
+ 599 0058 0B       		.uleb128 0xb
+ 600 0059 49       		.uleb128 0x49
+ 601 005a 13       		.uleb128 0x13
+ 602 005b 02       		.uleb128 0x2
+ 603 005c 17       		.uleb128 0x17
+ 604 005d 00       		.byte	0
+ 605 005e 00       		.byte	0
+ 606 005f 07       		.uleb128 0x7
+ 607 0060 34       		.uleb128 0x34
+ 608 0061 00       		.byte	0
+ 609 0062 03       		.uleb128 0x3
+ 610 0063 0E       		.uleb128 0xe
+ 611 0064 3A       		.uleb128 0x3a
+ 612 0065 0B       		.uleb128 0xb
+ 613 0066 3B       		.uleb128 0x3b
+ 614 0067 0B       		.uleb128 0xb
+ 615 0068 49       		.uleb128 0x49
+ 616 0069 13       		.uleb128 0x13
+ 617 006a 02       		.uleb128 0x2
+ 618 006b 17       		.uleb128 0x17
+ 619 006c 00       		.byte	0
+ 620 006d 00       		.byte	0
+ 621 006e 08       		.uleb128 0x8
+ 622 006f 898201   		.uleb128 0x4109
+ 623 0072 00       		.byte	0
+ 624 0073 11       		.uleb128 0x11
+ 625 0074 01       		.uleb128 0x1
+ 626 0075 31       		.uleb128 0x31
+ 627 0076 13       		.uleb128 0x13
+ 628 0077 00       		.byte	0
+ 629 0078 00       		.byte	0
+ 630 0079 09       		.uleb128 0x9
+ 631 007a 898201   		.uleb128 0x4109
+ 632 007d 01       		.byte	0x1
+ 633 007e 11       		.uleb128 0x11
+ 634 007f 01       		.uleb128 0x1
+ 635 0080 31       		.uleb128 0x31
+ 636 0081 13       		.uleb128 0x13
+ 637 0082 01       		.uleb128 0x1
+ 638 0083 13       		.uleb128 0x13
+ 639 0084 00       		.byte	0
+ 640 0085 00       		.byte	0
+ 641 0086 0A       		.uleb128 0xa
+ 642 0087 8A8201   		.uleb128 0x410a
+ 643 008a 00       		.byte	0
+ 644 008b 02       		.uleb128 0x2
+ 645 008c 18       		.uleb128 0x18
+ 646 008d 9142     		.uleb128 0x2111
+ 647 008f 18       		.uleb128 0x18
+ 648 0090 00       		.byte	0
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 15
+
+
+ 649 0091 00       		.byte	0
+ 650 0092 0B       		.uleb128 0xb
+ 651 0093 898201   		.uleb128 0x4109
+ 652 0096 01       		.byte	0x1
+ 653 0097 11       		.uleb128 0x11
+ 654 0098 01       		.uleb128 0x1
+ 655 0099 31       		.uleb128 0x31
+ 656 009a 13       		.uleb128 0x13
+ 657 009b 00       		.byte	0
+ 658 009c 00       		.byte	0
+ 659 009d 0C       		.uleb128 0xc
+ 660 009e 0F       		.uleb128 0xf
+ 661 009f 00       		.byte	0
+ 662 00a0 0B       		.uleb128 0xb
+ 663 00a1 0B       		.uleb128 0xb
+ 664 00a2 49       		.uleb128 0x49
+ 665 00a3 13       		.uleb128 0x13
+ 666 00a4 00       		.byte	0
+ 667 00a5 00       		.byte	0
+ 668 00a6 0D       		.uleb128 0xd
+ 669 00a7 26       		.uleb128 0x26
+ 670 00a8 00       		.byte	0
+ 671 00a9 49       		.uleb128 0x49
+ 672 00aa 13       		.uleb128 0x13
+ 673 00ab 00       		.byte	0
+ 674 00ac 00       		.byte	0
+ 675 00ad 0E       		.uleb128 0xe
+ 676 00ae 05       		.uleb128 0x5
+ 677 00af 00       		.byte	0
+ 678 00b0 03       		.uleb128 0x3
+ 679 00b1 08       		.uleb128 0x8
+ 680 00b2 3A       		.uleb128 0x3a
+ 681 00b3 0B       		.uleb128 0xb
+ 682 00b4 3B       		.uleb128 0x3b
+ 683 00b5 0B       		.uleb128 0xb
+ 684 00b6 49       		.uleb128 0x49
+ 685 00b7 13       		.uleb128 0x13
+ 686 00b8 02       		.uleb128 0x2
+ 687 00b9 17       		.uleb128 0x17
+ 688 00ba 00       		.byte	0
+ 689 00bb 00       		.byte	0
+ 690 00bc 0F       		.uleb128 0xf
+ 691 00bd 01       		.uleb128 0x1
+ 692 00be 01       		.byte	0x1
+ 693 00bf 49       		.uleb128 0x49
+ 694 00c0 13       		.uleb128 0x13
+ 695 00c1 01       		.uleb128 0x1
+ 696 00c2 13       		.uleb128 0x13
+ 697 00c3 00       		.byte	0
+ 698 00c4 00       		.byte	0
+ 699 00c5 10       		.uleb128 0x10
+ 700 00c6 21       		.uleb128 0x21
+ 701 00c7 00       		.byte	0
+ 702 00c8 49       		.uleb128 0x49
+ 703 00c9 13       		.uleb128 0x13
+ 704 00ca 2F       		.uleb128 0x2f
+ 705 00cb 0B       		.uleb128 0xb
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 16
+
+
+ 706 00cc 00       		.byte	0
+ 707 00cd 00       		.byte	0
+ 708 00ce 11       		.uleb128 0x11
+ 709 00cf 34       		.uleb128 0x34
+ 710 00d0 00       		.byte	0
+ 711 00d1 03       		.uleb128 0x3
+ 712 00d2 0E       		.uleb128 0xe
+ 713 00d3 3A       		.uleb128 0x3a
+ 714 00d4 0B       		.uleb128 0xb
+ 715 00d5 3B       		.uleb128 0x3b
+ 716 00d6 0B       		.uleb128 0xb
+ 717 00d7 49       		.uleb128 0x49
+ 718 00d8 13       		.uleb128 0x13
+ 719 00d9 3F       		.uleb128 0x3f
+ 720 00da 19       		.uleb128 0x19
+ 721 00db 02       		.uleb128 0x2
+ 722 00dc 18       		.uleb128 0x18
+ 723 00dd 00       		.byte	0
+ 724 00de 00       		.byte	0
+ 725 00df 12       		.uleb128 0x12
+ 726 00e0 2E       		.uleb128 0x2e
+ 727 00e1 00       		.byte	0
+ 728 00e2 3F       		.uleb128 0x3f
+ 729 00e3 19       		.uleb128 0x19
+ 730 00e4 3C       		.uleb128 0x3c
+ 731 00e5 19       		.uleb128 0x19
+ 732 00e6 6E       		.uleb128 0x6e
+ 733 00e7 0E       		.uleb128 0xe
+ 734 00e8 03       		.uleb128 0x3
+ 735 00e9 0E       		.uleb128 0xe
+ 736 00ea 3A       		.uleb128 0x3a
+ 737 00eb 0B       		.uleb128 0xb
+ 738 00ec 3B       		.uleb128 0x3b
+ 739 00ed 0B       		.uleb128 0xb
+ 740 00ee 00       		.byte	0
+ 741 00ef 00       		.byte	0
+ 742 00f0 00       		.byte	0
+ 743              		.section	.debug_loc,"",%progbits
+ 744              	.Ldebug_loc0:
+ 745              	.LLST0:
+ 746 0000 00000000 		.4byte	.LVL0
+ 747 0004 07000000 		.4byte	.LVL1-1
+ 748 0008 0100     		.2byte	0x1
+ 749 000a 50       		.byte	0x50
+ 750 000b 07000000 		.4byte	.LVL1-1
+ 751 000f 2C000000 		.4byte	.LFE0
+ 752 0013 0100     		.2byte	0x1
+ 753 0015 55       		.byte	0x55
+ 754 0016 00000000 		.4byte	0
+ 755 001a 00000000 		.4byte	0
+ 756              	.LLST1:
+ 757 001e 0E000000 		.4byte	.LVL2
+ 758 0022 12000000 		.4byte	.LVL3
+ 759 0026 0200     		.2byte	0x2
+ 760 0028 30       		.byte	0x30
+ 761 0029 9F       		.byte	0x9f
+ 762 002a 12000000 		.4byte	.LVL3
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 17
+
+
+ 763 002e 1A000000 		.4byte	.LVL5
+ 764 0032 0100     		.2byte	0x1
+ 765 0034 54       		.byte	0x54
+ 766 0035 1C000000 		.4byte	.LVL6
+ 767 0039 2C000000 		.4byte	.LFE0
+ 768 003d 0100     		.2byte	0x1
+ 769 003f 54       		.byte	0x54
+ 770 0040 00000000 		.4byte	0
+ 771 0044 00000000 		.4byte	0
+ 772              	.LLST2:
+ 773 0048 00000000 		.4byte	.LVL9
+ 774 004c 1F000000 		.4byte	.LVL14-1
+ 775 0050 0100     		.2byte	0x1
+ 776 0052 50       		.byte	0x50
+ 777 0053 1F000000 		.4byte	.LVL14-1
+ 778 0057 60000000 		.4byte	.LFE1
+ 779 005b 0400     		.2byte	0x4
+ 780 005d F3       		.byte	0xf3
+ 781 005e 01       		.uleb128 0x1
+ 782 005f 50       		.byte	0x50
+ 783 0060 9F       		.byte	0x9f
+ 784 0061 00000000 		.4byte	0
+ 785 0065 00000000 		.4byte	0
+ 786              	.LLST3:
+ 787 0069 00000000 		.4byte	.LVL9
+ 788 006d 1F000000 		.4byte	.LVL14-1
+ 789 0071 0100     		.2byte	0x1
+ 790 0073 51       		.byte	0x51
+ 791 0074 1F000000 		.4byte	.LVL14-1
+ 792 0078 60000000 		.4byte	.LFE1
+ 793 007c 0400     		.2byte	0x4
+ 794 007e F3       		.byte	0xf3
+ 795 007f 01       		.uleb128 0x1
+ 796 0080 51       		.byte	0x51
+ 797 0081 9F       		.byte	0x9f
+ 798 0082 00000000 		.4byte	0
+ 799 0086 00000000 		.4byte	0
+ 800              	.LLST4:
+ 801 008a 00000000 		.4byte	.LVL9
+ 802 008e 06000000 		.4byte	.LVL10
+ 803 0092 0100     		.2byte	0x1
+ 804 0094 52       		.byte	0x52
+ 805 0095 06000000 		.4byte	.LVL10
+ 806 0099 60000000 		.4byte	.LFE1
+ 807 009d 0400     		.2byte	0x4
+ 808 009f F3       		.byte	0xf3
+ 809 00a0 01       		.uleb128 0x1
+ 810 00a1 52       		.byte	0x52
+ 811 00a2 9F       		.byte	0x9f
+ 812 00a3 00000000 		.4byte	0
+ 813 00a7 00000000 		.4byte	0
+ 814              	.LLST5:
+ 815 00ab 00000000 		.4byte	.LVL9
+ 816 00af 1F000000 		.4byte	.LVL14-1
+ 817 00b3 0100     		.2byte	0x1
+ 818 00b5 53       		.byte	0x53
+ 819 00b6 1F000000 		.4byte	.LVL14-1
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 18
+
+
+ 820 00ba 60000000 		.4byte	.LFE1
+ 821 00be 0400     		.2byte	0x4
+ 822 00c0 F3       		.byte	0xf3
+ 823 00c1 01       		.uleb128 0x1
+ 824 00c2 53       		.byte	0x53
+ 825 00c3 9F       		.byte	0x9f
+ 826 00c4 00000000 		.4byte	0
+ 827 00c8 00000000 		.4byte	0
+ 828              	.LLST6:
+ 829 00cc 20000000 		.4byte	.LVL14
+ 830 00d0 24000000 		.4byte	.LVL15
+ 831 00d4 0200     		.2byte	0x2
+ 832 00d6 30       		.byte	0x30
+ 833 00d7 9F       		.byte	0x9f
+ 834 00d8 24000000 		.4byte	.LVL15
+ 835 00dc 2C000000 		.4byte	.LVL17
+ 836 00e0 0100     		.2byte	0x1
+ 837 00e2 54       		.byte	0x54
+ 838 00e3 2E000000 		.4byte	.LVL18
+ 839 00e7 4C000000 		.4byte	.LVL22
+ 840 00eb 0100     		.2byte	0x1
+ 841 00ed 54       		.byte	0x54
+ 842 00ee 4E000000 		.4byte	.LVL23
+ 843 00f2 5C000000 		.4byte	.LVL25
+ 844 00f6 0100     		.2byte	0x1
+ 845 00f8 54       		.byte	0x54
+ 846 00f9 00000000 		.4byte	0
+ 847 00fd 00000000 		.4byte	0
+ 848              	.LLST7:
+ 849 0101 0E000000 		.4byte	.LVL11
+ 850 0105 5C000000 		.4byte	.LVL25
+ 851 0109 0100     		.2byte	0x1
+ 852 010b 55       		.byte	0x55
+ 853 010c 00000000 		.4byte	0
+ 854 0110 00000000 		.4byte	0
+ 855              	.LLST8:
+ 856 0114 16000000 		.4byte	.LVL12
+ 857 0118 5C000000 		.4byte	.LVL25
+ 858 011c 0100     		.2byte	0x1
+ 859 011e 57       		.byte	0x57
+ 860 011f 00000000 		.4byte	0
+ 861 0123 00000000 		.4byte	0
+ 862              		.section	.debug_aranges,"",%progbits
+ 863 0000 24000000 		.4byte	0x24
+ 864 0004 0200     		.2byte	0x2
+ 865 0006 00000000 		.4byte	.Ldebug_info0
+ 866 000a 04       		.byte	0x4
+ 867 000b 00       		.byte	0
+ 868 000c 0000     		.2byte	0
+ 869 000e 0000     		.2byte	0
+ 870 0010 00000000 		.4byte	.LFB0
+ 871 0014 2C000000 		.4byte	.LFE0-.LFB0
+ 872 0018 00000000 		.4byte	.LFB1
+ 873 001c 60000000 		.4byte	.LFE1-.LFB1
+ 874 0020 00000000 		.4byte	0
+ 875 0024 00000000 		.4byte	0
+ 876              		.section	.debug_ranges,"",%progbits
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 19
+
+
+ 877              	.Ldebug_ranges0:
+ 878 0000 00000000 		.4byte	.LFB0
+ 879 0004 2C000000 		.4byte	.LFE0
+ 880 0008 00000000 		.4byte	.LFB1
+ 881 000c 60000000 		.4byte	.LFE1
+ 882 0010 00000000 		.4byte	0
+ 883 0014 00000000 		.4byte	0
+ 884              		.section	.debug_line,"",%progbits
+ 885              	.Ldebug_line0:
+ 886 0000 B8000000 		.section	.debug_str,"MS",%progbits,1
+ 886      02005200 
+ 886      00000201 
+ 886      FB0E0D00 
+ 886      01010101 
+ 887              	.LASF18:
+ 888 0000 696E6465 		.ascii	"indexU8\000"
+ 888      78553800 
+ 889              	.LASF13:
+ 890 0008 4C43445F 		.ascii	"LCD_DrawHorizontalBG\000"
+ 890      44726177 
+ 890      486F7269 
+ 890      7A6F6E74 
+ 890      616C4247 
+ 891              	.LASF15:
+ 892 001d 636F6C75 		.ascii	"column\000"
+ 892      6D6E00
+ 893              	.LASF24:
+ 894 0024 4C43445F 		.ascii	"LCD_WriteControl\000"
+ 894      57726974 
+ 894      65436F6E 
+ 894      74726F6C 
+ 894      00
+ 895              	.LASF2:
+ 896 0035 73686F72 		.ascii	"short int\000"
+ 896      7420696E 
+ 896      7400
+ 897              	.LASF22:
+ 898 003f 73697A65 		.ascii	"sizetype\000"
+ 898      74797065 
+ 898      00
+ 899              	.LASF17:
+ 900 0048 76616C75 		.ascii	"value\000"
+ 900      6500
+ 901              	.LASF30:
+ 902 004e 75696E74 		.ascii	"uint8\000"
+ 902      3800
+ 903              	.LASF9:
+ 904 0054 666C6F61 		.ascii	"float\000"
+ 904      7400
+ 905              	.LASF6:
+ 906 005a 6C6F6E67 		.ascii	"long long int\000"
+ 906      206C6F6E 
+ 906      6720696E 
+ 906      7400
+ 907              	.LASF4:
+ 908 0068 6C6F6E67 		.ascii	"long int\000"
+ 908      20696E74 
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 20
+
+
+ 908      00
+ 909              	.LASF14:
+ 910 0071 63757374 		.ascii	"customData\000"
+ 910      6F6D4461 
+ 910      746100
+ 911              	.LASF12:
+ 912 007c 4C43445F 		.ascii	"LCD_LoadCustomFonts\000"
+ 912      4C6F6164 
+ 912      43757374 
+ 912      6F6D466F 
+ 912      6E747300 
+ 913              	.LASF20:
+ 914 0090 66756C6C 		.ascii	"fullChars\000"
+ 914      43686172 
+ 914      7300
+ 915              	.LASF1:
+ 916 009a 756E7369 		.ascii	"unsigned char\000"
+ 916      676E6564 
+ 916      20636861 
+ 916      7200
+ 917              	.LASF21:
+ 918 00a8 72656D61 		.ascii	"remainingPixels\000"
+ 918      696E696E 
+ 918      67506978 
+ 918      656C7300 
+ 919              	.LASF0:
+ 920 00b8 7369676E 		.ascii	"signed char\000"
+ 920      65642063 
+ 920      68617200 
+ 921              	.LASF7:
+ 922 00c4 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 922      206C6F6E 
+ 922      6720756E 
+ 922      7369676E 
+ 922      65642069 
+ 923              	.LASF8:
+ 924 00db 756E7369 		.ascii	"unsigned int\000"
+ 924      676E6564 
+ 924      20696E74 
+ 924      00
+ 925              	.LASF16:
+ 926 00e8 6D617843 		.ascii	"maxCharacters\000"
+ 926      68617261 
+ 926      63746572 
+ 926      7300
+ 927              	.LASF3:
+ 928 00f6 73686F72 		.ascii	"short unsigned int\000"
+ 928      7420756E 
+ 928      7369676E 
+ 928      65642069 
+ 928      6E7400
+ 929              	.LASF11:
+ 930 0109 63686172 		.ascii	"char\000"
+ 930      00
+ 931              	.LASF31:
+ 932 010e 4C43445F 		.ascii	"LCD_customFonts\000"
+ 932      63757374 
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 21
+
+
+ 932      6F6D466F 
+ 932      6E747300 
+ 933              	.LASF23:
+ 934 011e 4C43445F 		.ascii	"LCD_IsReady\000"
+ 934      49735265 
+ 934      61647900 
+ 935              	.LASF5:
+ 936 012a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 936      20756E73 
+ 936      69676E65 
+ 936      6420696E 
+ 936      7400
+ 937              	.LASF28:
+ 938 013c 47656E65 		.ascii	"Generated_Source\\PSoC5\\LCD_BarGraph.c\000"
+ 938      72617465 
+ 938      645F536F 
+ 938      75726365 
+ 938      5C50536F 
+ 939              	.LASF29:
+ 940 0162 433A5C55 		.ascii	"C:\\Users\\acer\\Documents\\Embebidos\\Practica 3\\"
+ 940      73657273 
+ 940      5C616365 
+ 940      725C446F 
+ 940      63756D65 
+ 941 018f 70726163 		.ascii	"practica tres Foco\\Foco leds.cydsn\000"
+ 941      74696361 
+ 941      20747265 
+ 941      7320466F 
+ 941      636F5C46 
+ 942              	.LASF10:
+ 943 01b2 646F7562 		.ascii	"double\000"
+ 943      6C6500
+ 944              	.LASF19:
+ 945 01b9 636F756E 		.ascii	"count8\000"
+ 945      743800
+ 946              	.LASF26:
+ 947 01c0 4C43445F 		.ascii	"LCD_Position\000"
+ 947      506F7369 
+ 947      74696F6E 
+ 947      00
+ 948              	.LASF27:
+ 949 01cd 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 949      43313120 
+ 949      352E342E 
+ 949      31203230 
+ 949      31363036 
+ 950 0200 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 950      20726576 
+ 950      6973696F 
+ 950      6E203233 
+ 950      37373135 
+ 951 0233 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 951      66756E63 
+ 951      74696F6E 
+ 951      2D736563 
+ 951      74696F6E 
+ 952              	.LASF25:
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccIbEFS8.s 			page 22
+
+
+ 953 025b 4C43445F 		.ascii	"LCD_WriteData\000"
+ 953      57726974 
+ 953      65446174 
+ 953      6100
+ 954              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

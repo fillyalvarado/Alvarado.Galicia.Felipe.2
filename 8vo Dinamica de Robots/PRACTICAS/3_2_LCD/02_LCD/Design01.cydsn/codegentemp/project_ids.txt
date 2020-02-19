@@ -1,0 +1,7 @@
+C:\Users\acer\Documents\Embebidos\Practica 2\02_LCD\Design01.cydsn\Design01.cyprj|350747ab-ce04-4043-8f49-b6b6d48c1b88
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|e33b2cbe-441d-43b4-a169-a2a8982828f5
+C:\Users\acer\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|3e40a9b6-f324-4457-88aa-c9db95f3cf74
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|0a148bd2-ff56-4cf2-adc2-b526bbb74bc8
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|c55b766b-3af2-4353-872e-24521f828d44
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|2e006bb3-266a-4096-8193-501e4bf760a7
+C:\Users\acer\Documents\Embebidos\Practica 2\02_LCD\Interrupciones.cydsn\Interrupciones.cyprj|2cf79f59-b1a2-4438-9338-1171d7410859

@@ -1,0 +1,5155 @@
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.getValue,"ax",%progbits
+  20              		.align	2
+  21              		.global	getValue
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	getValue, %function
+  25              	getValue:
+  26              	.LFB63:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ================================================================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ================================================================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** 
+  14:main.c        **** 
+  15:main.c        **** int getValue(int sw1, int sw2, int sw3, int sw4, int sw5){
+  28              		.loc 1 15 0
+  29              		.cfi_startproc
+  30              		@ args = 4, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33              	.LVL0:
+  34 0000 30B4     		push	{r4, r5}
+  35              		.cfi_def_cfa_offset 8
+  36              		.cfi_offset 4, -8
+  37              		.cfi_offset 5, -4
+  38 0002 029D     		ldr	r5, [sp, #8]
+  16:main.c        ****     if(sw1==0&&sw2==0&&sw3==0&&sw4==0&&sw5==0) return 0;
+  39              		.loc 1 16 0
+  40 0004 0446     		mov	r4, r0
+  41 0006 28B9     		cbnz	r0, .L2
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 2
+
+
+  42              		.loc 1 16 0 is_stmt 0 discriminator 1
+  43 0008 21B9     		cbnz	r1, .L2
+  44              		.loc 1 16 0 discriminator 2
+  45 000a 1AB9     		cbnz	r2, .L2
+  46              		.loc 1 16 0 discriminator 3
+  47 000c 13B9     		cbnz	r3, .L2
+  48              		.loc 1 16 0 discriminator 4
+  49 000e 002D     		cmp	r5, #0
+  50 0010 00F01281 		beq	.L34
+  51              	.L2:
+  17:main.c        ****     if(sw1==1&&sw2==0&&sw3==0&&sw4==0&&sw5==0) return 1;
+  52              		.loc 1 17 0 is_stmt 1
+  53 0014 012C     		cmp	r4, #1
+  54 0016 05D1     		bne	.L4
+  55              		.loc 1 17 0 is_stmt 0 discriminator 1
+  56 0018 21B9     		cbnz	r1, .L4
+  57              		.loc 1 17 0 discriminator 2
+  58 001a 1AB9     		cbnz	r2, .L4
+  59              		.loc 1 17 0 discriminator 3
+  60 001c 13B9     		cbnz	r3, .L4
+  61              		.loc 1 17 0 discriminator 4
+  62 001e 002D     		cmp	r5, #0
+  63 0020 00F00C81 		beq	.L35
+  64              	.L4:
+  18:main.c        ****     if(sw1==0&&sw2==1&&sw3==0&&sw4==0&&sw5==0) return 2;
+  65              		.loc 1 18 0 is_stmt 1
+  66 0024 34B9     		cbnz	r4, .L5
+  67              		.loc 1 18 0 is_stmt 0 discriminator 1
+  68 0026 0129     		cmp	r1, #1
+  69 0028 04D1     		bne	.L5
+  70              		.loc 1 18 0 discriminator 2
+  71 002a 1AB9     		cbnz	r2, .L5
+  72              		.loc 1 18 0 discriminator 3
+  73 002c 13B9     		cbnz	r3, .L5
+  74              		.loc 1 18 0 discriminator 4
+  75 002e 002D     		cmp	r5, #0
+  76 0030 00F00681 		beq	.L36
+  77              	.L5:
+  19:main.c        ****     if(sw1==1&&sw2==1&&sw3==0&&sw4==0&&sw5==0) return 3;
+  78              		.loc 1 19 0 is_stmt 1
+  79 0034 012C     		cmp	r4, #1
+  80 0036 06D1     		bne	.L6
+  81              		.loc 1 19 0 is_stmt 0 discriminator 1
+  82 0038 0129     		cmp	r1, #1
+  83 003a 04D1     		bne	.L6
+  84              		.loc 1 19 0 discriminator 2
+  85 003c 1AB9     		cbnz	r2, .L6
+  86              		.loc 1 19 0 discriminator 3
+  87 003e 13B9     		cbnz	r3, .L6
+  88              		.loc 1 19 0 discriminator 4
+  89 0040 002D     		cmp	r5, #0
+  90 0042 00F0FF80 		beq	.L37
+  91              	.L6:
+  20:main.c        ****     if(sw1==0&&sw2==0&&sw3==1&&sw4==0&&sw5==0) return 4;
+  92              		.loc 1 20 0 is_stmt 1
+  93 0046 34B9     		cbnz	r4, .L7
+  94              		.loc 1 20 0 is_stmt 0 discriminator 1
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 3
+
+
+  95 0048 29B9     		cbnz	r1, .L7
+  96              		.loc 1 20 0 discriminator 2
+  97 004a 012A     		cmp	r2, #1
+  98 004c 03D1     		bne	.L7
+  99              		.loc 1 20 0 discriminator 3
+ 100 004e 13B9     		cbnz	r3, .L7
+ 101              		.loc 1 20 0 discriminator 4
+ 102 0050 002D     		cmp	r5, #0
+ 103 0052 00F0F980 		beq	.L38
+ 104              	.L7:
+  21:main.c        ****     if(sw1==1&&sw2==0&&sw3==1&&sw4==0&&sw5==0) return 5;
+ 105              		.loc 1 21 0 is_stmt 1
+ 106 0056 012C     		cmp	r4, #1
+ 107 0058 06D1     		bne	.L8
+ 108              		.loc 1 21 0 is_stmt 0 discriminator 1
+ 109 005a 29B9     		cbnz	r1, .L8
+ 110              		.loc 1 21 0 discriminator 2
+ 111 005c 012A     		cmp	r2, #1
+ 112 005e 03D1     		bne	.L8
+ 113              		.loc 1 21 0 discriminator 3
+ 114 0060 13B9     		cbnz	r3, .L8
+ 115              		.loc 1 21 0 discriminator 4
+ 116 0062 002D     		cmp	r5, #0
+ 117 0064 00F0F280 		beq	.L39
+ 118              	.L8:
+  22:main.c        ****     if(sw1==0&&sw2==1&&sw3==1&&sw4==0&&sw5==0) return 6;
+ 119              		.loc 1 22 0 is_stmt 1
+ 120 0068 3CB9     		cbnz	r4, .L9
+ 121              		.loc 1 22 0 is_stmt 0 discriminator 1
+ 122 006a 0129     		cmp	r1, #1
+ 123 006c 05D1     		bne	.L9
+ 124              		.loc 1 22 0 discriminator 2
+ 125 006e 012A     		cmp	r2, #1
+ 126 0070 03D1     		bne	.L9
+ 127              		.loc 1 22 0 discriminator 3
+ 128 0072 13B9     		cbnz	r3, .L9
+ 129              		.loc 1 22 0 discriminator 4
+ 130 0074 002D     		cmp	r5, #0
+ 131 0076 00F0EB80 		beq	.L40
+ 132              	.L9:
+  23:main.c        ****     if(sw1==1&&sw2==1&&sw3==1&&sw4==0&&sw5==0) return 7;
+ 133              		.loc 1 23 0 is_stmt 1
+ 134 007a 012C     		cmp	r4, #1
+ 135 007c 07D1     		bne	.L10
+ 136              		.loc 1 23 0 is_stmt 0 discriminator 1
+ 137 007e 0129     		cmp	r1, #1
+ 138 0080 05D1     		bne	.L10
+ 139              		.loc 1 23 0 discriminator 2
+ 140 0082 012A     		cmp	r2, #1
+ 141 0084 03D1     		bne	.L10
+ 142              		.loc 1 23 0 discriminator 3
+ 143 0086 13B9     		cbnz	r3, .L10
+ 144              		.loc 1 23 0 discriminator 4
+ 145 0088 002D     		cmp	r5, #0
+ 146 008a 00F0E380 		beq	.L41
+ 147              	.L10:
+  24:main.c        ****     if(sw1==0&&sw2==0&&sw3==0&&sw4==1&&sw5==0) return 8;
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 4
+
+
+ 148              		.loc 1 24 0 is_stmt 1
+ 149 008e 34B9     		cbnz	r4, .L11
+ 150              		.loc 1 24 0 is_stmt 0 discriminator 1
+ 151 0090 29B9     		cbnz	r1, .L11
+ 152              		.loc 1 24 0 discriminator 2
+ 153 0092 22B9     		cbnz	r2, .L11
+ 154              		.loc 1 24 0 discriminator 3
+ 155 0094 012B     		cmp	r3, #1
+ 156 0096 02D1     		bne	.L11
+ 157              		.loc 1 24 0 discriminator 4
+ 158 0098 002D     		cmp	r5, #0
+ 159 009a 00F0DD80 		beq	.L42
+ 160              	.L11:
+  25:main.c        ****     if(sw1==1&&sw2==0&&sw3==0&&sw4==1&&sw5==0) return 9;
+ 161              		.loc 1 25 0 is_stmt 1
+ 162 009e 012C     		cmp	r4, #1
+ 163 00a0 06D1     		bne	.L12
+ 164              		.loc 1 25 0 is_stmt 0 discriminator 1
+ 165 00a2 29B9     		cbnz	r1, .L12
+ 166              		.loc 1 25 0 discriminator 2
+ 167 00a4 22B9     		cbnz	r2, .L12
+ 168              		.loc 1 25 0 discriminator 3
+ 169 00a6 012B     		cmp	r3, #1
+ 170 00a8 02D1     		bne	.L12
+ 171              		.loc 1 25 0 discriminator 4
+ 172 00aa 002D     		cmp	r5, #0
+ 173 00ac 00F0D680 		beq	.L43
+ 174              	.L12:
+  26:main.c        ****     if(sw1==0&&sw2==1&&sw3==0&&sw4==1&&sw5==0) return 10;
+ 175              		.loc 1 26 0 is_stmt 1
+ 176 00b0 3CB9     		cbnz	r4, .L13
+ 177              		.loc 1 26 0 is_stmt 0 discriminator 1
+ 178 00b2 0129     		cmp	r1, #1
+ 179 00b4 05D1     		bne	.L13
+ 180              		.loc 1 26 0 discriminator 2
+ 181 00b6 22B9     		cbnz	r2, .L13
+ 182              		.loc 1 26 0 discriminator 3
+ 183 00b8 012B     		cmp	r3, #1
+ 184 00ba 02D1     		bne	.L13
+ 185              		.loc 1 26 0 discriminator 4
+ 186 00bc 002D     		cmp	r5, #0
+ 187 00be 00F0CF80 		beq	.L44
+ 188              	.L13:
+  27:main.c        ****     if(sw1==1&&sw2==1&&sw3==0&&sw4==1&&sw5==0) return 11;
+ 189              		.loc 1 27 0 is_stmt 1
+ 190 00c2 012C     		cmp	r4, #1
+ 191 00c4 07D1     		bne	.L14
+ 192              		.loc 1 27 0 is_stmt 0 discriminator 1
+ 193 00c6 0129     		cmp	r1, #1
+ 194 00c8 05D1     		bne	.L14
+ 195              		.loc 1 27 0 discriminator 2
+ 196 00ca 22B9     		cbnz	r2, .L14
+ 197              		.loc 1 27 0 discriminator 3
+ 198 00cc 012B     		cmp	r3, #1
+ 199 00ce 02D1     		bne	.L14
+ 200              		.loc 1 27 0 discriminator 4
+ 201 00d0 002D     		cmp	r5, #0
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 5
+
+
+ 202 00d2 00F0C780 		beq	.L45
+ 203              	.L14:
+  28:main.c        ****     if(sw1==0&&sw2==0&&sw3==1&&sw4==1&&sw5==0) return 12;
+ 204              		.loc 1 28 0 is_stmt 1
+ 205 00d6 3CB9     		cbnz	r4, .L15
+ 206              		.loc 1 28 0 is_stmt 0 discriminator 1
+ 207 00d8 31B9     		cbnz	r1, .L15
+ 208              		.loc 1 28 0 discriminator 2
+ 209 00da 012A     		cmp	r2, #1
+ 210 00dc 04D1     		bne	.L15
+ 211              		.loc 1 28 0 discriminator 3
+ 212 00de 012B     		cmp	r3, #1
+ 213 00e0 02D1     		bne	.L15
+ 214              		.loc 1 28 0 discriminator 4
+ 215 00e2 002D     		cmp	r5, #0
+ 216 00e4 00F0C080 		beq	.L46
+ 217              	.L15:
+  29:main.c        ****     if(sw1==1&&sw2==0&&sw3==1&&sw4==1&&sw5==0) return 13;
+ 218              		.loc 1 29 0 is_stmt 1
+ 219 00e8 012C     		cmp	r4, #1
+ 220 00ea 07D1     		bne	.L16
+ 221              		.loc 1 29 0 is_stmt 0 discriminator 1
+ 222 00ec 31B9     		cbnz	r1, .L16
+ 223              		.loc 1 29 0 discriminator 2
+ 224 00ee 012A     		cmp	r2, #1
+ 225 00f0 04D1     		bne	.L16
+ 226              		.loc 1 29 0 discriminator 3
+ 227 00f2 012B     		cmp	r3, #1
+ 228 00f4 02D1     		bne	.L16
+ 229              		.loc 1 29 0 discriminator 4
+ 230 00f6 002D     		cmp	r5, #0
+ 231 00f8 00F0B880 		beq	.L47
+ 232              	.L16:
+  30:main.c        ****     if(sw1==0&&sw2==1&&sw3==1&&sw4==1&&sw5==0) return 14;
+ 233              		.loc 1 30 0 is_stmt 1
+ 234 00fc 44B9     		cbnz	r4, .L17
+ 235              		.loc 1 30 0 is_stmt 0 discriminator 1
+ 236 00fe 0129     		cmp	r1, #1
+ 237 0100 06D1     		bne	.L17
+ 238              		.loc 1 30 0 discriminator 2
+ 239 0102 012A     		cmp	r2, #1
+ 240 0104 04D1     		bne	.L17
+ 241              		.loc 1 30 0 discriminator 3
+ 242 0106 012B     		cmp	r3, #1
+ 243 0108 02D1     		bne	.L17
+ 244              		.loc 1 30 0 discriminator 4
+ 245 010a 002D     		cmp	r5, #0
+ 246 010c 00F0B080 		beq	.L48
+ 247              	.L17:
+  31:main.c        ****     if(sw1==1&&sw2==1&&sw3==1&&sw4==1&&sw5==0) return 15;
+ 248              		.loc 1 31 0 is_stmt 1
+ 249 0110 012C     		cmp	r4, #1
+ 250 0112 08D1     		bne	.L18
+ 251              		.loc 1 31 0 is_stmt 0 discriminator 1
+ 252 0114 0129     		cmp	r1, #1
+ 253 0116 06D1     		bne	.L18
+ 254              		.loc 1 31 0 discriminator 2
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 6
+
+
+ 255 0118 012A     		cmp	r2, #1
+ 256 011a 04D1     		bne	.L18
+ 257              		.loc 1 31 0 discriminator 3
+ 258 011c 012B     		cmp	r3, #1
+ 259 011e 02D1     		bne	.L18
+ 260              		.loc 1 31 0 discriminator 4
+ 261 0120 002D     		cmp	r5, #0
+ 262 0122 00F0A780 		beq	.L49
+ 263              	.L18:
+  32:main.c        ****     if(sw1==0&&sw2==0&&sw3==0&&sw4==0&&sw5==1) return 16;
+ 264              		.loc 1 32 0 is_stmt 1
+ 265 0126 2CB9     		cbnz	r4, .L19
+ 266              		.loc 1 32 0 is_stmt 0 discriminator 1
+ 267 0128 21B9     		cbnz	r1, .L19
+ 268              		.loc 1 32 0 discriminator 2
+ 269 012a 1AB9     		cbnz	r2, .L19
+ 270              		.loc 1 32 0 discriminator 3
+ 271 012c 13B9     		cbnz	r3, .L19
+ 272              		.loc 1 32 0 discriminator 4
+ 273 012e 012D     		cmp	r5, #1
+ 274 0130 00F0A280 		beq	.L50
+ 275              	.L19:
+  33:main.c        ****     if(sw1==1&&sw2==0&&sw3==0&&sw4==0&&sw5==1) return 17;
+ 276              		.loc 1 33 0 is_stmt 1
+ 277 0134 012C     		cmp	r4, #1
+ 278 0136 05D1     		bne	.L20
+ 279              		.loc 1 33 0 is_stmt 0 discriminator 1
+ 280 0138 21B9     		cbnz	r1, .L20
+ 281              		.loc 1 33 0 discriminator 2
+ 282 013a 1AB9     		cbnz	r2, .L20
+ 283              		.loc 1 33 0 discriminator 3
+ 284 013c 13B9     		cbnz	r3, .L20
+ 285              		.loc 1 33 0 discriminator 4
+ 286 013e 012D     		cmp	r5, #1
+ 287 0140 00F09C80 		beq	.L51
+ 288              	.L20:
+  34:main.c        ****     if(sw1==0&&sw2==1&&sw3==0&&sw4==0&&sw5==1) return 18;
+ 289              		.loc 1 34 0 is_stmt 1
+ 290 0144 34B9     		cbnz	r4, .L21
+ 291              		.loc 1 34 0 is_stmt 0 discriminator 1
+ 292 0146 0129     		cmp	r1, #1
+ 293 0148 04D1     		bne	.L21
+ 294              		.loc 1 34 0 discriminator 2
+ 295 014a 1AB9     		cbnz	r2, .L21
+ 296              		.loc 1 34 0 discriminator 3
+ 297 014c 13B9     		cbnz	r3, .L21
+ 298              		.loc 1 34 0 discriminator 4
+ 299 014e 012D     		cmp	r5, #1
+ 300 0150 00F09680 		beq	.L52
+ 301              	.L21:
+  35:main.c        ****     if(sw1==1&&sw2==1&&sw3==0&&sw4==0&&sw5==1) return 19;
+ 302              		.loc 1 35 0 is_stmt 1
+ 303 0154 012C     		cmp	r4, #1
+ 304 0156 06D1     		bne	.L22
+ 305              		.loc 1 35 0 is_stmt 0 discriminator 1
+ 306 0158 0129     		cmp	r1, #1
+ 307 015a 04D1     		bne	.L22
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 7
+
+
+ 308              		.loc 1 35 0 discriminator 2
+ 309 015c 1AB9     		cbnz	r2, .L22
+ 310              		.loc 1 35 0 discriminator 3
+ 311 015e 13B9     		cbnz	r3, .L22
+ 312              		.loc 1 35 0 discriminator 4
+ 313 0160 012D     		cmp	r5, #1
+ 314 0162 00F08F80 		beq	.L53
+ 315              	.L22:
+  36:main.c        ****     if(sw1==0&&sw2==0&&sw3==1&&sw4==0&&sw5==1) return 20;
+ 316              		.loc 1 36 0 is_stmt 1
+ 317 0166 34B9     		cbnz	r4, .L23
+ 318              		.loc 1 36 0 is_stmt 0 discriminator 1
+ 319 0168 29B9     		cbnz	r1, .L23
+ 320              		.loc 1 36 0 discriminator 2
+ 321 016a 012A     		cmp	r2, #1
+ 322 016c 03D1     		bne	.L23
+ 323              		.loc 1 36 0 discriminator 3
+ 324 016e 13B9     		cbnz	r3, .L23
+ 325              		.loc 1 36 0 discriminator 4
+ 326 0170 012D     		cmp	r5, #1
+ 327 0172 00F08980 		beq	.L54
+ 328              	.L23:
+  37:main.c        ****     if(sw1==1&&sw2==0&&sw3==1&&sw4==0&&sw5==1) return 21;
+ 329              		.loc 1 37 0 is_stmt 1
+ 330 0176 012C     		cmp	r4, #1
+ 331 0178 06D1     		bne	.L24
+ 332              		.loc 1 37 0 is_stmt 0 discriminator 1
+ 333 017a 29B9     		cbnz	r1, .L24
+ 334              		.loc 1 37 0 discriminator 2
+ 335 017c 012A     		cmp	r2, #1
+ 336 017e 03D1     		bne	.L24
+ 337              		.loc 1 37 0 discriminator 3
+ 338 0180 13B9     		cbnz	r3, .L24
+ 339              		.loc 1 37 0 discriminator 4
+ 340 0182 012D     		cmp	r5, #1
+ 341 0184 00F08280 		beq	.L55
+ 342              	.L24:
+  38:main.c        ****     if(sw1==0&&sw2==1&&sw3==1&&sw4==0&&sw5==1) return 22;
+ 343              		.loc 1 38 0 is_stmt 1
+ 344 0188 34B9     		cbnz	r4, .L25
+ 345              		.loc 1 38 0 is_stmt 0 discriminator 1
+ 346 018a 0129     		cmp	r1, #1
+ 347 018c 04D1     		bne	.L25
+ 348              		.loc 1 38 0 discriminator 2
+ 349 018e 012A     		cmp	r2, #1
+ 350 0190 02D1     		bne	.L25
+ 351              		.loc 1 38 0 discriminator 3
+ 352 0192 0BB9     		cbnz	r3, .L25
+ 353              		.loc 1 38 0 discriminator 4
+ 354 0194 012D     		cmp	r5, #1
+ 355 0196 7BD0     		beq	.L56
+ 356              	.L25:
+  39:main.c        ****     if(sw1==1&&sw2==1&&sw3==1&&sw4==0&&sw5==1) return 23;
+ 357              		.loc 1 39 0 is_stmt 1
+ 358 0198 012C     		cmp	r4, #1
+ 359 019a 06D1     		bne	.L26
+ 360              		.loc 1 39 0 is_stmt 0 discriminator 1
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 8
+
+
+ 361 019c 0129     		cmp	r1, #1
+ 362 019e 04D1     		bne	.L26
+ 363              		.loc 1 39 0 discriminator 2
+ 364 01a0 012A     		cmp	r2, #1
+ 365 01a2 02D1     		bne	.L26
+ 366              		.loc 1 39 0 discriminator 3
+ 367 01a4 0BB9     		cbnz	r3, .L26
+ 368              		.loc 1 39 0 discriminator 4
+ 369 01a6 012D     		cmp	r5, #1
+ 370 01a8 74D0     		beq	.L57
+ 371              	.L26:
+  40:main.c        ****     if(sw1==0&&sw2==0&&sw3==0&&sw4==1&&sw5==1) return 24;
+ 372              		.loc 1 40 0 is_stmt 1
+ 373 01aa 2CB9     		cbnz	r4, .L27
+ 374              		.loc 1 40 0 is_stmt 0 discriminator 1
+ 375 01ac 21B9     		cbnz	r1, .L27
+ 376              		.loc 1 40 0 discriminator 2
+ 377 01ae 1AB9     		cbnz	r2, .L27
+ 378              		.loc 1 40 0 discriminator 3
+ 379 01b0 012B     		cmp	r3, #1
+ 380 01b2 01D1     		bne	.L27
+ 381              		.loc 1 40 0 discriminator 4
+ 382 01b4 012D     		cmp	r5, #1
+ 383 01b6 6FD0     		beq	.L58
+ 384              	.L27:
+  41:main.c        ****     if(sw1==1&&sw2==0&&sw3==0&&sw4==1&&sw5==1) return 25;
+ 385              		.loc 1 41 0 is_stmt 1
+ 386 01b8 012C     		cmp	r4, #1
+ 387 01ba 05D1     		bne	.L28
+ 388              		.loc 1 41 0 is_stmt 0 discriminator 1
+ 389 01bc 21B9     		cbnz	r1, .L28
+ 390              		.loc 1 41 0 discriminator 2
+ 391 01be 1AB9     		cbnz	r2, .L28
+ 392              		.loc 1 41 0 discriminator 3
+ 393 01c0 012B     		cmp	r3, #1
+ 394 01c2 01D1     		bne	.L28
+ 395              		.loc 1 41 0 discriminator 4
+ 396 01c4 012D     		cmp	r5, #1
+ 397 01c6 69D0     		beq	.L59
+ 398              	.L28:
+  42:main.c        ****     if(sw1==0&&sw2==1&&sw3==0&&sw4==1&&sw5==1) return 26;
+ 399              		.loc 1 42 0 is_stmt 1
+ 400 01c8 34B9     		cbnz	r4, .L29
+ 401              		.loc 1 42 0 is_stmt 0 discriminator 1
+ 402 01ca 0129     		cmp	r1, #1
+ 403 01cc 04D1     		bne	.L29
+ 404              		.loc 1 42 0 discriminator 2
+ 405 01ce 1AB9     		cbnz	r2, .L29
+ 406              		.loc 1 42 0 discriminator 3
+ 407 01d0 012B     		cmp	r3, #1
+ 408 01d2 01D1     		bne	.L29
+ 409              		.loc 1 42 0 discriminator 4
+ 410 01d4 012D     		cmp	r5, #1
+ 411 01d6 63D0     		beq	.L60
+ 412              	.L29:
+  43:main.c        ****     if(sw1==1&&sw2==1&&sw3==0&&sw4==1&&sw5==1) return 27;
+ 413              		.loc 1 43 0 is_stmt 1
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 9
+
+
+ 414 01d8 012C     		cmp	r4, #1
+ 415 01da 06D1     		bne	.L30
+ 416              		.loc 1 43 0 is_stmt 0 discriminator 1
+ 417 01dc 0129     		cmp	r1, #1
+ 418 01de 04D1     		bne	.L30
+ 419              		.loc 1 43 0 discriminator 2
+ 420 01e0 1AB9     		cbnz	r2, .L30
+ 421              		.loc 1 43 0 discriminator 3
+ 422 01e2 012B     		cmp	r3, #1
+ 423 01e4 01D1     		bne	.L30
+ 424              		.loc 1 43 0 discriminator 4
+ 425 01e6 012D     		cmp	r5, #1
+ 426 01e8 5CD0     		beq	.L61
+ 427              	.L30:
+  44:main.c        ****     if(sw1==0&&sw2==0&&sw3==1&&sw4==1&&sw5==1) return 28;
+ 428              		.loc 1 44 0 is_stmt 1
+ 429 01ea 34B9     		cbnz	r4, .L31
+ 430              		.loc 1 44 0 is_stmt 0 discriminator 1
+ 431 01ec 29B9     		cbnz	r1, .L31
+ 432              		.loc 1 44 0 discriminator 2
+ 433 01ee 012A     		cmp	r2, #1
+ 434 01f0 03D1     		bne	.L31
+ 435              		.loc 1 44 0 discriminator 3
+ 436 01f2 012B     		cmp	r3, #1
+ 437 01f4 01D1     		bne	.L31
+ 438              		.loc 1 44 0 discriminator 4
+ 439 01f6 012D     		cmp	r5, #1
+ 440 01f8 56D0     		beq	.L62
+ 441              	.L31:
+  45:main.c        ****     if(sw1==1&&sw2==0&&sw3==1&&sw4==1&&sw5==1) return 29;
+ 442              		.loc 1 45 0 is_stmt 1
+ 443 01fa 012C     		cmp	r4, #1
+ 444 01fc 06D1     		bne	.L32
+ 445              		.loc 1 45 0 is_stmt 0 discriminator 1
+ 446 01fe 29B9     		cbnz	r1, .L32
+ 447              		.loc 1 45 0 discriminator 2
+ 448 0200 012A     		cmp	r2, #1
+ 449 0202 03D1     		bne	.L32
+ 450              		.loc 1 45 0 discriminator 3
+ 451 0204 012B     		cmp	r3, #1
+ 452 0206 01D1     		bne	.L32
+ 453              		.loc 1 45 0 discriminator 4
+ 454 0208 012D     		cmp	r5, #1
+ 455 020a 4FD0     		beq	.L63
+ 456              	.L32:
+  46:main.c        ****     if(sw1==0&&sw2==1&&sw3==1&&sw4==1&&sw5==1) return 30;
+ 457              		.loc 1 46 0 is_stmt 1
+ 458 020c 3CB9     		cbnz	r4, .L33
+ 459              		.loc 1 46 0 is_stmt 0 discriminator 1
+ 460 020e 0129     		cmp	r1, #1
+ 461 0210 05D1     		bne	.L33
+ 462              		.loc 1 46 0 discriminator 2
+ 463 0212 012A     		cmp	r2, #1
+ 464 0214 03D1     		bne	.L33
+ 465              		.loc 1 46 0 discriminator 3
+ 466 0216 012B     		cmp	r3, #1
+ 467 0218 01D1     		bne	.L33
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 10
+
+
+ 468              		.loc 1 46 0 discriminator 4
+ 469 021a 012D     		cmp	r5, #1
+ 470 021c 48D0     		beq	.L64
+ 471              	.L33:
+  47:main.c        ****     if(sw1==1&&sw2==1&&sw3==1&&sw4==1&&sw5==1) return 31;
+ 472              		.loc 1 47 0 is_stmt 1
+ 473 021e 012C     		cmp	r4, #1
+ 474 0220 48D1     		bne	.L65
+ 475              		.loc 1 47 0 is_stmt 0 discriminator 1
+ 476 0222 0129     		cmp	r1, #1
+ 477 0224 49D1     		bne	.L66
+ 478              		.loc 1 47 0 discriminator 2
+ 479 0226 012A     		cmp	r2, #1
+ 480 0228 4AD1     		bne	.L67
+ 481              		.loc 1 47 0 discriminator 3
+ 482 022a 012B     		cmp	r3, #1
+ 483 022c 4BD1     		bne	.L68
+ 484              		.loc 1 47 0 discriminator 4
+ 485 022e 012D     		cmp	r5, #1
+ 486 0230 4CD0     		beq	.L69
+  48:main.c        ****     return -1;
+ 487              		.loc 1 48 0 is_stmt 1
+ 488 0232 4FF0FF30 		mov	r0, #-1
+ 489              	.LVL1:
+ 490 0236 4AE0     		b	.L3
+ 491              	.LVL2:
+ 492              	.L34:
+  16:main.c        ****     if(sw1==1&&sw2==0&&sw3==0&&sw4==0&&sw5==0) return 1;
+ 493              		.loc 1 16 0
+ 494 0238 0020     		movs	r0, #0
+ 495              	.LVL3:
+ 496 023a 48E0     		b	.L3
+ 497              	.LVL4:
+ 498              	.L35:
+  17:main.c        ****     if(sw1==0&&sw2==1&&sw3==0&&sw4==0&&sw5==0) return 2;
+ 499              		.loc 1 17 0
+ 500 023c 0120     		movs	r0, #1
+ 501              	.LVL5:
+ 502 023e 46E0     		b	.L3
+ 503              	.LVL6:
+ 504              	.L36:
+  18:main.c        ****     if(sw1==1&&sw2==1&&sw3==0&&sw4==0&&sw5==0) return 3;
+ 505              		.loc 1 18 0
+ 506 0240 0220     		movs	r0, #2
+ 507              	.LVL7:
+ 508 0242 44E0     		b	.L3
+ 509              	.LVL8:
+ 510              	.L37:
+  19:main.c        ****     if(sw1==0&&sw2==0&&sw3==1&&sw4==0&&sw5==0) return 4;
+ 511              		.loc 1 19 0
+ 512 0244 0320     		movs	r0, #3
+ 513              	.LVL9:
+ 514 0246 42E0     		b	.L3
+ 515              	.LVL10:
+ 516              	.L38:
+  20:main.c        ****     if(sw1==1&&sw2==0&&sw3==1&&sw4==0&&sw5==0) return 5;
+ 517              		.loc 1 20 0
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 11
+
+
+ 518 0248 0420     		movs	r0, #4
+ 519              	.LVL11:
+ 520 024a 40E0     		b	.L3
+ 521              	.LVL12:
+ 522              	.L39:
+  21:main.c        ****     if(sw1==0&&sw2==1&&sw3==1&&sw4==0&&sw5==0) return 6;
+ 523              		.loc 1 21 0
+ 524 024c 0520     		movs	r0, #5
+ 525              	.LVL13:
+ 526 024e 3EE0     		b	.L3
+ 527              	.LVL14:
+ 528              	.L40:
+  22:main.c        ****     if(sw1==1&&sw2==1&&sw3==1&&sw4==0&&sw5==0) return 7;
+ 529              		.loc 1 22 0
+ 530 0250 0620     		movs	r0, #6
+ 531              	.LVL15:
+ 532 0252 3CE0     		b	.L3
+ 533              	.LVL16:
+ 534              	.L41:
+  23:main.c        ****     if(sw1==0&&sw2==0&&sw3==0&&sw4==1&&sw5==0) return 8;
+ 535              		.loc 1 23 0
+ 536 0254 0720     		movs	r0, #7
+ 537              	.LVL17:
+ 538 0256 3AE0     		b	.L3
+ 539              	.LVL18:
+ 540              	.L42:
+  24:main.c        ****     if(sw1==1&&sw2==0&&sw3==0&&sw4==1&&sw5==0) return 9;
+ 541              		.loc 1 24 0
+ 542 0258 0820     		movs	r0, #8
+ 543              	.LVL19:
+ 544 025a 38E0     		b	.L3
+ 545              	.LVL20:
+ 546              	.L43:
+  25:main.c        ****     if(sw1==0&&sw2==1&&sw3==0&&sw4==1&&sw5==0) return 10;
+ 547              		.loc 1 25 0
+ 548 025c 0920     		movs	r0, #9
+ 549              	.LVL21:
+ 550 025e 36E0     		b	.L3
+ 551              	.LVL22:
+ 552              	.L44:
+  26:main.c        ****     if(sw1==1&&sw2==1&&sw3==0&&sw4==1&&sw5==0) return 11;
+ 553              		.loc 1 26 0
+ 554 0260 0A20     		movs	r0, #10
+ 555              	.LVL23:
+ 556 0262 34E0     		b	.L3
+ 557              	.LVL24:
+ 558              	.L45:
+  27:main.c        ****     if(sw1==0&&sw2==0&&sw3==1&&sw4==1&&sw5==0) return 12;
+ 559              		.loc 1 27 0
+ 560 0264 0B20     		movs	r0, #11
+ 561              	.LVL25:
+ 562 0266 32E0     		b	.L3
+ 563              	.LVL26:
+ 564              	.L46:
+  28:main.c        ****     if(sw1==1&&sw2==0&&sw3==1&&sw4==1&&sw5==0) return 13;
+ 565              		.loc 1 28 0
+ 566 0268 0C20     		movs	r0, #12
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 12
+
+
+ 567              	.LVL27:
+ 568 026a 30E0     		b	.L3
+ 569              	.LVL28:
+ 570              	.L47:
+  29:main.c        ****     if(sw1==0&&sw2==1&&sw3==1&&sw4==1&&sw5==0) return 14;
+ 571              		.loc 1 29 0
+ 572 026c 0D20     		movs	r0, #13
+ 573              	.LVL29:
+ 574 026e 2EE0     		b	.L3
+ 575              	.LVL30:
+ 576              	.L48:
+  30:main.c        ****     if(sw1==1&&sw2==1&&sw3==1&&sw4==1&&sw5==0) return 15;
+ 577              		.loc 1 30 0
+ 578 0270 0E20     		movs	r0, #14
+ 579              	.LVL31:
+ 580 0272 2CE0     		b	.L3
+ 581              	.LVL32:
+ 582              	.L49:
+  31:main.c        ****     if(sw1==0&&sw2==0&&sw3==0&&sw4==0&&sw5==1) return 16;
+ 583              		.loc 1 31 0
+ 584 0274 0F20     		movs	r0, #15
+ 585              	.LVL33:
+ 586 0276 2AE0     		b	.L3
+ 587              	.LVL34:
+ 588              	.L50:
+  32:main.c        ****     if(sw1==1&&sw2==0&&sw3==0&&sw4==0&&sw5==1) return 17;
+ 589              		.loc 1 32 0
+ 590 0278 1020     		movs	r0, #16
+ 591              	.LVL35:
+ 592 027a 28E0     		b	.L3
+ 593              	.LVL36:
+ 594              	.L51:
+  33:main.c        ****     if(sw1==0&&sw2==1&&sw3==0&&sw4==0&&sw5==1) return 18;
+ 595              		.loc 1 33 0
+ 596 027c 1120     		movs	r0, #17
+ 597              	.LVL37:
+ 598 027e 26E0     		b	.L3
+ 599              	.LVL38:
+ 600              	.L52:
+  34:main.c        ****     if(sw1==1&&sw2==1&&sw3==0&&sw4==0&&sw5==1) return 19;
+ 601              		.loc 1 34 0
+ 602 0280 1220     		movs	r0, #18
+ 603              	.LVL39:
+ 604 0282 24E0     		b	.L3
+ 605              	.LVL40:
+ 606              	.L53:
+  35:main.c        ****     if(sw1==0&&sw2==0&&sw3==1&&sw4==0&&sw5==1) return 20;
+ 607              		.loc 1 35 0
+ 608 0284 1320     		movs	r0, #19
+ 609              	.LVL41:
+ 610 0286 22E0     		b	.L3
+ 611              	.LVL42:
+ 612              	.L54:
+  36:main.c        ****     if(sw1==1&&sw2==0&&sw3==1&&sw4==0&&sw5==1) return 21;
+ 613              		.loc 1 36 0
+ 614 0288 1420     		movs	r0, #20
+ 615              	.LVL43:
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 13
+
+
+ 616 028a 20E0     		b	.L3
+ 617              	.LVL44:
+ 618              	.L55:
+  37:main.c        ****     if(sw1==0&&sw2==1&&sw3==1&&sw4==0&&sw5==1) return 22;
+ 619              		.loc 1 37 0
+ 620 028c 1520     		movs	r0, #21
+ 621              	.LVL45:
+ 622 028e 1EE0     		b	.L3
+ 623              	.LVL46:
+ 624              	.L56:
+  38:main.c        ****     if(sw1==1&&sw2==1&&sw3==1&&sw4==0&&sw5==1) return 23;
+ 625              		.loc 1 38 0
+ 626 0290 1620     		movs	r0, #22
+ 627              	.LVL47:
+ 628 0292 1CE0     		b	.L3
+ 629              	.LVL48:
+ 630              	.L57:
+  39:main.c        ****     if(sw1==0&&sw2==0&&sw3==0&&sw4==1&&sw5==1) return 24;
+ 631              		.loc 1 39 0
+ 632 0294 1720     		movs	r0, #23
+ 633              	.LVL49:
+ 634 0296 1AE0     		b	.L3
+ 635              	.LVL50:
+ 636              	.L58:
+  40:main.c        ****     if(sw1==1&&sw2==0&&sw3==0&&sw4==1&&sw5==1) return 25;
+ 637              		.loc 1 40 0
+ 638 0298 1820     		movs	r0, #24
+ 639              	.LVL51:
+ 640 029a 18E0     		b	.L3
+ 641              	.LVL52:
+ 642              	.L59:
+  41:main.c        ****     if(sw1==0&&sw2==1&&sw3==0&&sw4==1&&sw5==1) return 26;
+ 643              		.loc 1 41 0
+ 644 029c 1920     		movs	r0, #25
+ 645              	.LVL53:
+ 646 029e 16E0     		b	.L3
+ 647              	.LVL54:
+ 648              	.L60:
+  42:main.c        ****     if(sw1==1&&sw2==1&&sw3==0&&sw4==1&&sw5==1) return 27;
+ 649              		.loc 1 42 0
+ 650 02a0 1A20     		movs	r0, #26
+ 651              	.LVL55:
+ 652 02a2 14E0     		b	.L3
+ 653              	.LVL56:
+ 654              	.L61:
+  43:main.c        ****     if(sw1==0&&sw2==0&&sw3==1&&sw4==1&&sw5==1) return 28;
+ 655              		.loc 1 43 0
+ 656 02a4 1B20     		movs	r0, #27
+ 657              	.LVL57:
+ 658 02a6 12E0     		b	.L3
+ 659              	.LVL58:
+ 660              	.L62:
+  44:main.c        ****     if(sw1==1&&sw2==0&&sw3==1&&sw4==1&&sw5==1) return 29;
+ 661              		.loc 1 44 0
+ 662 02a8 1C20     		movs	r0, #28
+ 663              	.LVL59:
+ 664 02aa 10E0     		b	.L3
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 14
+
+
+ 665              	.LVL60:
+ 666              	.L63:
+  45:main.c        ****     if(sw1==0&&sw2==1&&sw3==1&&sw4==1&&sw5==1) return 30;
+ 667              		.loc 1 45 0
+ 668 02ac 1D20     		movs	r0, #29
+ 669              	.LVL61:
+ 670 02ae 0EE0     		b	.L3
+ 671              	.LVL62:
+ 672              	.L64:
+  46:main.c        ****     if(sw1==1&&sw2==1&&sw3==1&&sw4==1&&sw5==1) return 31;
+ 673              		.loc 1 46 0
+ 674 02b0 1E20     		movs	r0, #30
+ 675              	.LVL63:
+ 676 02b2 0CE0     		b	.L3
+ 677              	.LVL64:
+ 678              	.L65:
+ 679              		.loc 1 48 0
+ 680 02b4 4FF0FF30 		mov	r0, #-1
+ 681              	.LVL65:
+ 682 02b8 09E0     		b	.L3
+ 683              	.LVL66:
+ 684              	.L66:
+ 685 02ba 4FF0FF30 		mov	r0, #-1
+ 686              	.LVL67:
+ 687 02be 06E0     		b	.L3
+ 688              	.LVL68:
+ 689              	.L67:
+ 690 02c0 4FF0FF30 		mov	r0, #-1
+ 691              	.LVL69:
+ 692 02c4 03E0     		b	.L3
+ 693              	.LVL70:
+ 694              	.L68:
+ 695 02c6 4FF0FF30 		mov	r0, #-1
+ 696              	.LVL71:
+ 697 02ca 00E0     		b	.L3
+ 698              	.LVL72:
+ 699              	.L69:
+  47:main.c        ****     return -1;
+ 700              		.loc 1 47 0
+ 701 02cc 1F20     		movs	r0, #31
+ 702              	.LVL73:
+ 703              	.L3:
+  49:main.c        **** }
+ 704              		.loc 1 49 0
+ 705 02ce 30BC     		pop	{r4, r5}
+ 706              		.cfi_restore 5
+ 707              		.cfi_restore 4
+ 708              		.cfi_def_cfa_offset 0
+ 709              	.LVL74:
+ 710 02d0 7047     		bx	lr
+ 711              		.cfi_endproc
+ 712              	.LFE63:
+ 713              		.size	getValue, .-getValue
+ 714 02d2 00BF     		.section	.text.main,"ax",%progbits
+ 715              		.align	2
+ 716              		.global	main
+ 717              		.thumb
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 15
+
+
+ 718              		.thumb_func
+ 719              		.type	main, %function
+ 720              	main:
+ 721              	.LFB64:
+  50:main.c        **** 
+  51:main.c        **** 
+  52:main.c        **** int main(void){
+ 722              		.loc 1 52 0
+ 723              		.cfi_startproc
+ 724              		@ args = 0, pretend = 0, frame = 0
+ 725              		@ frame_needed = 0, uses_anonymous_args = 0
+ 726 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 727              		.cfi_def_cfa_offset 24
+ 728              		.cfi_offset 4, -24
+ 729              		.cfi_offset 5, -20
+ 730              		.cfi_offset 6, -16
+ 731              		.cfi_offset 7, -12
+ 732              		.cfi_offset 8, -8
+ 733              		.cfi_offset 14, -4
+ 734 0004 82B0     		sub	sp, sp, #8
+ 735              		.cfi_def_cfa_offset 32
+  53:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+ 736              		.loc 1 53 0
+ 737              		.syntax unified
+ 738              	@ 53 "main.c" 1
+ 739 0006 62B6     		CPSIE   i
+ 740              	@ 0 "" 2
+  54:main.c        ****     LCD_Start();
+ 741              		.loc 1 54 0
+ 742              		.thumb
+ 743              		.syntax unified
+ 744 0008 FFF7FEFF 		bl	LCD_Start
+ 745              	.LVL75:
+ 746              	.L73:
+  55:main.c        ****     int sw1,sw2,sw3,sw4,sw5;
+  56:main.c        ****     for(;;){
+  57:main.c        ****         sw1=Pin_1_Read();
+ 747              		.loc 1 57 0
+ 748 000c FFF7FEFF 		bl	Pin_1_Read
+ 749              	.LVL76:
+ 750 0010 0446     		mov	r4, r0
+ 751              	.LVL77:
+  58:main.c        ****         sw2=Pin_2_Read();
+ 752              		.loc 1 58 0
+ 753 0012 FFF7FEFF 		bl	Pin_2_Read
+ 754              	.LVL78:
+ 755 0016 0546     		mov	r5, r0
+ 756              	.LVL79:
+  59:main.c        ****         sw3=Pin_3_Read();
+ 757              		.loc 1 59 0
+ 758 0018 FFF7FEFF 		bl	Pin_3_Read
+ 759              	.LVL80:
+ 760 001c 0646     		mov	r6, r0
+ 761              	.LVL81:
+  60:main.c        ****         sw4=Pin_4_Read();
+ 762              		.loc 1 60 0
+ 763 001e FFF7FEFF 		bl	Pin_4_Read
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 16
+
+
+ 764              	.LVL82:
+ 765 0022 0746     		mov	r7, r0
+ 766              	.LVL83:
+  61:main.c        ****         sw5=Pin_5_Read();
+ 767              		.loc 1 61 0
+ 768 0024 FFF7FEFF 		bl	Pin_5_Read
+ 769              	.LVL84:
+ 770 0028 8046     		mov	r8, r0
+ 771              	.LVL85:
+  62:main.c        ****         CyDelay(500);
+ 772              		.loc 1 62 0
+ 773 002a 4FF4FA70 		mov	r0, #500
+ 774              	.LVL86:
+ 775 002e FFF7FEFF 		bl	CyDelay
+ 776              	.LVL87:
+  63:main.c        ****         LCD_ClearDisplay();
+ 777              		.loc 1 63 0
+ 778 0032 0120     		movs	r0, #1
+ 779 0034 FFF7FEFF 		bl	LCD_WriteControl
+ 780              	.LVL88:
+  64:main.c        ****       switch(getValue(sw1,sw2,sw3,sw4,sw5)){
+ 781              		.loc 1 64 0
+ 782 0038 CDF80080 		str	r8, [sp]
+ 783 003c 3B46     		mov	r3, r7
+ 784 003e 3246     		mov	r2, r6
+ 785 0040 2946     		mov	r1, r5
+ 786 0042 2046     		mov	r0, r4
+ 787 0044 FFF7FEFF 		bl	getValue
+ 788              	.LVL89:
+ 789 0048 1F28     		cmp	r0, #31
+ 790 004a DFD8     		bhi	.L73
+ 791 004c DFE810F0 		tbh	[pc, r0, lsl #1]
+ 792              	.L75:
+ 793 0050 2000     		.2byte	(.L74-.L75)/2
+ 794 0052 2F00     		.2byte	(.L76-.L75)/2
+ 795 0054 3E00     		.2byte	(.L77-.L75)/2
+ 796 0056 4D00     		.2byte	(.L78-.L75)/2
+ 797 0058 5C00     		.2byte	(.L79-.L75)/2
+ 798 005a 6B00     		.2byte	(.L80-.L75)/2
+ 799 005c 7A00     		.2byte	(.L81-.L75)/2
+ 800 005e 8900     		.2byte	(.L82-.L75)/2
+ 801 0060 9800     		.2byte	(.L83-.L75)/2
+ 802 0062 A700     		.2byte	(.L84-.L75)/2
+ 803 0064 B600     		.2byte	(.L85-.L75)/2
+ 804 0066 C500     		.2byte	(.L86-.L75)/2
+ 805 0068 D400     		.2byte	(.L87-.L75)/2
+ 806 006a E300     		.2byte	(.L88-.L75)/2
+ 807 006c F200     		.2byte	(.L89-.L75)/2
+ 808 006e 0101     		.2byte	(.L90-.L75)/2
+ 809 0070 1001     		.2byte	(.L91-.L75)/2
+ 810 0072 1F01     		.2byte	(.L92-.L75)/2
+ 811 0074 2E01     		.2byte	(.L93-.L75)/2
+ 812 0076 3D01     		.2byte	(.L94-.L75)/2
+ 813 0078 4C01     		.2byte	(.L95-.L75)/2
+ 814 007a 5B01     		.2byte	(.L96-.L75)/2
+ 815 007c 6A01     		.2byte	(.L97-.L75)/2
+ 816 007e 7901     		.2byte	(.L98-.L75)/2
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 17
+
+
+ 817 0080 8801     		.2byte	(.L99-.L75)/2
+ 818 0082 9701     		.2byte	(.L100-.L75)/2
+ 819 0084 A601     		.2byte	(.L101-.L75)/2
+ 820 0086 B501     		.2byte	(.L102-.L75)/2
+ 821 0088 3402     		.2byte	(.L103-.L75)/2
+ 822 008a 4302     		.2byte	(.L104-.L75)/2
+ 823 008c 5202     		.2byte	(.L105-.L75)/2
+ 824 008e 6102     		.2byte	(.L106-.L75)/2
+ 825              		.p2align 1
+ 826              	.L74:
+  65:main.c        ****         case 0:
+  66:main.c        ****             LCD_Position(0,1);
+ 827              		.loc 1 66 0
+ 828 0090 0121     		movs	r1, #1
+ 829 0092 0020     		movs	r0, #0
+ 830 0094 FFF7FEFF 		bl	LCD_Position
+ 831              	.LVL90:
+  67:main.c        ****             LCD_PrintString("FELIPE ALVARADO"); 
+ 832              		.loc 1 67 0
+ 833 0098 CF48     		ldr	r0, .L109
+ 834 009a FFF7FEFF 		bl	LCD_PrintString
+ 835              	.LVL91:
+  68:main.c        ****             LCD_Position(1,4);
+ 836              		.loc 1 68 0
+ 837 009e 0421     		movs	r1, #4
+ 838 00a0 0120     		movs	r0, #1
+ 839 00a2 FFF7FEFF 		bl	LCD_Position
+ 840              	.LVL92:
+  69:main.c        ****             LCD_PrintString("GALICIA");
+ 841              		.loc 1 69 0
+ 842 00a6 CD48     		ldr	r0, .L109+4
+ 843 00a8 FFF7FEFF 		bl	LCD_PrintString
+ 844              	.LVL93:
+  70:main.c        ****             break;
+ 845              		.loc 1 70 0
+ 846 00ac AEE7     		b	.L73
+ 847              	.L76:
+  71:main.c        ****             
+  72:main.c        ****         case 1:
+  73:main.c        ****             LCD_Position(0,7);
+ 848              		.loc 1 73 0
+ 849 00ae 0721     		movs	r1, #7
+ 850 00b0 0020     		movs	r0, #0
+ 851 00b2 FFF7FEFF 		bl	LCD_Position
+ 852              	.LVL94:
+  74:main.c        ****             LCD_PrintString("1");
+ 853              		.loc 1 74 0
+ 854 00b6 CA48     		ldr	r0, .L109+8
+ 855 00b8 FFF7FEFF 		bl	LCD_PrintString
+ 856              	.LVL95:
+  75:main.c        ****             LCD_Position(1,6);
+ 857              		.loc 1 75 0
+ 858 00bc 0621     		movs	r1, #6
+ 859 00be 0120     		movs	r0, #1
+ 860 00c0 FFF7FEFF 		bl	LCD_Position
+ 861              	.LVL96:
+  76:main.c        ****             LCD_PrintString("UNO");
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 18
+
+
+ 862              		.loc 1 76 0
+ 863 00c4 C748     		ldr	r0, .L109+12
+ 864 00c6 FFF7FEFF 		bl	LCD_PrintString
+ 865              	.LVL97:
+  77:main.c        ****             break;            
+ 866              		.loc 1 77 0
+ 867 00ca 9FE7     		b	.L73
+ 868              	.L77:
+  78:main.c        ****             
+  79:main.c        ****         case 2:
+  80:main.c        ****             LCD_Position(0,7);
+ 869              		.loc 1 80 0
+ 870 00cc 0721     		movs	r1, #7
+ 871 00ce 0020     		movs	r0, #0
+ 872 00d0 FFF7FEFF 		bl	LCD_Position
+ 873              	.LVL98:
+  81:main.c        ****             LCD_PrintString("2");
+ 874              		.loc 1 81 0
+ 875 00d4 C448     		ldr	r0, .L109+16
+ 876 00d6 FFF7FEFF 		bl	LCD_PrintString
+ 877              	.LVL99:
+  82:main.c        ****             LCD_Position(1,6);
+ 878              		.loc 1 82 0
+ 879 00da 0621     		movs	r1, #6
+ 880 00dc 0120     		movs	r0, #1
+ 881 00de FFF7FEFF 		bl	LCD_Position
+ 882              	.LVL100:
+  83:main.c        ****             LCD_PrintString("DOS");
+ 883              		.loc 1 83 0
+ 884 00e2 C248     		ldr	r0, .L109+20
+ 885 00e4 FFF7FEFF 		bl	LCD_PrintString
+ 886              	.LVL101:
+  84:main.c        ****             break;  
+ 887              		.loc 1 84 0
+ 888 00e8 90E7     		b	.L73
+ 889              	.L78:
+  85:main.c        ****             
+  86:main.c        ****         case 3:
+  87:main.c        ****             LCD_Position(0,7);
+ 890              		.loc 1 87 0
+ 891 00ea 0721     		movs	r1, #7
+ 892 00ec 0020     		movs	r0, #0
+ 893 00ee FFF7FEFF 		bl	LCD_Position
+ 894              	.LVL102:
+  88:main.c        ****             LCD_PrintString("3");
+ 895              		.loc 1 88 0
+ 896 00f2 BF48     		ldr	r0, .L109+24
+ 897 00f4 FFF7FEFF 		bl	LCD_PrintString
+ 898              	.LVL103:
+  89:main.c        ****             LCD_Position(1,5);
+ 899              		.loc 1 89 0
+ 900 00f8 0521     		movs	r1, #5
+ 901 00fa 0120     		movs	r0, #1
+ 902 00fc FFF7FEFF 		bl	LCD_Position
+ 903              	.LVL104:
+  90:main.c        ****             LCD_PrintString("TRES");
+ 904              		.loc 1 90 0
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 19
+
+
+ 905 0100 BC48     		ldr	r0, .L109+28
+ 906 0102 FFF7FEFF 		bl	LCD_PrintString
+ 907              	.LVL105:
+  91:main.c        ****             break;            
+ 908              		.loc 1 91 0
+ 909 0106 81E7     		b	.L73
+ 910              	.L79:
+  92:main.c        ****             
+  93:main.c        ****         case 4:
+  94:main.c        ****             LCD_Position(0,7);
+ 911              		.loc 1 94 0
+ 912 0108 0721     		movs	r1, #7
+ 913 010a 0020     		movs	r0, #0
+ 914 010c FFF7FEFF 		bl	LCD_Position
+ 915              	.LVL106:
+  95:main.c        ****             LCD_PrintString("4");
+ 916              		.loc 1 95 0
+ 917 0110 B948     		ldr	r0, .L109+32
+ 918 0112 FFF7FEFF 		bl	LCD_PrintString
+ 919              	.LVL107:
+  96:main.c        ****             LCD_Position(1,5);
+ 920              		.loc 1 96 0
+ 921 0116 0521     		movs	r1, #5
+ 922 0118 0120     		movs	r0, #1
+ 923 011a FFF7FEFF 		bl	LCD_Position
+ 924              	.LVL108:
+  97:main.c        ****             LCD_PrintString("CUATRO");
+ 925              		.loc 1 97 0
+ 926 011e B748     		ldr	r0, .L109+36
+ 927 0120 FFF7FEFF 		bl	LCD_PrintString
+ 928              	.LVL109:
+  98:main.c        ****             break;            
+ 929              		.loc 1 98 0
+ 930 0124 72E7     		b	.L73
+ 931              	.L80:
+  99:main.c        ****             
+ 100:main.c        ****         case 5:
+ 101:main.c        ****             LCD_Position(0,7);
+ 932              		.loc 1 101 0
+ 933 0126 0721     		movs	r1, #7
+ 934 0128 0020     		movs	r0, #0
+ 935 012a FFF7FEFF 		bl	LCD_Position
+ 936              	.LVL110:
+ 102:main.c        ****             LCD_PrintString("5");
+ 937              		.loc 1 102 0
+ 938 012e B448     		ldr	r0, .L109+40
+ 939 0130 FFF7FEFF 		bl	LCD_PrintString
+ 940              	.LVL111:
+ 103:main.c        ****             LCD_Position(1,5);
+ 941              		.loc 1 103 0
+ 942 0134 0521     		movs	r1, #5
+ 943 0136 0120     		movs	r0, #1
+ 944 0138 FFF7FEFF 		bl	LCD_Position
+ 945              	.LVL112:
+ 104:main.c        ****             LCD_PrintString("CINCO");
+ 946              		.loc 1 104 0
+ 947 013c B148     		ldr	r0, .L109+44
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 20
+
+
+ 948 013e FFF7FEFF 		bl	LCD_PrintString
+ 949              	.LVL113:
+ 105:main.c        ****             break;            
+ 950              		.loc 1 105 0
+ 951 0142 63E7     		b	.L73
+ 952              	.L81:
+ 106:main.c        ****             
+ 107:main.c        ****         case 6:
+ 108:main.c        ****             LCD_Position(0,7);
+ 953              		.loc 1 108 0
+ 954 0144 0721     		movs	r1, #7
+ 955 0146 0020     		movs	r0, #0
+ 956 0148 FFF7FEFF 		bl	LCD_Position
+ 957              	.LVL114:
+ 109:main.c        ****             LCD_PrintString("6");
+ 958              		.loc 1 109 0
+ 959 014c AE48     		ldr	r0, .L109+48
+ 960 014e FFF7FEFF 		bl	LCD_PrintString
+ 961              	.LVL115:
+ 110:main.c        ****             LCD_Position(1,5);
+ 962              		.loc 1 110 0
+ 963 0152 0521     		movs	r1, #5
+ 964 0154 0120     		movs	r0, #1
+ 965 0156 FFF7FEFF 		bl	LCD_Position
+ 966              	.LVL116:
+ 111:main.c        ****             LCD_PrintString("SEIS");
+ 967              		.loc 1 111 0
+ 968 015a AC48     		ldr	r0, .L109+52
+ 969 015c FFF7FEFF 		bl	LCD_PrintString
+ 970              	.LVL117:
+ 112:main.c        ****             break;            
+ 971              		.loc 1 112 0
+ 972 0160 54E7     		b	.L73
+ 973              	.L82:
+ 113:main.c        ****             
+ 114:main.c        ****         case 7:
+ 115:main.c        ****             LCD_Position(0,7);
+ 974              		.loc 1 115 0
+ 975 0162 0721     		movs	r1, #7
+ 976 0164 0020     		movs	r0, #0
+ 977 0166 FFF7FEFF 		bl	LCD_Position
+ 978              	.LVL118:
+ 116:main.c        ****             LCD_PrintString("7");
+ 979              		.loc 1 116 0
+ 980 016a A948     		ldr	r0, .L109+56
+ 981 016c FFF7FEFF 		bl	LCD_PrintString
+ 982              	.LVL119:
+ 117:main.c        ****             LCD_Position(1,5);
+ 983              		.loc 1 117 0
+ 984 0170 0521     		movs	r1, #5
+ 985 0172 0120     		movs	r0, #1
+ 986 0174 FFF7FEFF 		bl	LCD_Position
+ 987              	.LVL120:
+ 118:main.c        ****             LCD_PrintString("SIETE");
+ 988              		.loc 1 118 0
+ 989 0178 A648     		ldr	r0, .L109+60
+ 990 017a FFF7FEFF 		bl	LCD_PrintString
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 21
+
+
+ 991              	.LVL121:
+ 119:main.c        ****             break;            
+ 992              		.loc 1 119 0
+ 993 017e 45E7     		b	.L73
+ 994              	.L83:
+ 120:main.c        ****             
+ 121:main.c        ****         case 8:
+ 122:main.c        ****             LCD_Position(0,7);
+ 995              		.loc 1 122 0
+ 996 0180 0721     		movs	r1, #7
+ 997 0182 0020     		movs	r0, #0
+ 998 0184 FFF7FEFF 		bl	LCD_Position
+ 999              	.LVL122:
+ 123:main.c        ****             LCD_PrintString("8");
+ 1000              		.loc 1 123 0
+ 1001 0188 A348     		ldr	r0, .L109+64
+ 1002 018a FFF7FEFF 		bl	LCD_PrintString
+ 1003              	.LVL123:
+ 124:main.c        ****             LCD_Position(1,6);
+ 1004              		.loc 1 124 0
+ 1005 018e 0621     		movs	r1, #6
+ 1006 0190 0120     		movs	r0, #1
+ 1007 0192 FFF7FEFF 		bl	LCD_Position
+ 1008              	.LVL124:
+ 125:main.c        ****             LCD_PrintString("OCHO");
+ 1009              		.loc 1 125 0
+ 1010 0196 A148     		ldr	r0, .L109+68
+ 1011 0198 FFF7FEFF 		bl	LCD_PrintString
+ 1012              	.LVL125:
+ 126:main.c        ****             break;            
+ 1013              		.loc 1 126 0
+ 1014 019c 36E7     		b	.L73
+ 1015              	.L84:
+ 127:main.c        ****             
+ 128:main.c        ****         case 9:
+ 129:main.c        ****             LCD_Position(0,7);
+ 1016              		.loc 1 129 0
+ 1017 019e 0721     		movs	r1, #7
+ 1018 01a0 0020     		movs	r0, #0
+ 1019 01a2 FFF7FEFF 		bl	LCD_Position
+ 1020              	.LVL126:
+ 130:main.c        ****             LCD_PrintString("9");
+ 1021              		.loc 1 130 0
+ 1022 01a6 9E48     		ldr	r0, .L109+72
+ 1023 01a8 FFF7FEFF 		bl	LCD_PrintString
+ 1024              	.LVL127:
+ 131:main.c        ****             LCD_Position(1,5);
+ 1025              		.loc 1 131 0
+ 1026 01ac 0521     		movs	r1, #5
+ 1027 01ae 0120     		movs	r0, #1
+ 1028 01b0 FFF7FEFF 		bl	LCD_Position
+ 1029              	.LVL128:
+ 132:main.c        ****             LCD_PrintString("NUEVE");
+ 1030              		.loc 1 132 0
+ 1031 01b4 9B48     		ldr	r0, .L109+76
+ 1032 01b6 FFF7FEFF 		bl	LCD_PrintString
+ 1033              	.LVL129:
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 22
+
+
+ 133:main.c        ****             break;            
+ 1034              		.loc 1 133 0
+ 1035 01ba 27E7     		b	.L73
+ 1036              	.L85:
+ 134:main.c        ****             
+ 135:main.c        ****         case 10:
+ 136:main.c        ****             LCD_Position(0,7);
+ 1037              		.loc 1 136 0
+ 1038 01bc 0721     		movs	r1, #7
+ 1039 01be 0020     		movs	r0, #0
+ 1040 01c0 FFF7FEFF 		bl	LCD_Position
+ 1041              	.LVL130:
+ 137:main.c        ****             LCD_PrintString("10");
+ 1042              		.loc 1 137 0
+ 1043 01c4 9848     		ldr	r0, .L109+80
+ 1044 01c6 FFF7FEFF 		bl	LCD_PrintString
+ 1045              	.LVL131:
+ 138:main.c        ****             LCD_Position(1,6);
+ 1046              		.loc 1 138 0
+ 1047 01ca 0621     		movs	r1, #6
+ 1048 01cc 0120     		movs	r0, #1
+ 1049 01ce FFF7FEFF 		bl	LCD_Position
+ 1050              	.LVL132:
+ 139:main.c        ****             LCD_PrintString("DIEZ");
+ 1051              		.loc 1 139 0
+ 1052 01d2 9648     		ldr	r0, .L109+84
+ 1053 01d4 FFF7FEFF 		bl	LCD_PrintString
+ 1054              	.LVL133:
+ 140:main.c        ****             break;            
+ 1055              		.loc 1 140 0
+ 1056 01d8 18E7     		b	.L73
+ 1057              	.L86:
+ 141:main.c        ****             
+ 142:main.c        ****         case 11:
+ 143:main.c        ****             LCD_Position(0,7);
+ 1058              		.loc 1 143 0
+ 1059 01da 0721     		movs	r1, #7
+ 1060 01dc 0020     		movs	r0, #0
+ 1061 01de FFF7FEFF 		bl	LCD_Position
+ 1062              	.LVL134:
+ 144:main.c        ****             LCD_PrintString("11");
+ 1063              		.loc 1 144 0
+ 1064 01e2 9348     		ldr	r0, .L109+88
+ 1065 01e4 FFF7FEFF 		bl	LCD_PrintString
+ 1066              	.LVL135:
+ 145:main.c        ****             LCD_Position(1,6);
+ 1067              		.loc 1 145 0
+ 1068 01e8 0621     		movs	r1, #6
+ 1069 01ea 0120     		movs	r0, #1
+ 1070 01ec FFF7FEFF 		bl	LCD_Position
+ 1071              	.LVL136:
+ 146:main.c        ****             LCD_PrintString("ONCE");
+ 1072              		.loc 1 146 0
+ 1073 01f0 9048     		ldr	r0, .L109+92
+ 1074 01f2 FFF7FEFF 		bl	LCD_PrintString
+ 1075              	.LVL137:
+ 147:main.c        ****             break;    
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 23
+
+
+ 1076              		.loc 1 147 0
+ 1077 01f6 09E7     		b	.L73
+ 1078              	.L87:
+ 148:main.c        ****             
+ 149:main.c        ****         case 12:
+ 150:main.c        ****             LCD_Position(0,7);
+ 1079              		.loc 1 150 0
+ 1080 01f8 0721     		movs	r1, #7
+ 1081 01fa 0020     		movs	r0, #0
+ 1082 01fc FFF7FEFF 		bl	LCD_Position
+ 1083              	.LVL138:
+ 151:main.c        ****             LCD_PrintString("12");
+ 1084              		.loc 1 151 0
+ 1085 0200 8D48     		ldr	r0, .L109+96
+ 1086 0202 FFF7FEFF 		bl	LCD_PrintString
+ 1087              	.LVL139:
+ 152:main.c        ****             LCD_Position(1,6);
+ 1088              		.loc 1 152 0
+ 1089 0206 0621     		movs	r1, #6
+ 1090 0208 0120     		movs	r0, #1
+ 1091 020a FFF7FEFF 		bl	LCD_Position
+ 1092              	.LVL140:
+ 153:main.c        ****              LCD_PrintString("DOCE");
+ 1093              		.loc 1 153 0
+ 1094 020e 8B48     		ldr	r0, .L109+100
+ 1095 0210 FFF7FEFF 		bl	LCD_PrintString
+ 1096              	.LVL141:
+ 154:main.c        ****             break;            
+ 1097              		.loc 1 154 0
+ 1098 0214 FAE6     		b	.L73
+ 1099              	.L88:
+ 155:main.c        ****             
+ 156:main.c        ****         case 13:
+ 157:main.c        ****             LCD_Position(0,7);
+ 1100              		.loc 1 157 0
+ 1101 0216 0721     		movs	r1, #7
+ 1102 0218 0020     		movs	r0, #0
+ 1103 021a FFF7FEFF 		bl	LCD_Position
+ 1104              	.LVL142:
+ 158:main.c        ****             LCD_PrintString("13");
+ 1105              		.loc 1 158 0
+ 1106 021e 8848     		ldr	r0, .L109+104
+ 1107 0220 FFF7FEFF 		bl	LCD_PrintString
+ 1108              	.LVL143:
+ 159:main.c        ****             LCD_Position(1,5);
+ 1109              		.loc 1 159 0
+ 1110 0224 0521     		movs	r1, #5
+ 1111 0226 0120     		movs	r0, #1
+ 1112 0228 FFF7FEFF 		bl	LCD_Position
+ 1113              	.LVL144:
+ 160:main.c        ****             LCD_PrintString("TRECE");
+ 1114              		.loc 1 160 0
+ 1115 022c 8548     		ldr	r0, .L109+108
+ 1116 022e FFF7FEFF 		bl	LCD_PrintString
+ 1117              	.LVL145:
+ 161:main.c        ****             break;            
+ 1118              		.loc 1 161 0
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 24
+
+
+ 1119 0232 EBE6     		b	.L73
+ 1120              	.L89:
+ 162:main.c        ****             
+ 163:main.c        ****         case 14:
+ 164:main.c        ****             LCD_Position(0,7);
+ 1121              		.loc 1 164 0
+ 1122 0234 0721     		movs	r1, #7
+ 1123 0236 0020     		movs	r0, #0
+ 1124 0238 FFF7FEFF 		bl	LCD_Position
+ 1125              	.LVL146:
+ 165:main.c        ****             LCD_PrintString("14");
+ 1126              		.loc 1 165 0
+ 1127 023c 8248     		ldr	r0, .L109+112
+ 1128 023e FFF7FEFF 		bl	LCD_PrintString
+ 1129              	.LVL147:
+ 166:main.c        ****             LCD_Position(1,5);
+ 1130              		.loc 1 166 0
+ 1131 0242 0521     		movs	r1, #5
+ 1132 0244 0120     		movs	r0, #1
+ 1133 0246 FFF7FEFF 		bl	LCD_Position
+ 1134              	.LVL148:
+ 167:main.c        ****             LCD_PrintString("CATORCE");
+ 1135              		.loc 1 167 0
+ 1136 024a 8048     		ldr	r0, .L109+116
+ 1137 024c FFF7FEFF 		bl	LCD_PrintString
+ 1138              	.LVL149:
+ 168:main.c        ****             break;            
+ 1139              		.loc 1 168 0
+ 1140 0250 DCE6     		b	.L73
+ 1141              	.L90:
+ 169:main.c        ****             
+ 170:main.c        ****         case 15:
+ 171:main.c        ****             LCD_Position(0,7);
+ 1142              		.loc 1 171 0
+ 1143 0252 0721     		movs	r1, #7
+ 1144 0254 0020     		movs	r0, #0
+ 1145 0256 FFF7FEFF 		bl	LCD_Position
+ 1146              	.LVL150:
+ 172:main.c        ****             LCD_PrintString("15");
+ 1147              		.loc 1 172 0
+ 1148 025a 7D48     		ldr	r0, .L109+120
+ 1149 025c FFF7FEFF 		bl	LCD_PrintString
+ 1150              	.LVL151:
+ 173:main.c        ****             LCD_Position(1,5);
+ 1151              		.loc 1 173 0
+ 1152 0260 0521     		movs	r1, #5
+ 1153 0262 0120     		movs	r0, #1
+ 1154 0264 FFF7FEFF 		bl	LCD_Position
+ 1155              	.LVL152:
+ 174:main.c        ****             LCD_PrintString("QUINCE");
+ 1156              		.loc 1 174 0
+ 1157 0268 7A48     		ldr	r0, .L109+124
+ 1158 026a FFF7FEFF 		bl	LCD_PrintString
+ 1159              	.LVL153:
+ 175:main.c        ****             break;            
+ 1160              		.loc 1 175 0
+ 1161 026e CDE6     		b	.L73
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 25
+
+
+ 1162              	.L91:
+ 176:main.c        ****             
+ 177:main.c        ****         case 16:
+ 178:main.c        ****             LCD_Position(0,7);
+ 1163              		.loc 1 178 0
+ 1164 0270 0721     		movs	r1, #7
+ 1165 0272 0020     		movs	r0, #0
+ 1166 0274 FFF7FEFF 		bl	LCD_Position
+ 1167              	.LVL154:
+ 179:main.c        ****             LCD_PrintString("16");
+ 1168              		.loc 1 179 0
+ 1169 0278 7748     		ldr	r0, .L109+128
+ 1170 027a FFF7FEFF 		bl	LCD_PrintString
+ 1171              	.LVL155:
+ 180:main.c        ****             LCD_Position(1,3);
+ 1172              		.loc 1 180 0
+ 1173 027e 0321     		movs	r1, #3
+ 1174 0280 0120     		movs	r0, #1
+ 1175 0282 FFF7FEFF 		bl	LCD_Position
+ 1176              	.LVL156:
+ 181:main.c        ****             LCD_PrintString("DIECISEIS");
+ 1177              		.loc 1 181 0
+ 1178 0286 7548     		ldr	r0, .L109+132
+ 1179 0288 FFF7FEFF 		bl	LCD_PrintString
+ 1180              	.LVL157:
+ 182:main.c        ****             break;            
+ 1181              		.loc 1 182 0
+ 1182 028c BEE6     		b	.L73
+ 1183              	.L92:
+ 183:main.c        ****             
+ 184:main.c        ****         case 17:
+ 185:main.c        ****             LCD_Position(0,7);
+ 1184              		.loc 1 185 0
+ 1185 028e 0721     		movs	r1, #7
+ 1186 0290 0020     		movs	r0, #0
+ 1187 0292 FFF7FEFF 		bl	LCD_Position
+ 1188              	.LVL158:
+ 186:main.c        ****             LCD_PrintString("17");
+ 1189              		.loc 1 186 0
+ 1190 0296 7248     		ldr	r0, .L109+136
+ 1191 0298 FFF7FEFF 		bl	LCD_PrintString
+ 1192              	.LVL159:
+ 187:main.c        ****             LCD_Position(1,3);
+ 1193              		.loc 1 187 0
+ 1194 029c 0321     		movs	r1, #3
+ 1195 029e 0120     		movs	r0, #1
+ 1196 02a0 FFF7FEFF 		bl	LCD_Position
+ 1197              	.LVL160:
+ 188:main.c        ****             LCD_PrintString("DIECISIETE");
+ 1198              		.loc 1 188 0
+ 1199 02a4 6F48     		ldr	r0, .L109+140
+ 1200 02a6 FFF7FEFF 		bl	LCD_PrintString
+ 1201              	.LVL161:
+ 189:main.c        ****             break;            
+ 1202              		.loc 1 189 0
+ 1203 02aa AFE6     		b	.L73
+ 1204              	.L93:
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 26
+
+
+ 190:main.c        ****             
+ 191:main.c        ****         case 18:
+ 192:main.c        ****             LCD_Position(0,7);
+ 1205              		.loc 1 192 0
+ 1206 02ac 0721     		movs	r1, #7
+ 1207 02ae 0020     		movs	r0, #0
+ 1208 02b0 FFF7FEFF 		bl	LCD_Position
+ 1209              	.LVL162:
+ 193:main.c        ****             LCD_PrintString("18");
+ 1210              		.loc 1 193 0
+ 1211 02b4 6C48     		ldr	r0, .L109+144
+ 1212 02b6 FFF7FEFF 		bl	LCD_PrintString
+ 1213              	.LVL163:
+ 194:main.c        ****             LCD_Position(1,3);
+ 1214              		.loc 1 194 0
+ 1215 02ba 0321     		movs	r1, #3
+ 1216 02bc 0120     		movs	r0, #1
+ 1217 02be FFF7FEFF 		bl	LCD_Position
+ 1218              	.LVL164:
+ 195:main.c        ****             LCD_PrintString("DIECIOCHO");
+ 1219              		.loc 1 195 0
+ 1220 02c2 6A48     		ldr	r0, .L109+148
+ 1221 02c4 FFF7FEFF 		bl	LCD_PrintString
+ 1222              	.LVL165:
+ 196:main.c        ****             break;            
+ 1223              		.loc 1 196 0
+ 1224 02c8 A0E6     		b	.L73
+ 1225              	.L94:
+ 197:main.c        ****             
+ 198:main.c        ****         case 19:
+ 199:main.c        ****             LCD_Position(0,7);
+ 1226              		.loc 1 199 0
+ 1227 02ca 0721     		movs	r1, #7
+ 1228 02cc 0020     		movs	r0, #0
+ 1229 02ce FFF7FEFF 		bl	LCD_Position
+ 1230              	.LVL166:
+ 200:main.c        ****             LCD_PrintString("19");
+ 1231              		.loc 1 200 0
+ 1232 02d2 6748     		ldr	r0, .L109+152
+ 1233 02d4 FFF7FEFF 		bl	LCD_PrintString
+ 1234              	.LVL167:
+ 201:main.c        ****             LCD_Position(1,3);
+ 1235              		.loc 1 201 0
+ 1236 02d8 0321     		movs	r1, #3
+ 1237 02da 0120     		movs	r0, #1
+ 1238 02dc FFF7FEFF 		bl	LCD_Position
+ 1239              	.LVL168:
+ 202:main.c        ****             LCD_PrintString("DIECINUEVE");
+ 1240              		.loc 1 202 0
+ 1241 02e0 6448     		ldr	r0, .L109+156
+ 1242 02e2 FFF7FEFF 		bl	LCD_PrintString
+ 1243              	.LVL169:
+ 203:main.c        ****             break;            
+ 1244              		.loc 1 203 0
+ 1245 02e6 91E6     		b	.L73
+ 1246              	.L95:
+ 204:main.c        ****             
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 27
+
+
+ 205:main.c        ****         case 20:
+ 206:main.c        ****             LCD_Position(0,7);
+ 1247              		.loc 1 206 0
+ 1248 02e8 0721     		movs	r1, #7
+ 1249 02ea 0020     		movs	r0, #0
+ 1250 02ec FFF7FEFF 		bl	LCD_Position
+ 1251              	.LVL170:
+ 207:main.c        ****             LCD_PrintString("20");
+ 1252              		.loc 1 207 0
+ 1253 02f0 6148     		ldr	r0, .L109+160
+ 1254 02f2 FFF7FEFF 		bl	LCD_PrintString
+ 1255              	.LVL171:
+ 208:main.c        ****             LCD_Position(1,5);
+ 1256              		.loc 1 208 0
+ 1257 02f6 0521     		movs	r1, #5
+ 1258 02f8 0120     		movs	r0, #1
+ 1259 02fa FFF7FEFF 		bl	LCD_Position
+ 1260              	.LVL172:
+ 209:main.c        ****             LCD_PrintString("VEINTE");
+ 1261              		.loc 1 209 0
+ 1262 02fe 5F48     		ldr	r0, .L109+164
+ 1263 0300 FFF7FEFF 		bl	LCD_PrintString
+ 1264              	.LVL173:
+ 210:main.c        ****             break;            
+ 1265              		.loc 1 210 0
+ 1266 0304 82E6     		b	.L73
+ 1267              	.L96:
+ 211:main.c        ****             
+ 212:main.c        ****         case 21:
+ 213:main.c        ****             LCD_Position(0,7);
+ 1268              		.loc 1 213 0
+ 1269 0306 0721     		movs	r1, #7
+ 1270 0308 0020     		movs	r0, #0
+ 1271 030a FFF7FEFF 		bl	LCD_Position
+ 1272              	.LVL174:
+ 214:main.c        ****             LCD_PrintString("21");
+ 1273              		.loc 1 214 0
+ 1274 030e 5C48     		ldr	r0, .L109+168
+ 1275 0310 FFF7FEFF 		bl	LCD_PrintString
+ 1276              	.LVL175:
+ 215:main.c        ****             LCD_Position(1,3);
+ 1277              		.loc 1 215 0
+ 1278 0314 0321     		movs	r1, #3
+ 1279 0316 0120     		movs	r0, #1
+ 1280 0318 FFF7FEFF 		bl	LCD_Position
+ 1281              	.LVL176:
+ 216:main.c        ****             LCD_PrintString("VEINTIUNO");
+ 1282              		.loc 1 216 0
+ 1283 031c 5948     		ldr	r0, .L109+172
+ 1284 031e FFF7FEFF 		bl	LCD_PrintString
+ 1285              	.LVL177:
+ 217:main.c        ****             break;            
+ 1286              		.loc 1 217 0
+ 1287 0322 73E6     		b	.L73
+ 1288              	.L97:
+ 218:main.c        ****             
+ 219:main.c        ****         case 22:
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 28
+
+
+ 220:main.c        ****             LCD_Position(0,7);
+ 1289              		.loc 1 220 0
+ 1290 0324 0721     		movs	r1, #7
+ 1291 0326 0020     		movs	r0, #0
+ 1292 0328 FFF7FEFF 		bl	LCD_Position
+ 1293              	.LVL178:
+ 221:main.c        ****             LCD_PrintString("22");
+ 1294              		.loc 1 221 0
+ 1295 032c 5648     		ldr	r0, .L109+176
+ 1296 032e FFF7FEFF 		bl	LCD_PrintString
+ 1297              	.LVL179:
+ 222:main.c        ****             LCD_Position(1,3);
+ 1298              		.loc 1 222 0
+ 1299 0332 0321     		movs	r1, #3
+ 1300 0334 0120     		movs	r0, #1
+ 1301 0336 FFF7FEFF 		bl	LCD_Position
+ 1302              	.LVL180:
+ 223:main.c        ****             LCD_PrintString("VEINTIDOS");
+ 1303              		.loc 1 223 0
+ 1304 033a 5448     		ldr	r0, .L109+180
+ 1305 033c FFF7FEFF 		bl	LCD_PrintString
+ 1306              	.LVL181:
+ 224:main.c        ****             break;            
+ 1307              		.loc 1 224 0
+ 1308 0340 64E6     		b	.L73
+ 1309              	.L98:
+ 225:main.c        ****             
+ 226:main.c        ****         case 23:
+ 227:main.c        ****             LCD_Position(0,7);
+ 1310              		.loc 1 227 0
+ 1311 0342 0721     		movs	r1, #7
+ 1312 0344 0020     		movs	r0, #0
+ 1313 0346 FFF7FEFF 		bl	LCD_Position
+ 1314              	.LVL182:
+ 228:main.c        ****             LCD_PrintString("23");
+ 1315              		.loc 1 228 0
+ 1316 034a 5148     		ldr	r0, .L109+184
+ 1317 034c FFF7FEFF 		bl	LCD_PrintString
+ 1318              	.LVL183:
+ 229:main.c        ****             LCD_Position(1,3);
+ 1319              		.loc 1 229 0
+ 1320 0350 0321     		movs	r1, #3
+ 1321 0352 0120     		movs	r0, #1
+ 1322 0354 FFF7FEFF 		bl	LCD_Position
+ 1323              	.LVL184:
+ 230:main.c        ****             LCD_PrintString("VEINTITRES");
+ 1324              		.loc 1 230 0
+ 1325 0358 4E48     		ldr	r0, .L109+188
+ 1326 035a FFF7FEFF 		bl	LCD_PrintString
+ 1327              	.LVL185:
+ 231:main.c        ****             break;            
+ 1328              		.loc 1 231 0
+ 1329 035e 55E6     		b	.L73
+ 1330              	.L99:
+ 232:main.c        ****             
+ 233:main.c        ****         case 24:
+ 234:main.c        ****             LCD_Position(0,7);
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 29
+
+
+ 1331              		.loc 1 234 0
+ 1332 0360 0721     		movs	r1, #7
+ 1333 0362 0020     		movs	r0, #0
+ 1334 0364 FFF7FEFF 		bl	LCD_Position
+ 1335              	.LVL186:
+ 235:main.c        ****             LCD_PrintString("24");
+ 1336              		.loc 1 235 0
+ 1337 0368 4B48     		ldr	r0, .L109+192
+ 1338 036a FFF7FEFF 		bl	LCD_PrintString
+ 1339              	.LVL187:
+ 236:main.c        ****             LCD_Position(1,2);
+ 1340              		.loc 1 236 0
+ 1341 036e 0221     		movs	r1, #2
+ 1342 0370 0120     		movs	r0, #1
+ 1343 0372 FFF7FEFF 		bl	LCD_Position
+ 1344              	.LVL188:
+ 237:main.c        ****             LCD_PrintString("VEINTICUATRO");
+ 1345              		.loc 1 237 0
+ 1346 0376 4948     		ldr	r0, .L109+196
+ 1347 0378 FFF7FEFF 		bl	LCD_PrintString
+ 1348              	.LVL189:
+ 238:main.c        ****             break;            
+ 1349              		.loc 1 238 0
+ 1350 037c 46E6     		b	.L73
+ 1351              	.L100:
+ 239:main.c        ****             
+ 240:main.c        ****         case 25:
+ 241:main.c        ****             LCD_Position(0,7);
+ 1352              		.loc 1 241 0
+ 1353 037e 0721     		movs	r1, #7
+ 1354 0380 0020     		movs	r0, #0
+ 1355 0382 FFF7FEFF 		bl	LCD_Position
+ 1356              	.LVL190:
+ 242:main.c        ****             LCD_PrintString("25");
+ 1357              		.loc 1 242 0
+ 1358 0386 4648     		ldr	r0, .L109+200
+ 1359 0388 FFF7FEFF 		bl	LCD_PrintString
+ 1360              	.LVL191:
+ 243:main.c        ****             LCD_Position(1,3);
+ 1361              		.loc 1 243 0
+ 1362 038c 0321     		movs	r1, #3
+ 1363 038e 0120     		movs	r0, #1
+ 1364 0390 FFF7FEFF 		bl	LCD_Position
+ 1365              	.LVL192:
+ 244:main.c        ****             LCD_PrintString("VEINTICINCO");
+ 1366              		.loc 1 244 0
+ 1367 0394 4348     		ldr	r0, .L109+204
+ 1368 0396 FFF7FEFF 		bl	LCD_PrintString
+ 1369              	.LVL193:
+ 245:main.c        ****             break;            
+ 1370              		.loc 1 245 0
+ 1371 039a 37E6     		b	.L73
+ 1372              	.L101:
+ 246:main.c        ****             
+ 247:main.c        ****         case 26:
+ 248:main.c        ****             LCD_Position(0,7);
+ 1373              		.loc 1 248 0
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 30
+
+
+ 1374 039c 0721     		movs	r1, #7
+ 1375 039e 0020     		movs	r0, #0
+ 1376 03a0 FFF7FEFF 		bl	LCD_Position
+ 1377              	.LVL194:
+ 249:main.c        ****             LCD_PrintString("26");
+ 1378              		.loc 1 249 0
+ 1379 03a4 4048     		ldr	r0, .L109+208
+ 1380 03a6 FFF7FEFF 		bl	LCD_PrintString
+ 1381              	.LVL195:
+ 250:main.c        ****             LCD_Position(1,3);
+ 1382              		.loc 1 250 0
+ 1383 03aa 0321     		movs	r1, #3
+ 1384 03ac 0120     		movs	r0, #1
+ 1385 03ae FFF7FEFF 		bl	LCD_Position
+ 1386              	.LVL196:
+ 251:main.c        ****             LCD_PrintString("VEINTISEIS");
+ 1387              		.loc 1 251 0
+ 1388 03b2 3E48     		ldr	r0, .L109+212
+ 1389 03b4 FFF7FEFF 		bl	LCD_PrintString
+ 1390              	.LVL197:
+ 252:main.c        ****             break;            
+ 1391              		.loc 1 252 0
+ 1392 03b8 28E6     		b	.L73
+ 1393              	.L102:
+ 253:main.c        ****             
+ 254:main.c        ****         case 27:
+ 255:main.c        ****             LCD_Position(0,7);
+ 1394              		.loc 1 255 0
+ 1395 03ba 0721     		movs	r1, #7
+ 1396 03bc 0020     		movs	r0, #0
+ 1397 03be FFF7FEFF 		bl	LCD_Position
+ 1398              	.LVL198:
+ 256:main.c        ****             LCD_PrintString("27");
+ 1399              		.loc 1 256 0
+ 1400 03c2 3B48     		ldr	r0, .L109+216
+ 1401 03c4 FFF7FEFF 		bl	LCD_PrintString
+ 1402              	.LVL199:
+ 257:main.c        ****             LCD_Position(1,2);
+ 1403              		.loc 1 257 0
+ 1404 03c8 0221     		movs	r1, #2
+ 1405 03ca 0120     		movs	r0, #1
+ 1406 03cc FFF7FEFF 		bl	LCD_Position
+ 1407              	.LVL200:
+ 258:main.c        ****             LCD_PrintString("VEINTISIETE");
+ 1408              		.loc 1 258 0
+ 1409 03d0 3848     		ldr	r0, .L109+220
+ 1410 03d2 FFF7FEFF 		bl	LCD_PrintString
+ 1411              	.LVL201:
+ 259:main.c        ****             break;            
+ 1412              		.loc 1 259 0
+ 1413 03d6 19E6     		b	.L73
+ 1414              	.L110:
+ 1415              		.align	2
+ 1416              	.L109:
+ 1417 03d8 00000000 		.word	.LC0
+ 1418 03dc 10000000 		.word	.LC1
+ 1419 03e0 18000000 		.word	.LC2
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 31
+
+
+ 1420 03e4 1C000000 		.word	.LC3
+ 1421 03e8 20000000 		.word	.LC4
+ 1422 03ec 24000000 		.word	.LC5
+ 1423 03f0 28000000 		.word	.LC6
+ 1424 03f4 2C000000 		.word	.LC7
+ 1425 03f8 34000000 		.word	.LC8
+ 1426 03fc 38000000 		.word	.LC9
+ 1427 0400 40000000 		.word	.LC10
+ 1428 0404 44000000 		.word	.LC11
+ 1429 0408 4C000000 		.word	.LC12
+ 1430 040c 50000000 		.word	.LC13
+ 1431 0410 58000000 		.word	.LC14
+ 1432 0414 5C000000 		.word	.LC15
+ 1433 0418 64000000 		.word	.LC16
+ 1434 041c 68000000 		.word	.LC17
+ 1435 0420 70000000 		.word	.LC18
+ 1436 0424 74000000 		.word	.LC19
+ 1437 0428 7C000000 		.word	.LC20
+ 1438 042c 80000000 		.word	.LC21
+ 1439 0430 88000000 		.word	.LC22
+ 1440 0434 8C000000 		.word	.LC23
+ 1441 0438 94000000 		.word	.LC24
+ 1442 043c 98000000 		.word	.LC25
+ 1443 0440 A0000000 		.word	.LC26
+ 1444 0444 A4000000 		.word	.LC27
+ 1445 0448 AC000000 		.word	.LC28
+ 1446 044c B0000000 		.word	.LC29
+ 1447 0450 B8000000 		.word	.LC30
+ 1448 0454 BC000000 		.word	.LC31
+ 1449 0458 C4000000 		.word	.LC32
+ 1450 045c C8000000 		.word	.LC33
+ 1451 0460 D4000000 		.word	.LC34
+ 1452 0464 D8000000 		.word	.LC35
+ 1453 0468 E4000000 		.word	.LC36
+ 1454 046c E8000000 		.word	.LC37
+ 1455 0470 F4000000 		.word	.LC38
+ 1456 0474 F8000000 		.word	.LC39
+ 1457 0478 04010000 		.word	.LC40
+ 1458 047c 08010000 		.word	.LC41
+ 1459 0480 10010000 		.word	.LC42
+ 1460 0484 14010000 		.word	.LC43
+ 1461 0488 20010000 		.word	.LC44
+ 1462 048c 24010000 		.word	.LC45
+ 1463 0490 30010000 		.word	.LC46
+ 1464 0494 34010000 		.word	.LC47
+ 1465 0498 40010000 		.word	.LC48
+ 1466 049c 44010000 		.word	.LC49
+ 1467 04a0 54010000 		.word	.LC50
+ 1468 04a4 58010000 		.word	.LC51
+ 1469 04a8 64010000 		.word	.LC52
+ 1470 04ac 68010000 		.word	.LC53
+ 1471 04b0 74010000 		.word	.LC54
+ 1472 04b4 78010000 		.word	.LC55
+ 1473              	.L103:
+ 260:main.c        ****             
+ 261:main.c        ****         case 28:
+ 262:main.c        ****             LCD_Position(0,7);
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 32
+
+
+ 1474              		.loc 1 262 0
+ 1475 04b8 0721     		movs	r1, #7
+ 1476 04ba 0020     		movs	r0, #0
+ 1477 04bc FFF7FEFF 		bl	LCD_Position
+ 1478              	.LVL202:
+ 263:main.c        ****             LCD_PrintString("28");
+ 1479              		.loc 1 263 0
+ 1480 04c0 1B48     		ldr	r0, .L111
+ 1481 04c2 FFF7FEFF 		bl	LCD_PrintString
+ 1482              	.LVL203:
+ 264:main.c        ****             LCD_Position(1,3);
+ 1483              		.loc 1 264 0
+ 1484 04c6 0321     		movs	r1, #3
+ 1485 04c8 0120     		movs	r0, #1
+ 1486 04ca FFF7FEFF 		bl	LCD_Position
+ 1487              	.LVL204:
+ 265:main.c        ****             LCD_PrintString("VEINTIOCHO");
+ 1488              		.loc 1 265 0
+ 1489 04ce 1948     		ldr	r0, .L111+4
+ 1490 04d0 FFF7FEFF 		bl	LCD_PrintString
+ 1491              	.LVL205:
+ 266:main.c        ****             break;            
+ 1492              		.loc 1 266 0
+ 1493 04d4 9AE5     		b	.L73
+ 1494              	.L104:
+ 267:main.c        ****             
+ 268:main.c        ****         case 29:
+ 269:main.c        ****             LCD_Position(0,7);
+ 1495              		.loc 1 269 0
+ 1496 04d6 0721     		movs	r1, #7
+ 1497 04d8 0020     		movs	r0, #0
+ 1498 04da FFF7FEFF 		bl	LCD_Position
+ 1499              	.LVL206:
+ 270:main.c        ****             LCD_PrintString("29");
+ 1500              		.loc 1 270 0
+ 1501 04de 1648     		ldr	r0, .L111+8
+ 1502 04e0 FFF7FEFF 		bl	LCD_PrintString
+ 1503              	.LVL207:
+ 271:main.c        ****             LCD_Position(1,2);
+ 1504              		.loc 1 271 0
+ 1505 04e4 0221     		movs	r1, #2
+ 1506 04e6 0120     		movs	r0, #1
+ 1507 04e8 FFF7FEFF 		bl	LCD_Position
+ 1508              	.LVL208:
+ 272:main.c        ****             LCD_PrintString("VEINTINUEVE");
+ 1509              		.loc 1 272 0
+ 1510 04ec 1348     		ldr	r0, .L111+12
+ 1511 04ee FFF7FEFF 		bl	LCD_PrintString
+ 1512              	.LVL209:
+ 273:main.c        ****             break;
+ 1513              		.loc 1 273 0
+ 1514 04f2 8BE5     		b	.L73
+ 1515              	.L105:
+ 274:main.c        ****             
+ 275:main.c        ****         case 30:
+ 276:main.c        ****             LCD_Position(0,7);
+ 1516              		.loc 1 276 0
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 33
+
+
+ 1517 04f4 0721     		movs	r1, #7
+ 1518 04f6 0020     		movs	r0, #0
+ 1519 04f8 FFF7FEFF 		bl	LCD_Position
+ 1520              	.LVL210:
+ 277:main.c        ****             LCD_PrintString("30");
+ 1521              		.loc 1 277 0
+ 1522 04fc 1048     		ldr	r0, .L111+16
+ 1523 04fe FFF7FEFF 		bl	LCD_PrintString
+ 1524              	.LVL211:
+ 278:main.c        ****             LCD_Position(1,5);
+ 1525              		.loc 1 278 0
+ 1526 0502 0521     		movs	r1, #5
+ 1527 0504 0120     		movs	r0, #1
+ 1528 0506 FFF7FEFF 		bl	LCD_Position
+ 1529              	.LVL212:
+ 279:main.c        ****             LCD_PrintString("TREINTA");
+ 1530              		.loc 1 279 0
+ 1531 050a 0E48     		ldr	r0, .L111+20
+ 1532 050c FFF7FEFF 		bl	LCD_PrintString
+ 1533              	.LVL213:
+ 280:main.c        ****             break;          
+ 1534              		.loc 1 280 0
+ 1535 0510 7CE5     		b	.L73
+ 1536              	.L106:
+ 281:main.c        ****             
+ 282:main.c        ****          case 31:
+ 283:main.c        ****             LCD_Position(0,7);
+ 1537              		.loc 1 283 0
+ 1538 0512 0721     		movs	r1, #7
+ 1539 0514 0020     		movs	r0, #0
+ 1540 0516 FFF7FEFF 		bl	LCD_Position
+ 1541              	.LVL214:
+ 284:main.c        ****             LCD_PrintString("31");
+ 1542              		.loc 1 284 0
+ 1543 051a 0B48     		ldr	r0, .L111+24
+ 1544 051c FFF7FEFF 		bl	LCD_PrintString
+ 1545              	.LVL215:
+ 285:main.c        ****             LCD_Position(1,2);
+ 1546              		.loc 1 285 0
+ 1547 0520 0221     		movs	r1, #2
+ 1548 0522 0120     		movs	r0, #1
+ 1549 0524 FFF7FEFF 		bl	LCD_Position
+ 1550              	.LVL216:
+ 286:main.c        ****             LCD_PrintString("TREINTAIUNO");
+ 1551              		.loc 1 286 0
+ 1552 0528 0848     		ldr	r0, .L111+28
+ 1553 052a FFF7FEFF 		bl	LCD_PrintString
+ 1554              	.LVL217:
+ 287:main.c        **** 
+ 288:main.c        ****             
+ 289:main.c        ****             break;  
+ 1555              		.loc 1 289 0
+ 1556 052e 6DE5     		b	.L73
+ 1557              	.L112:
+ 1558              		.align	2
+ 1559              	.L111:
+ 1560 0530 84010000 		.word	.LC56
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 34
+
+
+ 1561 0534 88010000 		.word	.LC57
+ 1562 0538 94010000 		.word	.LC58
+ 1563 053c 98010000 		.word	.LC59
+ 1564 0540 A4010000 		.word	.LC60
+ 1565 0544 A8010000 		.word	.LC61
+ 1566 0548 B0010000 		.word	.LC62
+ 1567 054c B4010000 		.word	.LC63
+ 1568              		.cfi_endproc
+ 1569              	.LFE64:
+ 1570              		.size	main, .-main
+ 1571              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 1572              		.align	2
+ 1573              	.LC0:
+ 1574 0000 46454C49 		.ascii	"FELIPE ALVARADO\000"
+ 1574      50452041 
+ 1574      4C564152 
+ 1574      41444F00 
+ 1575              	.LC1:
+ 1576 0010 47414C49 		.ascii	"GALICIA\000"
+ 1576      43494100 
+ 1577              	.LC2:
+ 1578 0018 3100     		.ascii	"1\000"
+ 1579 001a 0000     		.space	2
+ 1580              	.LC3:
+ 1581 001c 554E4F00 		.ascii	"UNO\000"
+ 1582              	.LC4:
+ 1583 0020 3200     		.ascii	"2\000"
+ 1584 0022 0000     		.space	2
+ 1585              	.LC5:
+ 1586 0024 444F5300 		.ascii	"DOS\000"
+ 1587              	.LC6:
+ 1588 0028 3300     		.ascii	"3\000"
+ 1589 002a 0000     		.space	2
+ 1590              	.LC7:
+ 1591 002c 54524553 		.ascii	"TRES\000"
+ 1591      00
+ 1592 0031 000000   		.space	3
+ 1593              	.LC8:
+ 1594 0034 3400     		.ascii	"4\000"
+ 1595 0036 0000     		.space	2
+ 1596              	.LC9:
+ 1597 0038 43554154 		.ascii	"CUATRO\000"
+ 1597      524F00
+ 1598 003f 00       		.space	1
+ 1599              	.LC10:
+ 1600 0040 3500     		.ascii	"5\000"
+ 1601 0042 0000     		.space	2
+ 1602              	.LC11:
+ 1603 0044 43494E43 		.ascii	"CINCO\000"
+ 1603      4F00
+ 1604 004a 0000     		.space	2
+ 1605              	.LC12:
+ 1606 004c 3600     		.ascii	"6\000"
+ 1607 004e 0000     		.space	2
+ 1608              	.LC13:
+ 1609 0050 53454953 		.ascii	"SEIS\000"
+ 1609      00
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 35
+
+
+ 1610 0055 000000   		.space	3
+ 1611              	.LC14:
+ 1612 0058 3700     		.ascii	"7\000"
+ 1613 005a 0000     		.space	2
+ 1614              	.LC15:
+ 1615 005c 53494554 		.ascii	"SIETE\000"
+ 1615      4500
+ 1616 0062 0000     		.space	2
+ 1617              	.LC16:
+ 1618 0064 3800     		.ascii	"8\000"
+ 1619 0066 0000     		.space	2
+ 1620              	.LC17:
+ 1621 0068 4F43484F 		.ascii	"OCHO\000"
+ 1621      00
+ 1622 006d 000000   		.space	3
+ 1623              	.LC18:
+ 1624 0070 3900     		.ascii	"9\000"
+ 1625 0072 0000     		.space	2
+ 1626              	.LC19:
+ 1627 0074 4E554556 		.ascii	"NUEVE\000"
+ 1627      4500
+ 1628 007a 0000     		.space	2
+ 1629              	.LC20:
+ 1630 007c 313000   		.ascii	"10\000"
+ 1631 007f 00       		.space	1
+ 1632              	.LC21:
+ 1633 0080 4449455A 		.ascii	"DIEZ\000"
+ 1633      00
+ 1634 0085 000000   		.space	3
+ 1635              	.LC22:
+ 1636 0088 313100   		.ascii	"11\000"
+ 1637 008b 00       		.space	1
+ 1638              	.LC23:
+ 1639 008c 4F4E4345 		.ascii	"ONCE\000"
+ 1639      00
+ 1640 0091 000000   		.space	3
+ 1641              	.LC24:
+ 1642 0094 313200   		.ascii	"12\000"
+ 1643 0097 00       		.space	1
+ 1644              	.LC25:
+ 1645 0098 444F4345 		.ascii	"DOCE\000"
+ 1645      00
+ 1646 009d 000000   		.space	3
+ 1647              	.LC26:
+ 1648 00a0 313300   		.ascii	"13\000"
+ 1649 00a3 00       		.space	1
+ 1650              	.LC27:
+ 1651 00a4 54524543 		.ascii	"TRECE\000"
+ 1651      4500
+ 1652 00aa 0000     		.space	2
+ 1653              	.LC28:
+ 1654 00ac 313400   		.ascii	"14\000"
+ 1655 00af 00       		.space	1
+ 1656              	.LC29:
+ 1657 00b0 4341544F 		.ascii	"CATORCE\000"
+ 1657      52434500 
+ 1658              	.LC30:
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 36
+
+
+ 1659 00b8 313500   		.ascii	"15\000"
+ 1660 00bb 00       		.space	1
+ 1661              	.LC31:
+ 1662 00bc 5155494E 		.ascii	"QUINCE\000"
+ 1662      434500
+ 1663 00c3 00       		.space	1
+ 1664              	.LC32:
+ 1665 00c4 313600   		.ascii	"16\000"
+ 1666 00c7 00       		.space	1
+ 1667              	.LC33:
+ 1668 00c8 44494543 		.ascii	"DIECISEIS\000"
+ 1668      49534549 
+ 1668      5300
+ 1669 00d2 0000     		.space	2
+ 1670              	.LC34:
+ 1671 00d4 313700   		.ascii	"17\000"
+ 1672 00d7 00       		.space	1
+ 1673              	.LC35:
+ 1674 00d8 44494543 		.ascii	"DIECISIETE\000"
+ 1674      49534945 
+ 1674      544500
+ 1675 00e3 00       		.space	1
+ 1676              	.LC36:
+ 1677 00e4 313800   		.ascii	"18\000"
+ 1678 00e7 00       		.space	1
+ 1679              	.LC37:
+ 1680 00e8 44494543 		.ascii	"DIECIOCHO\000"
+ 1680      494F4348 
+ 1680      4F00
+ 1681 00f2 0000     		.space	2
+ 1682              	.LC38:
+ 1683 00f4 313900   		.ascii	"19\000"
+ 1684 00f7 00       		.space	1
+ 1685              	.LC39:
+ 1686 00f8 44494543 		.ascii	"DIECINUEVE\000"
+ 1686      494E5545 
+ 1686      564500
+ 1687 0103 00       		.space	1
+ 1688              	.LC40:
+ 1689 0104 323000   		.ascii	"20\000"
+ 1690 0107 00       		.space	1
+ 1691              	.LC41:
+ 1692 0108 5645494E 		.ascii	"VEINTE\000"
+ 1692      544500
+ 1693 010f 00       		.space	1
+ 1694              	.LC42:
+ 1695 0110 323100   		.ascii	"21\000"
+ 1696 0113 00       		.space	1
+ 1697              	.LC43:
+ 1698 0114 5645494E 		.ascii	"VEINTIUNO\000"
+ 1698      5449554E 
+ 1698      4F00
+ 1699 011e 0000     		.space	2
+ 1700              	.LC44:
+ 1701 0120 323200   		.ascii	"22\000"
+ 1702 0123 00       		.space	1
+ 1703              	.LC45:
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 37
+
+
+ 1704 0124 5645494E 		.ascii	"VEINTIDOS\000"
+ 1704      5449444F 
+ 1704      5300
+ 1705 012e 0000     		.space	2
+ 1706              	.LC46:
+ 1707 0130 323300   		.ascii	"23\000"
+ 1708 0133 00       		.space	1
+ 1709              	.LC47:
+ 1710 0134 5645494E 		.ascii	"VEINTITRES\000"
+ 1710      54495452 
+ 1710      455300
+ 1711 013f 00       		.space	1
+ 1712              	.LC48:
+ 1713 0140 323400   		.ascii	"24\000"
+ 1714 0143 00       		.space	1
+ 1715              	.LC49:
+ 1716 0144 5645494E 		.ascii	"VEINTICUATRO\000"
+ 1716      54494355 
+ 1716      4154524F 
+ 1716      00
+ 1717 0151 000000   		.space	3
+ 1718              	.LC50:
+ 1719 0154 323500   		.ascii	"25\000"
+ 1720 0157 00       		.space	1
+ 1721              	.LC51:
+ 1722 0158 5645494E 		.ascii	"VEINTICINCO\000"
+ 1722      54494349 
+ 1722      4E434F00 
+ 1723              	.LC52:
+ 1724 0164 323600   		.ascii	"26\000"
+ 1725 0167 00       		.space	1
+ 1726              	.LC53:
+ 1727 0168 5645494E 		.ascii	"VEINTISEIS\000"
+ 1727      54495345 
+ 1727      495300
+ 1728 0173 00       		.space	1
+ 1729              	.LC54:
+ 1730 0174 323700   		.ascii	"27\000"
+ 1731 0177 00       		.space	1
+ 1732              	.LC55:
+ 1733 0178 5645494E 		.ascii	"VEINTISIETE\000"
+ 1733      54495349 
+ 1733      45544500 
+ 1734              	.LC56:
+ 1735 0184 323800   		.ascii	"28\000"
+ 1736 0187 00       		.space	1
+ 1737              	.LC57:
+ 1738 0188 5645494E 		.ascii	"VEINTIOCHO\000"
+ 1738      54494F43 
+ 1738      484F00
+ 1739 0193 00       		.space	1
+ 1740              	.LC58:
+ 1741 0194 323900   		.ascii	"29\000"
+ 1742 0197 00       		.space	1
+ 1743              	.LC59:
+ 1744 0198 5645494E 		.ascii	"VEINTINUEVE\000"
+ 1744      54494E55 
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 38
+
+
+ 1744      45564500 
+ 1745              	.LC60:
+ 1746 01a4 333000   		.ascii	"30\000"
+ 1747 01a7 00       		.space	1
+ 1748              	.LC61:
+ 1749 01a8 54524549 		.ascii	"TREINTA\000"
+ 1749      4E544100 
+ 1750              	.LC62:
+ 1751 01b0 333100   		.ascii	"31\000"
+ 1752 01b3 00       		.space	1
+ 1753              	.LC63:
+ 1754 01b4 54524549 		.ascii	"TREINTAIUNO\000"
+ 1754      4E544149 
+ 1754      554E4F00 
+ 1755              		.text
+ 1756              	.Letext0:
+ 1757              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1758              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 1759              		.file 4 "Generated_Source\\PSoC5/LCD.h"
+ 1760              		.file 5 "Generated_Source\\PSoC5/Pin_1.h"
+ 1761              		.file 6 "Generated_Source\\PSoC5/Pin_2.h"
+ 1762              		.file 7 "Generated_Source\\PSoC5/Pin_3.h"
+ 1763              		.file 8 "Generated_Source\\PSoC5/Pin_4.h"
+ 1764              		.file 9 "Generated_Source\\PSoC5/Pin_5.h"
+ 1765              		.file 10 "Generated_Source\\PSoC5/CyLib.h"
+ 1766              		.file 11 "Generated_Source\\PSoC5/core_cm3.h"
+ 1767              		.section	.debug_info,"",%progbits
+ 1768              	.Ldebug_info0:
+ 1769 0000 2B0E0000 		.4byte	0xe2b
+ 1770 0004 0400     		.2byte	0x4
+ 1771 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1772 000a 04       		.byte	0x4
+ 1773 000b 01       		.uleb128 0x1
+ 1774 000c 67000000 		.4byte	.LASF26
+ 1775 0010 0C       		.byte	0xc
+ 1776 0011 9A010000 		.4byte	.LASF27
+ 1777 0015 A6010000 		.4byte	.LASF28
+ 1778 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 1779 001d 00000000 		.4byte	0
+ 1780 0021 00000000 		.4byte	.Ldebug_line0
+ 1781 0025 02       		.uleb128 0x2
+ 1782 0026 01       		.byte	0x1
+ 1783 0027 06       		.byte	0x6
+ 1784 0028 08020000 		.4byte	.LASF0
+ 1785 002c 02       		.uleb128 0x2
+ 1786 002d 01       		.byte	0x1
+ 1787 002e 08       		.byte	0x8
+ 1788 002f 59000000 		.4byte	.LASF1
+ 1789 0033 02       		.uleb128 0x2
+ 1790 0034 02       		.byte	0x2
+ 1791 0035 05       		.byte	0x5
+ 1792 0036 E9010000 		.4byte	.LASF2
+ 1793 003a 02       		.uleb128 0x2
+ 1794 003b 02       		.byte	0x2
+ 1795 003c 07       		.byte	0x7
+ 1796 003d 26000000 		.4byte	.LASF3
+ 1797 0041 03       		.uleb128 0x3
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 39
+
+
+ 1798 0042 1C000000 		.4byte	.LASF9
+ 1799 0046 02       		.byte	0x2
+ 1800 0047 3F       		.byte	0x3f
+ 1801 0048 4C000000 		.4byte	0x4c
+ 1802 004c 02       		.uleb128 0x2
+ 1803 004d 04       		.byte	0x4
+ 1804 004e 05       		.byte	0x5
+ 1805 004f F3010000 		.4byte	.LASF4
+ 1806 0053 02       		.uleb128 0x2
+ 1807 0054 04       		.byte	0x4
+ 1808 0055 07       		.byte	0x7
+ 1809 0056 0D010000 		.4byte	.LASF5
+ 1810 005a 02       		.uleb128 0x2
+ 1811 005b 08       		.byte	0x8
+ 1812 005c 05       		.byte	0x5
+ 1813 005d 8C010000 		.4byte	.LASF6
+ 1814 0061 02       		.uleb128 0x2
+ 1815 0062 08       		.byte	0x8
+ 1816 0063 07       		.byte	0x7
+ 1817 0064 41010000 		.4byte	.LASF7
+ 1818 0068 04       		.uleb128 0x4
+ 1819 0069 04       		.byte	0x4
+ 1820 006a 05       		.byte	0x5
+ 1821 006b 696E7400 		.ascii	"int\000"
+ 1822 006f 02       		.uleb128 0x2
+ 1823 0070 04       		.byte	0x4
+ 1824 0071 07       		.byte	0x7
+ 1825 0072 34010000 		.4byte	.LASF8
+ 1826 0076 03       		.uleb128 0x3
+ 1827 0077 70010000 		.4byte	.LASF10
+ 1828 007b 03       		.byte	0x3
+ 1829 007c 2C       		.byte	0x2c
+ 1830 007d 41000000 		.4byte	0x41
+ 1831 0081 02       		.uleb128 0x2
+ 1832 0082 04       		.byte	0x4
+ 1833 0083 04       		.byte	0x4
+ 1834 0084 49000000 		.4byte	.LASF11
+ 1835 0088 02       		.uleb128 0x2
+ 1836 0089 08       		.byte	0x8
+ 1837 008a 04       		.byte	0x4
+ 1838 008b 39000000 		.4byte	.LASF12
+ 1839 008f 02       		.uleb128 0x2
+ 1840 0090 01       		.byte	0x1
+ 1841 0091 08       		.byte	0x8
+ 1842 0092 A1010000 		.4byte	.LASF13
+ 1843 0096 02       		.uleb128 0x2
+ 1844 0097 04       		.byte	0x4
+ 1845 0098 07       		.byte	0x7
+ 1846 0099 78010000 		.4byte	.LASF14
+ 1847 009d 02       		.uleb128 0x2
+ 1848 009e 08       		.byte	0x8
+ 1849 009f 04       		.byte	0x4
+ 1850 00a0 FC010000 		.4byte	.LASF15
+ 1851 00a4 05       		.uleb128 0x5
+ 1852 00a5 40000000 		.4byte	.LASF29
+ 1853 00a9 01       		.byte	0x1
+ 1854 00aa 0F       		.byte	0xf
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 40
+
+
+ 1855 00ab 68000000 		.4byte	0x68
+ 1856 00af 00000000 		.4byte	.LFB63
+ 1857 00b3 D2020000 		.4byte	.LFE63-.LFB63
+ 1858 00b7 01       		.uleb128 0x1
+ 1859 00b8 9C       		.byte	0x9c
+ 1860 00b9 03010000 		.4byte	0x103
+ 1861 00bd 06       		.uleb128 0x6
+ 1862 00be 73773100 		.ascii	"sw1\000"
+ 1863 00c2 01       		.byte	0x1
+ 1864 00c3 0F       		.byte	0xf
+ 1865 00c4 68000000 		.4byte	0x68
+ 1866 00c8 00000000 		.4byte	.LLST0
+ 1867 00cc 07       		.uleb128 0x7
+ 1868 00cd 73773200 		.ascii	"sw2\000"
+ 1869 00d1 01       		.byte	0x1
+ 1870 00d2 0F       		.byte	0xf
+ 1871 00d3 68000000 		.4byte	0x68
+ 1872 00d7 01       		.uleb128 0x1
+ 1873 00d8 51       		.byte	0x51
+ 1874 00d9 07       		.uleb128 0x7
+ 1875 00da 73773300 		.ascii	"sw3\000"
+ 1876 00de 01       		.byte	0x1
+ 1877 00df 0F       		.byte	0xf
+ 1878 00e0 68000000 		.4byte	0x68
+ 1879 00e4 01       		.uleb128 0x1
+ 1880 00e5 52       		.byte	0x52
+ 1881 00e6 07       		.uleb128 0x7
+ 1882 00e7 73773400 		.ascii	"sw4\000"
+ 1883 00eb 01       		.byte	0x1
+ 1884 00ec 0F       		.byte	0xf
+ 1885 00ed 68000000 		.4byte	0x68
+ 1886 00f1 01       		.uleb128 0x1
+ 1887 00f2 53       		.byte	0x53
+ 1888 00f3 06       		.uleb128 0x6
+ 1889 00f4 73773500 		.ascii	"sw5\000"
+ 1890 00f8 01       		.byte	0x1
+ 1891 00f9 0F       		.byte	0xf
+ 1892 00fa 68000000 		.4byte	0x68
+ 1893 00fe 44030000 		.4byte	.LLST1
+ 1894 0102 00       		.byte	0
+ 1895 0103 08       		.uleb128 0x8
+ 1896 0104 1F010000 		.4byte	.LASF30
+ 1897 0108 01       		.byte	0x1
+ 1898 0109 34       		.byte	0x34
+ 1899 010a 68000000 		.4byte	0x68
+ 1900 010e 00000000 		.4byte	.LFB64
+ 1901 0112 50050000 		.4byte	.LFE64-.LFB64
+ 1902 0116 01       		.uleb128 0x1
+ 1903 0117 9C       		.byte	0x9c
+ 1904 0118 AF0D0000 		.4byte	0xdaf
+ 1905 011c 09       		.uleb128 0x9
+ 1906 011d 73773100 		.ascii	"sw1\000"
+ 1907 0121 01       		.byte	0x1
+ 1908 0122 37       		.byte	0x37
+ 1909 0123 68000000 		.4byte	0x68
+ 1910 0127 64030000 		.4byte	.LLST2
+ 1911 012b 09       		.uleb128 0x9
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 41
+
+
+ 1912 012c 73773200 		.ascii	"sw2\000"
+ 1913 0130 01       		.byte	0x1
+ 1914 0131 37       		.byte	0x37
+ 1915 0132 68000000 		.4byte	0x68
+ 1916 0136 82030000 		.4byte	.LLST3
+ 1917 013a 09       		.uleb128 0x9
+ 1918 013b 73773300 		.ascii	"sw3\000"
+ 1919 013f 01       		.byte	0x1
+ 1920 0140 37       		.byte	0x37
+ 1921 0141 68000000 		.4byte	0x68
+ 1922 0145 A0030000 		.4byte	.LLST4
+ 1923 0149 09       		.uleb128 0x9
+ 1924 014a 73773400 		.ascii	"sw4\000"
+ 1925 014e 01       		.byte	0x1
+ 1926 014f 37       		.byte	0x37
+ 1927 0150 68000000 		.4byte	0x68
+ 1928 0154 BE030000 		.4byte	.LLST5
+ 1929 0158 09       		.uleb128 0x9
+ 1930 0159 73773500 		.ascii	"sw5\000"
+ 1931 015d 01       		.byte	0x1
+ 1932 015e 37       		.byte	0x37
+ 1933 015f 68000000 		.4byte	0x68
+ 1934 0163 DC030000 		.4byte	.LLST6
+ 1935 0167 0A       		.uleb128 0xa
+ 1936 0168 0C000000 		.4byte	.LVL75
+ 1937 016c C00D0000 		.4byte	0xdc0
+ 1938 0170 0A       		.uleb128 0xa
+ 1939 0171 10000000 		.4byte	.LVL76
+ 1940 0175 CB0D0000 		.4byte	0xdcb
+ 1941 0179 0A       		.uleb128 0xa
+ 1942 017a 16000000 		.4byte	.LVL78
+ 1943 017e D60D0000 		.4byte	0xdd6
+ 1944 0182 0A       		.uleb128 0xa
+ 1945 0183 1C000000 		.4byte	.LVL80
+ 1946 0187 E10D0000 		.4byte	0xde1
+ 1947 018b 0A       		.uleb128 0xa
+ 1948 018c 22000000 		.4byte	.LVL82
+ 1949 0190 EC0D0000 		.4byte	0xdec
+ 1950 0194 0A       		.uleb128 0xa
+ 1951 0195 28000000 		.4byte	.LVL84
+ 1952 0199 F70D0000 		.4byte	0xdf7
+ 1953 019d 0B       		.uleb128 0xb
+ 1954 019e 32000000 		.4byte	.LVL87
+ 1955 01a2 020E0000 		.4byte	0xe02
+ 1956 01a6 B2010000 		.4byte	0x1b2
+ 1957 01aa 0C       		.uleb128 0xc
+ 1958 01ab 01       		.uleb128 0x1
+ 1959 01ac 50       		.byte	0x50
+ 1960 01ad 03       		.uleb128 0x3
+ 1961 01ae 0A       		.byte	0xa
+ 1962 01af F401     		.2byte	0x1f4
+ 1963 01b1 00       		.byte	0
+ 1964 01b2 0B       		.uleb128 0xb
+ 1965 01b3 38000000 		.4byte	.LVL88
+ 1966 01b7 0D0E0000 		.4byte	0xe0d
+ 1967 01bb C5010000 		.4byte	0x1c5
+ 1968 01bf 0C       		.uleb128 0xc
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 42
+
+
+ 1969 01c0 01       		.uleb128 0x1
+ 1970 01c1 50       		.byte	0x50
+ 1971 01c2 01       		.uleb128 0x1
+ 1972 01c3 31       		.byte	0x31
+ 1973 01c4 00       		.byte	0
+ 1974 01c5 0B       		.uleb128 0xb
+ 1975 01c6 48000000 		.4byte	.LVL89
+ 1976 01ca A4000000 		.4byte	0xa4
+ 1977 01ce F2010000 		.4byte	0x1f2
+ 1978 01d2 0C       		.uleb128 0xc
+ 1979 01d3 01       		.uleb128 0x1
+ 1980 01d4 50       		.byte	0x50
+ 1981 01d5 02       		.uleb128 0x2
+ 1982 01d6 74       		.byte	0x74
+ 1983 01d7 00       		.sleb128 0
+ 1984 01d8 0C       		.uleb128 0xc
+ 1985 01d9 01       		.uleb128 0x1
+ 1986 01da 51       		.byte	0x51
+ 1987 01db 02       		.uleb128 0x2
+ 1988 01dc 75       		.byte	0x75
+ 1989 01dd 00       		.sleb128 0
+ 1990 01de 0C       		.uleb128 0xc
+ 1991 01df 01       		.uleb128 0x1
+ 1992 01e0 52       		.byte	0x52
+ 1993 01e1 02       		.uleb128 0x2
+ 1994 01e2 76       		.byte	0x76
+ 1995 01e3 00       		.sleb128 0
+ 1996 01e4 0C       		.uleb128 0xc
+ 1997 01e5 01       		.uleb128 0x1
+ 1998 01e6 53       		.byte	0x53
+ 1999 01e7 02       		.uleb128 0x2
+ 2000 01e8 77       		.byte	0x77
+ 2001 01e9 00       		.sleb128 0
+ 2002 01ea 0C       		.uleb128 0xc
+ 2003 01eb 02       		.uleb128 0x2
+ 2004 01ec 7D       		.byte	0x7d
+ 2005 01ed 00       		.sleb128 0
+ 2006 01ee 02       		.uleb128 0x2
+ 2007 01ef 78       		.byte	0x78
+ 2008 01f0 00       		.sleb128 0
+ 2009 01f1 00       		.byte	0
+ 2010 01f2 0B       		.uleb128 0xb
+ 2011 01f3 98000000 		.4byte	.LVL90
+ 2012 01f7 180E0000 		.4byte	0xe18
+ 2013 01fb 0A020000 		.4byte	0x20a
+ 2014 01ff 0C       		.uleb128 0xc
+ 2015 0200 01       		.uleb128 0x1
+ 2016 0201 50       		.byte	0x50
+ 2017 0202 01       		.uleb128 0x1
+ 2018 0203 30       		.byte	0x30
+ 2019 0204 0C       		.uleb128 0xc
+ 2020 0205 01       		.uleb128 0x1
+ 2021 0206 51       		.byte	0x51
+ 2022 0207 01       		.uleb128 0x1
+ 2023 0208 31       		.byte	0x31
+ 2024 0209 00       		.byte	0
+ 2025 020a 0B       		.uleb128 0xb
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 43
+
+
+ 2026 020b 9E000000 		.4byte	.LVL91
+ 2027 020f 230E0000 		.4byte	0xe23
+ 2028 0213 21020000 		.4byte	0x221
+ 2029 0217 0C       		.uleb128 0xc
+ 2030 0218 01       		.uleb128 0x1
+ 2031 0219 50       		.byte	0x50
+ 2032 021a 05       		.uleb128 0x5
+ 2033 021b 03       		.byte	0x3
+ 2034 021c 00000000 		.4byte	.LC0
+ 2035 0220 00       		.byte	0
+ 2036 0221 0B       		.uleb128 0xb
+ 2037 0222 A6000000 		.4byte	.LVL92
+ 2038 0226 180E0000 		.4byte	0xe18
+ 2039 022a 39020000 		.4byte	0x239
+ 2040 022e 0C       		.uleb128 0xc
+ 2041 022f 01       		.uleb128 0x1
+ 2042 0230 50       		.byte	0x50
+ 2043 0231 01       		.uleb128 0x1
+ 2044 0232 31       		.byte	0x31
+ 2045 0233 0C       		.uleb128 0xc
+ 2046 0234 01       		.uleb128 0x1
+ 2047 0235 51       		.byte	0x51
+ 2048 0236 01       		.uleb128 0x1
+ 2049 0237 34       		.byte	0x34
+ 2050 0238 00       		.byte	0
+ 2051 0239 0B       		.uleb128 0xb
+ 2052 023a AC000000 		.4byte	.LVL93
+ 2053 023e 230E0000 		.4byte	0xe23
+ 2054 0242 50020000 		.4byte	0x250
+ 2055 0246 0C       		.uleb128 0xc
+ 2056 0247 01       		.uleb128 0x1
+ 2057 0248 50       		.byte	0x50
+ 2058 0249 05       		.uleb128 0x5
+ 2059 024a 03       		.byte	0x3
+ 2060 024b 10000000 		.4byte	.LC1
+ 2061 024f 00       		.byte	0
+ 2062 0250 0B       		.uleb128 0xb
+ 2063 0251 B6000000 		.4byte	.LVL94
+ 2064 0255 180E0000 		.4byte	0xe18
+ 2065 0259 68020000 		.4byte	0x268
+ 2066 025d 0C       		.uleb128 0xc
+ 2067 025e 01       		.uleb128 0x1
+ 2068 025f 50       		.byte	0x50
+ 2069 0260 01       		.uleb128 0x1
+ 2070 0261 30       		.byte	0x30
+ 2071 0262 0C       		.uleb128 0xc
+ 2072 0263 01       		.uleb128 0x1
+ 2073 0264 51       		.byte	0x51
+ 2074 0265 01       		.uleb128 0x1
+ 2075 0266 37       		.byte	0x37
+ 2076 0267 00       		.byte	0
+ 2077 0268 0B       		.uleb128 0xb
+ 2078 0269 BC000000 		.4byte	.LVL95
+ 2079 026d 230E0000 		.4byte	0xe23
+ 2080 0271 7F020000 		.4byte	0x27f
+ 2081 0275 0C       		.uleb128 0xc
+ 2082 0276 01       		.uleb128 0x1
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 44
+
+
+ 2083 0277 50       		.byte	0x50
+ 2084 0278 05       		.uleb128 0x5
+ 2085 0279 03       		.byte	0x3
+ 2086 027a 18000000 		.4byte	.LC2
+ 2087 027e 00       		.byte	0
+ 2088 027f 0B       		.uleb128 0xb
+ 2089 0280 C4000000 		.4byte	.LVL96
+ 2090 0284 180E0000 		.4byte	0xe18
+ 2091 0288 97020000 		.4byte	0x297
+ 2092 028c 0C       		.uleb128 0xc
+ 2093 028d 01       		.uleb128 0x1
+ 2094 028e 50       		.byte	0x50
+ 2095 028f 01       		.uleb128 0x1
+ 2096 0290 31       		.byte	0x31
+ 2097 0291 0C       		.uleb128 0xc
+ 2098 0292 01       		.uleb128 0x1
+ 2099 0293 51       		.byte	0x51
+ 2100 0294 01       		.uleb128 0x1
+ 2101 0295 36       		.byte	0x36
+ 2102 0296 00       		.byte	0
+ 2103 0297 0B       		.uleb128 0xb
+ 2104 0298 CA000000 		.4byte	.LVL97
+ 2105 029c 230E0000 		.4byte	0xe23
+ 2106 02a0 AE020000 		.4byte	0x2ae
+ 2107 02a4 0C       		.uleb128 0xc
+ 2108 02a5 01       		.uleb128 0x1
+ 2109 02a6 50       		.byte	0x50
+ 2110 02a7 05       		.uleb128 0x5
+ 2111 02a8 03       		.byte	0x3
+ 2112 02a9 1C000000 		.4byte	.LC3
+ 2113 02ad 00       		.byte	0
+ 2114 02ae 0B       		.uleb128 0xb
+ 2115 02af D4000000 		.4byte	.LVL98
+ 2116 02b3 180E0000 		.4byte	0xe18
+ 2117 02b7 C6020000 		.4byte	0x2c6
+ 2118 02bb 0C       		.uleb128 0xc
+ 2119 02bc 01       		.uleb128 0x1
+ 2120 02bd 50       		.byte	0x50
+ 2121 02be 01       		.uleb128 0x1
+ 2122 02bf 30       		.byte	0x30
+ 2123 02c0 0C       		.uleb128 0xc
+ 2124 02c1 01       		.uleb128 0x1
+ 2125 02c2 51       		.byte	0x51
+ 2126 02c3 01       		.uleb128 0x1
+ 2127 02c4 37       		.byte	0x37
+ 2128 02c5 00       		.byte	0
+ 2129 02c6 0B       		.uleb128 0xb
+ 2130 02c7 DA000000 		.4byte	.LVL99
+ 2131 02cb 230E0000 		.4byte	0xe23
+ 2132 02cf DD020000 		.4byte	0x2dd
+ 2133 02d3 0C       		.uleb128 0xc
+ 2134 02d4 01       		.uleb128 0x1
+ 2135 02d5 50       		.byte	0x50
+ 2136 02d6 05       		.uleb128 0x5
+ 2137 02d7 03       		.byte	0x3
+ 2138 02d8 20000000 		.4byte	.LC4
+ 2139 02dc 00       		.byte	0
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 45
+
+
+ 2140 02dd 0B       		.uleb128 0xb
+ 2141 02de E2000000 		.4byte	.LVL100
+ 2142 02e2 180E0000 		.4byte	0xe18
+ 2143 02e6 F5020000 		.4byte	0x2f5
+ 2144 02ea 0C       		.uleb128 0xc
+ 2145 02eb 01       		.uleb128 0x1
+ 2146 02ec 50       		.byte	0x50
+ 2147 02ed 01       		.uleb128 0x1
+ 2148 02ee 31       		.byte	0x31
+ 2149 02ef 0C       		.uleb128 0xc
+ 2150 02f0 01       		.uleb128 0x1
+ 2151 02f1 51       		.byte	0x51
+ 2152 02f2 01       		.uleb128 0x1
+ 2153 02f3 36       		.byte	0x36
+ 2154 02f4 00       		.byte	0
+ 2155 02f5 0B       		.uleb128 0xb
+ 2156 02f6 E8000000 		.4byte	.LVL101
+ 2157 02fa 230E0000 		.4byte	0xe23
+ 2158 02fe 0C030000 		.4byte	0x30c
+ 2159 0302 0C       		.uleb128 0xc
+ 2160 0303 01       		.uleb128 0x1
+ 2161 0304 50       		.byte	0x50
+ 2162 0305 05       		.uleb128 0x5
+ 2163 0306 03       		.byte	0x3
+ 2164 0307 24000000 		.4byte	.LC5
+ 2165 030b 00       		.byte	0
+ 2166 030c 0B       		.uleb128 0xb
+ 2167 030d F2000000 		.4byte	.LVL102
+ 2168 0311 180E0000 		.4byte	0xe18
+ 2169 0315 24030000 		.4byte	0x324
+ 2170 0319 0C       		.uleb128 0xc
+ 2171 031a 01       		.uleb128 0x1
+ 2172 031b 50       		.byte	0x50
+ 2173 031c 01       		.uleb128 0x1
+ 2174 031d 30       		.byte	0x30
+ 2175 031e 0C       		.uleb128 0xc
+ 2176 031f 01       		.uleb128 0x1
+ 2177 0320 51       		.byte	0x51
+ 2178 0321 01       		.uleb128 0x1
+ 2179 0322 37       		.byte	0x37
+ 2180 0323 00       		.byte	0
+ 2181 0324 0B       		.uleb128 0xb
+ 2182 0325 F8000000 		.4byte	.LVL103
+ 2183 0329 230E0000 		.4byte	0xe23
+ 2184 032d 3B030000 		.4byte	0x33b
+ 2185 0331 0C       		.uleb128 0xc
+ 2186 0332 01       		.uleb128 0x1
+ 2187 0333 50       		.byte	0x50
+ 2188 0334 05       		.uleb128 0x5
+ 2189 0335 03       		.byte	0x3
+ 2190 0336 28000000 		.4byte	.LC6
+ 2191 033a 00       		.byte	0
+ 2192 033b 0B       		.uleb128 0xb
+ 2193 033c 00010000 		.4byte	.LVL104
+ 2194 0340 180E0000 		.4byte	0xe18
+ 2195 0344 53030000 		.4byte	0x353
+ 2196 0348 0C       		.uleb128 0xc
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 46
+
+
+ 2197 0349 01       		.uleb128 0x1
+ 2198 034a 50       		.byte	0x50
+ 2199 034b 01       		.uleb128 0x1
+ 2200 034c 31       		.byte	0x31
+ 2201 034d 0C       		.uleb128 0xc
+ 2202 034e 01       		.uleb128 0x1
+ 2203 034f 51       		.byte	0x51
+ 2204 0350 01       		.uleb128 0x1
+ 2205 0351 35       		.byte	0x35
+ 2206 0352 00       		.byte	0
+ 2207 0353 0B       		.uleb128 0xb
+ 2208 0354 06010000 		.4byte	.LVL105
+ 2209 0358 230E0000 		.4byte	0xe23
+ 2210 035c 6A030000 		.4byte	0x36a
+ 2211 0360 0C       		.uleb128 0xc
+ 2212 0361 01       		.uleb128 0x1
+ 2213 0362 50       		.byte	0x50
+ 2214 0363 05       		.uleb128 0x5
+ 2215 0364 03       		.byte	0x3
+ 2216 0365 2C000000 		.4byte	.LC7
+ 2217 0369 00       		.byte	0
+ 2218 036a 0B       		.uleb128 0xb
+ 2219 036b 10010000 		.4byte	.LVL106
+ 2220 036f 180E0000 		.4byte	0xe18
+ 2221 0373 82030000 		.4byte	0x382
+ 2222 0377 0C       		.uleb128 0xc
+ 2223 0378 01       		.uleb128 0x1
+ 2224 0379 50       		.byte	0x50
+ 2225 037a 01       		.uleb128 0x1
+ 2226 037b 30       		.byte	0x30
+ 2227 037c 0C       		.uleb128 0xc
+ 2228 037d 01       		.uleb128 0x1
+ 2229 037e 51       		.byte	0x51
+ 2230 037f 01       		.uleb128 0x1
+ 2231 0380 37       		.byte	0x37
+ 2232 0381 00       		.byte	0
+ 2233 0382 0B       		.uleb128 0xb
+ 2234 0383 16010000 		.4byte	.LVL107
+ 2235 0387 230E0000 		.4byte	0xe23
+ 2236 038b 99030000 		.4byte	0x399
+ 2237 038f 0C       		.uleb128 0xc
+ 2238 0390 01       		.uleb128 0x1
+ 2239 0391 50       		.byte	0x50
+ 2240 0392 05       		.uleb128 0x5
+ 2241 0393 03       		.byte	0x3
+ 2242 0394 34000000 		.4byte	.LC8
+ 2243 0398 00       		.byte	0
+ 2244 0399 0B       		.uleb128 0xb
+ 2245 039a 1E010000 		.4byte	.LVL108
+ 2246 039e 180E0000 		.4byte	0xe18
+ 2247 03a2 B1030000 		.4byte	0x3b1
+ 2248 03a6 0C       		.uleb128 0xc
+ 2249 03a7 01       		.uleb128 0x1
+ 2250 03a8 50       		.byte	0x50
+ 2251 03a9 01       		.uleb128 0x1
+ 2252 03aa 31       		.byte	0x31
+ 2253 03ab 0C       		.uleb128 0xc
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 47
+
+
+ 2254 03ac 01       		.uleb128 0x1
+ 2255 03ad 51       		.byte	0x51
+ 2256 03ae 01       		.uleb128 0x1
+ 2257 03af 35       		.byte	0x35
+ 2258 03b0 00       		.byte	0
+ 2259 03b1 0B       		.uleb128 0xb
+ 2260 03b2 24010000 		.4byte	.LVL109
+ 2261 03b6 230E0000 		.4byte	0xe23
+ 2262 03ba C8030000 		.4byte	0x3c8
+ 2263 03be 0C       		.uleb128 0xc
+ 2264 03bf 01       		.uleb128 0x1
+ 2265 03c0 50       		.byte	0x50
+ 2266 03c1 05       		.uleb128 0x5
+ 2267 03c2 03       		.byte	0x3
+ 2268 03c3 38000000 		.4byte	.LC9
+ 2269 03c7 00       		.byte	0
+ 2270 03c8 0B       		.uleb128 0xb
+ 2271 03c9 2E010000 		.4byte	.LVL110
+ 2272 03cd 180E0000 		.4byte	0xe18
+ 2273 03d1 E0030000 		.4byte	0x3e0
+ 2274 03d5 0C       		.uleb128 0xc
+ 2275 03d6 01       		.uleb128 0x1
+ 2276 03d7 50       		.byte	0x50
+ 2277 03d8 01       		.uleb128 0x1
+ 2278 03d9 30       		.byte	0x30
+ 2279 03da 0C       		.uleb128 0xc
+ 2280 03db 01       		.uleb128 0x1
+ 2281 03dc 51       		.byte	0x51
+ 2282 03dd 01       		.uleb128 0x1
+ 2283 03de 37       		.byte	0x37
+ 2284 03df 00       		.byte	0
+ 2285 03e0 0B       		.uleb128 0xb
+ 2286 03e1 34010000 		.4byte	.LVL111
+ 2287 03e5 230E0000 		.4byte	0xe23
+ 2288 03e9 F7030000 		.4byte	0x3f7
+ 2289 03ed 0C       		.uleb128 0xc
+ 2290 03ee 01       		.uleb128 0x1
+ 2291 03ef 50       		.byte	0x50
+ 2292 03f0 05       		.uleb128 0x5
+ 2293 03f1 03       		.byte	0x3
+ 2294 03f2 40000000 		.4byte	.LC10
+ 2295 03f6 00       		.byte	0
+ 2296 03f7 0B       		.uleb128 0xb
+ 2297 03f8 3C010000 		.4byte	.LVL112
+ 2298 03fc 180E0000 		.4byte	0xe18
+ 2299 0400 0F040000 		.4byte	0x40f
+ 2300 0404 0C       		.uleb128 0xc
+ 2301 0405 01       		.uleb128 0x1
+ 2302 0406 50       		.byte	0x50
+ 2303 0407 01       		.uleb128 0x1
+ 2304 0408 31       		.byte	0x31
+ 2305 0409 0C       		.uleb128 0xc
+ 2306 040a 01       		.uleb128 0x1
+ 2307 040b 51       		.byte	0x51
+ 2308 040c 01       		.uleb128 0x1
+ 2309 040d 35       		.byte	0x35
+ 2310 040e 00       		.byte	0
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 48
+
+
+ 2311 040f 0B       		.uleb128 0xb
+ 2312 0410 42010000 		.4byte	.LVL113
+ 2313 0414 230E0000 		.4byte	0xe23
+ 2314 0418 26040000 		.4byte	0x426
+ 2315 041c 0C       		.uleb128 0xc
+ 2316 041d 01       		.uleb128 0x1
+ 2317 041e 50       		.byte	0x50
+ 2318 041f 05       		.uleb128 0x5
+ 2319 0420 03       		.byte	0x3
+ 2320 0421 44000000 		.4byte	.LC11
+ 2321 0425 00       		.byte	0
+ 2322 0426 0B       		.uleb128 0xb
+ 2323 0427 4C010000 		.4byte	.LVL114
+ 2324 042b 180E0000 		.4byte	0xe18
+ 2325 042f 3E040000 		.4byte	0x43e
+ 2326 0433 0C       		.uleb128 0xc
+ 2327 0434 01       		.uleb128 0x1
+ 2328 0435 50       		.byte	0x50
+ 2329 0436 01       		.uleb128 0x1
+ 2330 0437 30       		.byte	0x30
+ 2331 0438 0C       		.uleb128 0xc
+ 2332 0439 01       		.uleb128 0x1
+ 2333 043a 51       		.byte	0x51
+ 2334 043b 01       		.uleb128 0x1
+ 2335 043c 37       		.byte	0x37
+ 2336 043d 00       		.byte	0
+ 2337 043e 0B       		.uleb128 0xb
+ 2338 043f 52010000 		.4byte	.LVL115
+ 2339 0443 230E0000 		.4byte	0xe23
+ 2340 0447 55040000 		.4byte	0x455
+ 2341 044b 0C       		.uleb128 0xc
+ 2342 044c 01       		.uleb128 0x1
+ 2343 044d 50       		.byte	0x50
+ 2344 044e 05       		.uleb128 0x5
+ 2345 044f 03       		.byte	0x3
+ 2346 0450 4C000000 		.4byte	.LC12
+ 2347 0454 00       		.byte	0
+ 2348 0455 0B       		.uleb128 0xb
+ 2349 0456 5A010000 		.4byte	.LVL116
+ 2350 045a 180E0000 		.4byte	0xe18
+ 2351 045e 6D040000 		.4byte	0x46d
+ 2352 0462 0C       		.uleb128 0xc
+ 2353 0463 01       		.uleb128 0x1
+ 2354 0464 50       		.byte	0x50
+ 2355 0465 01       		.uleb128 0x1
+ 2356 0466 31       		.byte	0x31
+ 2357 0467 0C       		.uleb128 0xc
+ 2358 0468 01       		.uleb128 0x1
+ 2359 0469 51       		.byte	0x51
+ 2360 046a 01       		.uleb128 0x1
+ 2361 046b 35       		.byte	0x35
+ 2362 046c 00       		.byte	0
+ 2363 046d 0B       		.uleb128 0xb
+ 2364 046e 60010000 		.4byte	.LVL117
+ 2365 0472 230E0000 		.4byte	0xe23
+ 2366 0476 84040000 		.4byte	0x484
+ 2367 047a 0C       		.uleb128 0xc
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 49
+
+
+ 2368 047b 01       		.uleb128 0x1
+ 2369 047c 50       		.byte	0x50
+ 2370 047d 05       		.uleb128 0x5
+ 2371 047e 03       		.byte	0x3
+ 2372 047f 50000000 		.4byte	.LC13
+ 2373 0483 00       		.byte	0
+ 2374 0484 0B       		.uleb128 0xb
+ 2375 0485 6A010000 		.4byte	.LVL118
+ 2376 0489 180E0000 		.4byte	0xe18
+ 2377 048d 9C040000 		.4byte	0x49c
+ 2378 0491 0C       		.uleb128 0xc
+ 2379 0492 01       		.uleb128 0x1
+ 2380 0493 50       		.byte	0x50
+ 2381 0494 01       		.uleb128 0x1
+ 2382 0495 30       		.byte	0x30
+ 2383 0496 0C       		.uleb128 0xc
+ 2384 0497 01       		.uleb128 0x1
+ 2385 0498 51       		.byte	0x51
+ 2386 0499 01       		.uleb128 0x1
+ 2387 049a 37       		.byte	0x37
+ 2388 049b 00       		.byte	0
+ 2389 049c 0B       		.uleb128 0xb
+ 2390 049d 70010000 		.4byte	.LVL119
+ 2391 04a1 230E0000 		.4byte	0xe23
+ 2392 04a5 B3040000 		.4byte	0x4b3
+ 2393 04a9 0C       		.uleb128 0xc
+ 2394 04aa 01       		.uleb128 0x1
+ 2395 04ab 50       		.byte	0x50
+ 2396 04ac 05       		.uleb128 0x5
+ 2397 04ad 03       		.byte	0x3
+ 2398 04ae 58000000 		.4byte	.LC14
+ 2399 04b2 00       		.byte	0
+ 2400 04b3 0B       		.uleb128 0xb
+ 2401 04b4 78010000 		.4byte	.LVL120
+ 2402 04b8 180E0000 		.4byte	0xe18
+ 2403 04bc CB040000 		.4byte	0x4cb
+ 2404 04c0 0C       		.uleb128 0xc
+ 2405 04c1 01       		.uleb128 0x1
+ 2406 04c2 50       		.byte	0x50
+ 2407 04c3 01       		.uleb128 0x1
+ 2408 04c4 31       		.byte	0x31
+ 2409 04c5 0C       		.uleb128 0xc
+ 2410 04c6 01       		.uleb128 0x1
+ 2411 04c7 51       		.byte	0x51
+ 2412 04c8 01       		.uleb128 0x1
+ 2413 04c9 35       		.byte	0x35
+ 2414 04ca 00       		.byte	0
+ 2415 04cb 0B       		.uleb128 0xb
+ 2416 04cc 7E010000 		.4byte	.LVL121
+ 2417 04d0 230E0000 		.4byte	0xe23
+ 2418 04d4 E2040000 		.4byte	0x4e2
+ 2419 04d8 0C       		.uleb128 0xc
+ 2420 04d9 01       		.uleb128 0x1
+ 2421 04da 50       		.byte	0x50
+ 2422 04db 05       		.uleb128 0x5
+ 2423 04dc 03       		.byte	0x3
+ 2424 04dd 5C000000 		.4byte	.LC15
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 50
+
+
+ 2425 04e1 00       		.byte	0
+ 2426 04e2 0B       		.uleb128 0xb
+ 2427 04e3 88010000 		.4byte	.LVL122
+ 2428 04e7 180E0000 		.4byte	0xe18
+ 2429 04eb FA040000 		.4byte	0x4fa
+ 2430 04ef 0C       		.uleb128 0xc
+ 2431 04f0 01       		.uleb128 0x1
+ 2432 04f1 50       		.byte	0x50
+ 2433 04f2 01       		.uleb128 0x1
+ 2434 04f3 30       		.byte	0x30
+ 2435 04f4 0C       		.uleb128 0xc
+ 2436 04f5 01       		.uleb128 0x1
+ 2437 04f6 51       		.byte	0x51
+ 2438 04f7 01       		.uleb128 0x1
+ 2439 04f8 37       		.byte	0x37
+ 2440 04f9 00       		.byte	0
+ 2441 04fa 0B       		.uleb128 0xb
+ 2442 04fb 8E010000 		.4byte	.LVL123
+ 2443 04ff 230E0000 		.4byte	0xe23
+ 2444 0503 11050000 		.4byte	0x511
+ 2445 0507 0C       		.uleb128 0xc
+ 2446 0508 01       		.uleb128 0x1
+ 2447 0509 50       		.byte	0x50
+ 2448 050a 05       		.uleb128 0x5
+ 2449 050b 03       		.byte	0x3
+ 2450 050c 64000000 		.4byte	.LC16
+ 2451 0510 00       		.byte	0
+ 2452 0511 0B       		.uleb128 0xb
+ 2453 0512 96010000 		.4byte	.LVL124
+ 2454 0516 180E0000 		.4byte	0xe18
+ 2455 051a 29050000 		.4byte	0x529
+ 2456 051e 0C       		.uleb128 0xc
+ 2457 051f 01       		.uleb128 0x1
+ 2458 0520 50       		.byte	0x50
+ 2459 0521 01       		.uleb128 0x1
+ 2460 0522 31       		.byte	0x31
+ 2461 0523 0C       		.uleb128 0xc
+ 2462 0524 01       		.uleb128 0x1
+ 2463 0525 51       		.byte	0x51
+ 2464 0526 01       		.uleb128 0x1
+ 2465 0527 36       		.byte	0x36
+ 2466 0528 00       		.byte	0
+ 2467 0529 0B       		.uleb128 0xb
+ 2468 052a 9C010000 		.4byte	.LVL125
+ 2469 052e 230E0000 		.4byte	0xe23
+ 2470 0532 40050000 		.4byte	0x540
+ 2471 0536 0C       		.uleb128 0xc
+ 2472 0537 01       		.uleb128 0x1
+ 2473 0538 50       		.byte	0x50
+ 2474 0539 05       		.uleb128 0x5
+ 2475 053a 03       		.byte	0x3
+ 2476 053b 68000000 		.4byte	.LC17
+ 2477 053f 00       		.byte	0
+ 2478 0540 0B       		.uleb128 0xb
+ 2479 0541 A6010000 		.4byte	.LVL126
+ 2480 0545 180E0000 		.4byte	0xe18
+ 2481 0549 58050000 		.4byte	0x558
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 51
+
+
+ 2482 054d 0C       		.uleb128 0xc
+ 2483 054e 01       		.uleb128 0x1
+ 2484 054f 50       		.byte	0x50
+ 2485 0550 01       		.uleb128 0x1
+ 2486 0551 30       		.byte	0x30
+ 2487 0552 0C       		.uleb128 0xc
+ 2488 0553 01       		.uleb128 0x1
+ 2489 0554 51       		.byte	0x51
+ 2490 0555 01       		.uleb128 0x1
+ 2491 0556 37       		.byte	0x37
+ 2492 0557 00       		.byte	0
+ 2493 0558 0B       		.uleb128 0xb
+ 2494 0559 AC010000 		.4byte	.LVL127
+ 2495 055d 230E0000 		.4byte	0xe23
+ 2496 0561 6F050000 		.4byte	0x56f
+ 2497 0565 0C       		.uleb128 0xc
+ 2498 0566 01       		.uleb128 0x1
+ 2499 0567 50       		.byte	0x50
+ 2500 0568 05       		.uleb128 0x5
+ 2501 0569 03       		.byte	0x3
+ 2502 056a 70000000 		.4byte	.LC18
+ 2503 056e 00       		.byte	0
+ 2504 056f 0B       		.uleb128 0xb
+ 2505 0570 B4010000 		.4byte	.LVL128
+ 2506 0574 180E0000 		.4byte	0xe18
+ 2507 0578 87050000 		.4byte	0x587
+ 2508 057c 0C       		.uleb128 0xc
+ 2509 057d 01       		.uleb128 0x1
+ 2510 057e 50       		.byte	0x50
+ 2511 057f 01       		.uleb128 0x1
+ 2512 0580 31       		.byte	0x31
+ 2513 0581 0C       		.uleb128 0xc
+ 2514 0582 01       		.uleb128 0x1
+ 2515 0583 51       		.byte	0x51
+ 2516 0584 01       		.uleb128 0x1
+ 2517 0585 35       		.byte	0x35
+ 2518 0586 00       		.byte	0
+ 2519 0587 0B       		.uleb128 0xb
+ 2520 0588 BA010000 		.4byte	.LVL129
+ 2521 058c 230E0000 		.4byte	0xe23
+ 2522 0590 9E050000 		.4byte	0x59e
+ 2523 0594 0C       		.uleb128 0xc
+ 2524 0595 01       		.uleb128 0x1
+ 2525 0596 50       		.byte	0x50
+ 2526 0597 05       		.uleb128 0x5
+ 2527 0598 03       		.byte	0x3
+ 2528 0599 74000000 		.4byte	.LC19
+ 2529 059d 00       		.byte	0
+ 2530 059e 0B       		.uleb128 0xb
+ 2531 059f C4010000 		.4byte	.LVL130
+ 2532 05a3 180E0000 		.4byte	0xe18
+ 2533 05a7 B6050000 		.4byte	0x5b6
+ 2534 05ab 0C       		.uleb128 0xc
+ 2535 05ac 01       		.uleb128 0x1
+ 2536 05ad 50       		.byte	0x50
+ 2537 05ae 01       		.uleb128 0x1
+ 2538 05af 30       		.byte	0x30
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 52
+
+
+ 2539 05b0 0C       		.uleb128 0xc
+ 2540 05b1 01       		.uleb128 0x1
+ 2541 05b2 51       		.byte	0x51
+ 2542 05b3 01       		.uleb128 0x1
+ 2543 05b4 37       		.byte	0x37
+ 2544 05b5 00       		.byte	0
+ 2545 05b6 0B       		.uleb128 0xb
+ 2546 05b7 CA010000 		.4byte	.LVL131
+ 2547 05bb 230E0000 		.4byte	0xe23
+ 2548 05bf CD050000 		.4byte	0x5cd
+ 2549 05c3 0C       		.uleb128 0xc
+ 2550 05c4 01       		.uleb128 0x1
+ 2551 05c5 50       		.byte	0x50
+ 2552 05c6 05       		.uleb128 0x5
+ 2553 05c7 03       		.byte	0x3
+ 2554 05c8 7C000000 		.4byte	.LC20
+ 2555 05cc 00       		.byte	0
+ 2556 05cd 0B       		.uleb128 0xb
+ 2557 05ce D2010000 		.4byte	.LVL132
+ 2558 05d2 180E0000 		.4byte	0xe18
+ 2559 05d6 E5050000 		.4byte	0x5e5
+ 2560 05da 0C       		.uleb128 0xc
+ 2561 05db 01       		.uleb128 0x1
+ 2562 05dc 50       		.byte	0x50
+ 2563 05dd 01       		.uleb128 0x1
+ 2564 05de 31       		.byte	0x31
+ 2565 05df 0C       		.uleb128 0xc
+ 2566 05e0 01       		.uleb128 0x1
+ 2567 05e1 51       		.byte	0x51
+ 2568 05e2 01       		.uleb128 0x1
+ 2569 05e3 36       		.byte	0x36
+ 2570 05e4 00       		.byte	0
+ 2571 05e5 0B       		.uleb128 0xb
+ 2572 05e6 D8010000 		.4byte	.LVL133
+ 2573 05ea 230E0000 		.4byte	0xe23
+ 2574 05ee FC050000 		.4byte	0x5fc
+ 2575 05f2 0C       		.uleb128 0xc
+ 2576 05f3 01       		.uleb128 0x1
+ 2577 05f4 50       		.byte	0x50
+ 2578 05f5 05       		.uleb128 0x5
+ 2579 05f6 03       		.byte	0x3
+ 2580 05f7 80000000 		.4byte	.LC21
+ 2581 05fb 00       		.byte	0
+ 2582 05fc 0B       		.uleb128 0xb
+ 2583 05fd E2010000 		.4byte	.LVL134
+ 2584 0601 180E0000 		.4byte	0xe18
+ 2585 0605 14060000 		.4byte	0x614
+ 2586 0609 0C       		.uleb128 0xc
+ 2587 060a 01       		.uleb128 0x1
+ 2588 060b 50       		.byte	0x50
+ 2589 060c 01       		.uleb128 0x1
+ 2590 060d 30       		.byte	0x30
+ 2591 060e 0C       		.uleb128 0xc
+ 2592 060f 01       		.uleb128 0x1
+ 2593 0610 51       		.byte	0x51
+ 2594 0611 01       		.uleb128 0x1
+ 2595 0612 37       		.byte	0x37
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 53
+
+
+ 2596 0613 00       		.byte	0
+ 2597 0614 0B       		.uleb128 0xb
+ 2598 0615 E8010000 		.4byte	.LVL135
+ 2599 0619 230E0000 		.4byte	0xe23
+ 2600 061d 2B060000 		.4byte	0x62b
+ 2601 0621 0C       		.uleb128 0xc
+ 2602 0622 01       		.uleb128 0x1
+ 2603 0623 50       		.byte	0x50
+ 2604 0624 05       		.uleb128 0x5
+ 2605 0625 03       		.byte	0x3
+ 2606 0626 88000000 		.4byte	.LC22
+ 2607 062a 00       		.byte	0
+ 2608 062b 0B       		.uleb128 0xb
+ 2609 062c F0010000 		.4byte	.LVL136
+ 2610 0630 180E0000 		.4byte	0xe18
+ 2611 0634 43060000 		.4byte	0x643
+ 2612 0638 0C       		.uleb128 0xc
+ 2613 0639 01       		.uleb128 0x1
+ 2614 063a 50       		.byte	0x50
+ 2615 063b 01       		.uleb128 0x1
+ 2616 063c 31       		.byte	0x31
+ 2617 063d 0C       		.uleb128 0xc
+ 2618 063e 01       		.uleb128 0x1
+ 2619 063f 51       		.byte	0x51
+ 2620 0640 01       		.uleb128 0x1
+ 2621 0641 36       		.byte	0x36
+ 2622 0642 00       		.byte	0
+ 2623 0643 0B       		.uleb128 0xb
+ 2624 0644 F6010000 		.4byte	.LVL137
+ 2625 0648 230E0000 		.4byte	0xe23
+ 2626 064c 5A060000 		.4byte	0x65a
+ 2627 0650 0C       		.uleb128 0xc
+ 2628 0651 01       		.uleb128 0x1
+ 2629 0652 50       		.byte	0x50
+ 2630 0653 05       		.uleb128 0x5
+ 2631 0654 03       		.byte	0x3
+ 2632 0655 8C000000 		.4byte	.LC23
+ 2633 0659 00       		.byte	0
+ 2634 065a 0B       		.uleb128 0xb
+ 2635 065b 00020000 		.4byte	.LVL138
+ 2636 065f 180E0000 		.4byte	0xe18
+ 2637 0663 72060000 		.4byte	0x672
+ 2638 0667 0C       		.uleb128 0xc
+ 2639 0668 01       		.uleb128 0x1
+ 2640 0669 50       		.byte	0x50
+ 2641 066a 01       		.uleb128 0x1
+ 2642 066b 30       		.byte	0x30
+ 2643 066c 0C       		.uleb128 0xc
+ 2644 066d 01       		.uleb128 0x1
+ 2645 066e 51       		.byte	0x51
+ 2646 066f 01       		.uleb128 0x1
+ 2647 0670 37       		.byte	0x37
+ 2648 0671 00       		.byte	0
+ 2649 0672 0B       		.uleb128 0xb
+ 2650 0673 06020000 		.4byte	.LVL139
+ 2651 0677 230E0000 		.4byte	0xe23
+ 2652 067b 89060000 		.4byte	0x689
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 54
+
+
+ 2653 067f 0C       		.uleb128 0xc
+ 2654 0680 01       		.uleb128 0x1
+ 2655 0681 50       		.byte	0x50
+ 2656 0682 05       		.uleb128 0x5
+ 2657 0683 03       		.byte	0x3
+ 2658 0684 94000000 		.4byte	.LC24
+ 2659 0688 00       		.byte	0
+ 2660 0689 0B       		.uleb128 0xb
+ 2661 068a 0E020000 		.4byte	.LVL140
+ 2662 068e 180E0000 		.4byte	0xe18
+ 2663 0692 A1060000 		.4byte	0x6a1
+ 2664 0696 0C       		.uleb128 0xc
+ 2665 0697 01       		.uleb128 0x1
+ 2666 0698 50       		.byte	0x50
+ 2667 0699 01       		.uleb128 0x1
+ 2668 069a 31       		.byte	0x31
+ 2669 069b 0C       		.uleb128 0xc
+ 2670 069c 01       		.uleb128 0x1
+ 2671 069d 51       		.byte	0x51
+ 2672 069e 01       		.uleb128 0x1
+ 2673 069f 36       		.byte	0x36
+ 2674 06a0 00       		.byte	0
+ 2675 06a1 0B       		.uleb128 0xb
+ 2676 06a2 14020000 		.4byte	.LVL141
+ 2677 06a6 230E0000 		.4byte	0xe23
+ 2678 06aa B8060000 		.4byte	0x6b8
+ 2679 06ae 0C       		.uleb128 0xc
+ 2680 06af 01       		.uleb128 0x1
+ 2681 06b0 50       		.byte	0x50
+ 2682 06b1 05       		.uleb128 0x5
+ 2683 06b2 03       		.byte	0x3
+ 2684 06b3 98000000 		.4byte	.LC25
+ 2685 06b7 00       		.byte	0
+ 2686 06b8 0B       		.uleb128 0xb
+ 2687 06b9 1E020000 		.4byte	.LVL142
+ 2688 06bd 180E0000 		.4byte	0xe18
+ 2689 06c1 D0060000 		.4byte	0x6d0
+ 2690 06c5 0C       		.uleb128 0xc
+ 2691 06c6 01       		.uleb128 0x1
+ 2692 06c7 50       		.byte	0x50
+ 2693 06c8 01       		.uleb128 0x1
+ 2694 06c9 30       		.byte	0x30
+ 2695 06ca 0C       		.uleb128 0xc
+ 2696 06cb 01       		.uleb128 0x1
+ 2697 06cc 51       		.byte	0x51
+ 2698 06cd 01       		.uleb128 0x1
+ 2699 06ce 37       		.byte	0x37
+ 2700 06cf 00       		.byte	0
+ 2701 06d0 0B       		.uleb128 0xb
+ 2702 06d1 24020000 		.4byte	.LVL143
+ 2703 06d5 230E0000 		.4byte	0xe23
+ 2704 06d9 E7060000 		.4byte	0x6e7
+ 2705 06dd 0C       		.uleb128 0xc
+ 2706 06de 01       		.uleb128 0x1
+ 2707 06df 50       		.byte	0x50
+ 2708 06e0 05       		.uleb128 0x5
+ 2709 06e1 03       		.byte	0x3
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 55
+
+
+ 2710 06e2 A0000000 		.4byte	.LC26
+ 2711 06e6 00       		.byte	0
+ 2712 06e7 0B       		.uleb128 0xb
+ 2713 06e8 2C020000 		.4byte	.LVL144
+ 2714 06ec 180E0000 		.4byte	0xe18
+ 2715 06f0 FF060000 		.4byte	0x6ff
+ 2716 06f4 0C       		.uleb128 0xc
+ 2717 06f5 01       		.uleb128 0x1
+ 2718 06f6 50       		.byte	0x50
+ 2719 06f7 01       		.uleb128 0x1
+ 2720 06f8 31       		.byte	0x31
+ 2721 06f9 0C       		.uleb128 0xc
+ 2722 06fa 01       		.uleb128 0x1
+ 2723 06fb 51       		.byte	0x51
+ 2724 06fc 01       		.uleb128 0x1
+ 2725 06fd 35       		.byte	0x35
+ 2726 06fe 00       		.byte	0
+ 2727 06ff 0B       		.uleb128 0xb
+ 2728 0700 32020000 		.4byte	.LVL145
+ 2729 0704 230E0000 		.4byte	0xe23
+ 2730 0708 16070000 		.4byte	0x716
+ 2731 070c 0C       		.uleb128 0xc
+ 2732 070d 01       		.uleb128 0x1
+ 2733 070e 50       		.byte	0x50
+ 2734 070f 05       		.uleb128 0x5
+ 2735 0710 03       		.byte	0x3
+ 2736 0711 A4000000 		.4byte	.LC27
+ 2737 0715 00       		.byte	0
+ 2738 0716 0B       		.uleb128 0xb
+ 2739 0717 3C020000 		.4byte	.LVL146
+ 2740 071b 180E0000 		.4byte	0xe18
+ 2741 071f 2E070000 		.4byte	0x72e
+ 2742 0723 0C       		.uleb128 0xc
+ 2743 0724 01       		.uleb128 0x1
+ 2744 0725 50       		.byte	0x50
+ 2745 0726 01       		.uleb128 0x1
+ 2746 0727 30       		.byte	0x30
+ 2747 0728 0C       		.uleb128 0xc
+ 2748 0729 01       		.uleb128 0x1
+ 2749 072a 51       		.byte	0x51
+ 2750 072b 01       		.uleb128 0x1
+ 2751 072c 37       		.byte	0x37
+ 2752 072d 00       		.byte	0
+ 2753 072e 0B       		.uleb128 0xb
+ 2754 072f 42020000 		.4byte	.LVL147
+ 2755 0733 230E0000 		.4byte	0xe23
+ 2756 0737 45070000 		.4byte	0x745
+ 2757 073b 0C       		.uleb128 0xc
+ 2758 073c 01       		.uleb128 0x1
+ 2759 073d 50       		.byte	0x50
+ 2760 073e 05       		.uleb128 0x5
+ 2761 073f 03       		.byte	0x3
+ 2762 0740 AC000000 		.4byte	.LC28
+ 2763 0744 00       		.byte	0
+ 2764 0745 0B       		.uleb128 0xb
+ 2765 0746 4A020000 		.4byte	.LVL148
+ 2766 074a 180E0000 		.4byte	0xe18
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 56
+
+
+ 2767 074e 5D070000 		.4byte	0x75d
+ 2768 0752 0C       		.uleb128 0xc
+ 2769 0753 01       		.uleb128 0x1
+ 2770 0754 50       		.byte	0x50
+ 2771 0755 01       		.uleb128 0x1
+ 2772 0756 31       		.byte	0x31
+ 2773 0757 0C       		.uleb128 0xc
+ 2774 0758 01       		.uleb128 0x1
+ 2775 0759 51       		.byte	0x51
+ 2776 075a 01       		.uleb128 0x1
+ 2777 075b 35       		.byte	0x35
+ 2778 075c 00       		.byte	0
+ 2779 075d 0B       		.uleb128 0xb
+ 2780 075e 50020000 		.4byte	.LVL149
+ 2781 0762 230E0000 		.4byte	0xe23
+ 2782 0766 74070000 		.4byte	0x774
+ 2783 076a 0C       		.uleb128 0xc
+ 2784 076b 01       		.uleb128 0x1
+ 2785 076c 50       		.byte	0x50
+ 2786 076d 05       		.uleb128 0x5
+ 2787 076e 03       		.byte	0x3
+ 2788 076f B0000000 		.4byte	.LC29
+ 2789 0773 00       		.byte	0
+ 2790 0774 0B       		.uleb128 0xb
+ 2791 0775 5A020000 		.4byte	.LVL150
+ 2792 0779 180E0000 		.4byte	0xe18
+ 2793 077d 8C070000 		.4byte	0x78c
+ 2794 0781 0C       		.uleb128 0xc
+ 2795 0782 01       		.uleb128 0x1
+ 2796 0783 50       		.byte	0x50
+ 2797 0784 01       		.uleb128 0x1
+ 2798 0785 30       		.byte	0x30
+ 2799 0786 0C       		.uleb128 0xc
+ 2800 0787 01       		.uleb128 0x1
+ 2801 0788 51       		.byte	0x51
+ 2802 0789 01       		.uleb128 0x1
+ 2803 078a 37       		.byte	0x37
+ 2804 078b 00       		.byte	0
+ 2805 078c 0B       		.uleb128 0xb
+ 2806 078d 60020000 		.4byte	.LVL151
+ 2807 0791 230E0000 		.4byte	0xe23
+ 2808 0795 A3070000 		.4byte	0x7a3
+ 2809 0799 0C       		.uleb128 0xc
+ 2810 079a 01       		.uleb128 0x1
+ 2811 079b 50       		.byte	0x50
+ 2812 079c 05       		.uleb128 0x5
+ 2813 079d 03       		.byte	0x3
+ 2814 079e B8000000 		.4byte	.LC30
+ 2815 07a2 00       		.byte	0
+ 2816 07a3 0B       		.uleb128 0xb
+ 2817 07a4 68020000 		.4byte	.LVL152
+ 2818 07a8 180E0000 		.4byte	0xe18
+ 2819 07ac BB070000 		.4byte	0x7bb
+ 2820 07b0 0C       		.uleb128 0xc
+ 2821 07b1 01       		.uleb128 0x1
+ 2822 07b2 50       		.byte	0x50
+ 2823 07b3 01       		.uleb128 0x1
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 57
+
+
+ 2824 07b4 31       		.byte	0x31
+ 2825 07b5 0C       		.uleb128 0xc
+ 2826 07b6 01       		.uleb128 0x1
+ 2827 07b7 51       		.byte	0x51
+ 2828 07b8 01       		.uleb128 0x1
+ 2829 07b9 35       		.byte	0x35
+ 2830 07ba 00       		.byte	0
+ 2831 07bb 0B       		.uleb128 0xb
+ 2832 07bc 6E020000 		.4byte	.LVL153
+ 2833 07c0 230E0000 		.4byte	0xe23
+ 2834 07c4 D2070000 		.4byte	0x7d2
+ 2835 07c8 0C       		.uleb128 0xc
+ 2836 07c9 01       		.uleb128 0x1
+ 2837 07ca 50       		.byte	0x50
+ 2838 07cb 05       		.uleb128 0x5
+ 2839 07cc 03       		.byte	0x3
+ 2840 07cd BC000000 		.4byte	.LC31
+ 2841 07d1 00       		.byte	0
+ 2842 07d2 0B       		.uleb128 0xb
+ 2843 07d3 78020000 		.4byte	.LVL154
+ 2844 07d7 180E0000 		.4byte	0xe18
+ 2845 07db EA070000 		.4byte	0x7ea
+ 2846 07df 0C       		.uleb128 0xc
+ 2847 07e0 01       		.uleb128 0x1
+ 2848 07e1 50       		.byte	0x50
+ 2849 07e2 01       		.uleb128 0x1
+ 2850 07e3 30       		.byte	0x30
+ 2851 07e4 0C       		.uleb128 0xc
+ 2852 07e5 01       		.uleb128 0x1
+ 2853 07e6 51       		.byte	0x51
+ 2854 07e7 01       		.uleb128 0x1
+ 2855 07e8 37       		.byte	0x37
+ 2856 07e9 00       		.byte	0
+ 2857 07ea 0B       		.uleb128 0xb
+ 2858 07eb 7E020000 		.4byte	.LVL155
+ 2859 07ef 230E0000 		.4byte	0xe23
+ 2860 07f3 01080000 		.4byte	0x801
+ 2861 07f7 0C       		.uleb128 0xc
+ 2862 07f8 01       		.uleb128 0x1
+ 2863 07f9 50       		.byte	0x50
+ 2864 07fa 05       		.uleb128 0x5
+ 2865 07fb 03       		.byte	0x3
+ 2866 07fc C4000000 		.4byte	.LC32
+ 2867 0800 00       		.byte	0
+ 2868 0801 0B       		.uleb128 0xb
+ 2869 0802 86020000 		.4byte	.LVL156
+ 2870 0806 180E0000 		.4byte	0xe18
+ 2871 080a 19080000 		.4byte	0x819
+ 2872 080e 0C       		.uleb128 0xc
+ 2873 080f 01       		.uleb128 0x1
+ 2874 0810 50       		.byte	0x50
+ 2875 0811 01       		.uleb128 0x1
+ 2876 0812 31       		.byte	0x31
+ 2877 0813 0C       		.uleb128 0xc
+ 2878 0814 01       		.uleb128 0x1
+ 2879 0815 51       		.byte	0x51
+ 2880 0816 01       		.uleb128 0x1
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 58
+
+
+ 2881 0817 33       		.byte	0x33
+ 2882 0818 00       		.byte	0
+ 2883 0819 0B       		.uleb128 0xb
+ 2884 081a 8C020000 		.4byte	.LVL157
+ 2885 081e 230E0000 		.4byte	0xe23
+ 2886 0822 30080000 		.4byte	0x830
+ 2887 0826 0C       		.uleb128 0xc
+ 2888 0827 01       		.uleb128 0x1
+ 2889 0828 50       		.byte	0x50
+ 2890 0829 05       		.uleb128 0x5
+ 2891 082a 03       		.byte	0x3
+ 2892 082b C8000000 		.4byte	.LC33
+ 2893 082f 00       		.byte	0
+ 2894 0830 0B       		.uleb128 0xb
+ 2895 0831 96020000 		.4byte	.LVL158
+ 2896 0835 180E0000 		.4byte	0xe18
+ 2897 0839 48080000 		.4byte	0x848
+ 2898 083d 0C       		.uleb128 0xc
+ 2899 083e 01       		.uleb128 0x1
+ 2900 083f 50       		.byte	0x50
+ 2901 0840 01       		.uleb128 0x1
+ 2902 0841 30       		.byte	0x30
+ 2903 0842 0C       		.uleb128 0xc
+ 2904 0843 01       		.uleb128 0x1
+ 2905 0844 51       		.byte	0x51
+ 2906 0845 01       		.uleb128 0x1
+ 2907 0846 37       		.byte	0x37
+ 2908 0847 00       		.byte	0
+ 2909 0848 0B       		.uleb128 0xb
+ 2910 0849 9C020000 		.4byte	.LVL159
+ 2911 084d 230E0000 		.4byte	0xe23
+ 2912 0851 5F080000 		.4byte	0x85f
+ 2913 0855 0C       		.uleb128 0xc
+ 2914 0856 01       		.uleb128 0x1
+ 2915 0857 50       		.byte	0x50
+ 2916 0858 05       		.uleb128 0x5
+ 2917 0859 03       		.byte	0x3
+ 2918 085a D4000000 		.4byte	.LC34
+ 2919 085e 00       		.byte	0
+ 2920 085f 0B       		.uleb128 0xb
+ 2921 0860 A4020000 		.4byte	.LVL160
+ 2922 0864 180E0000 		.4byte	0xe18
+ 2923 0868 77080000 		.4byte	0x877
+ 2924 086c 0C       		.uleb128 0xc
+ 2925 086d 01       		.uleb128 0x1
+ 2926 086e 50       		.byte	0x50
+ 2927 086f 01       		.uleb128 0x1
+ 2928 0870 31       		.byte	0x31
+ 2929 0871 0C       		.uleb128 0xc
+ 2930 0872 01       		.uleb128 0x1
+ 2931 0873 51       		.byte	0x51
+ 2932 0874 01       		.uleb128 0x1
+ 2933 0875 33       		.byte	0x33
+ 2934 0876 00       		.byte	0
+ 2935 0877 0B       		.uleb128 0xb
+ 2936 0878 AA020000 		.4byte	.LVL161
+ 2937 087c 230E0000 		.4byte	0xe23
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 59
+
+
+ 2938 0880 8E080000 		.4byte	0x88e
+ 2939 0884 0C       		.uleb128 0xc
+ 2940 0885 01       		.uleb128 0x1
+ 2941 0886 50       		.byte	0x50
+ 2942 0887 05       		.uleb128 0x5
+ 2943 0888 03       		.byte	0x3
+ 2944 0889 D8000000 		.4byte	.LC35
+ 2945 088d 00       		.byte	0
+ 2946 088e 0B       		.uleb128 0xb
+ 2947 088f B4020000 		.4byte	.LVL162
+ 2948 0893 180E0000 		.4byte	0xe18
+ 2949 0897 A6080000 		.4byte	0x8a6
+ 2950 089b 0C       		.uleb128 0xc
+ 2951 089c 01       		.uleb128 0x1
+ 2952 089d 50       		.byte	0x50
+ 2953 089e 01       		.uleb128 0x1
+ 2954 089f 30       		.byte	0x30
+ 2955 08a0 0C       		.uleb128 0xc
+ 2956 08a1 01       		.uleb128 0x1
+ 2957 08a2 51       		.byte	0x51
+ 2958 08a3 01       		.uleb128 0x1
+ 2959 08a4 37       		.byte	0x37
+ 2960 08a5 00       		.byte	0
+ 2961 08a6 0B       		.uleb128 0xb
+ 2962 08a7 BA020000 		.4byte	.LVL163
+ 2963 08ab 230E0000 		.4byte	0xe23
+ 2964 08af BD080000 		.4byte	0x8bd
+ 2965 08b3 0C       		.uleb128 0xc
+ 2966 08b4 01       		.uleb128 0x1
+ 2967 08b5 50       		.byte	0x50
+ 2968 08b6 05       		.uleb128 0x5
+ 2969 08b7 03       		.byte	0x3
+ 2970 08b8 E4000000 		.4byte	.LC36
+ 2971 08bc 00       		.byte	0
+ 2972 08bd 0B       		.uleb128 0xb
+ 2973 08be C2020000 		.4byte	.LVL164
+ 2974 08c2 180E0000 		.4byte	0xe18
+ 2975 08c6 D5080000 		.4byte	0x8d5
+ 2976 08ca 0C       		.uleb128 0xc
+ 2977 08cb 01       		.uleb128 0x1
+ 2978 08cc 50       		.byte	0x50
+ 2979 08cd 01       		.uleb128 0x1
+ 2980 08ce 31       		.byte	0x31
+ 2981 08cf 0C       		.uleb128 0xc
+ 2982 08d0 01       		.uleb128 0x1
+ 2983 08d1 51       		.byte	0x51
+ 2984 08d2 01       		.uleb128 0x1
+ 2985 08d3 33       		.byte	0x33
+ 2986 08d4 00       		.byte	0
+ 2987 08d5 0B       		.uleb128 0xb
+ 2988 08d6 C8020000 		.4byte	.LVL165
+ 2989 08da 230E0000 		.4byte	0xe23
+ 2990 08de EC080000 		.4byte	0x8ec
+ 2991 08e2 0C       		.uleb128 0xc
+ 2992 08e3 01       		.uleb128 0x1
+ 2993 08e4 50       		.byte	0x50
+ 2994 08e5 05       		.uleb128 0x5
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 60
+
+
+ 2995 08e6 03       		.byte	0x3
+ 2996 08e7 E8000000 		.4byte	.LC37
+ 2997 08eb 00       		.byte	0
+ 2998 08ec 0B       		.uleb128 0xb
+ 2999 08ed D2020000 		.4byte	.LVL166
+ 3000 08f1 180E0000 		.4byte	0xe18
+ 3001 08f5 04090000 		.4byte	0x904
+ 3002 08f9 0C       		.uleb128 0xc
+ 3003 08fa 01       		.uleb128 0x1
+ 3004 08fb 50       		.byte	0x50
+ 3005 08fc 01       		.uleb128 0x1
+ 3006 08fd 30       		.byte	0x30
+ 3007 08fe 0C       		.uleb128 0xc
+ 3008 08ff 01       		.uleb128 0x1
+ 3009 0900 51       		.byte	0x51
+ 3010 0901 01       		.uleb128 0x1
+ 3011 0902 37       		.byte	0x37
+ 3012 0903 00       		.byte	0
+ 3013 0904 0B       		.uleb128 0xb
+ 3014 0905 D8020000 		.4byte	.LVL167
+ 3015 0909 230E0000 		.4byte	0xe23
+ 3016 090d 1B090000 		.4byte	0x91b
+ 3017 0911 0C       		.uleb128 0xc
+ 3018 0912 01       		.uleb128 0x1
+ 3019 0913 50       		.byte	0x50
+ 3020 0914 05       		.uleb128 0x5
+ 3021 0915 03       		.byte	0x3
+ 3022 0916 F4000000 		.4byte	.LC38
+ 3023 091a 00       		.byte	0
+ 3024 091b 0B       		.uleb128 0xb
+ 3025 091c E0020000 		.4byte	.LVL168
+ 3026 0920 180E0000 		.4byte	0xe18
+ 3027 0924 33090000 		.4byte	0x933
+ 3028 0928 0C       		.uleb128 0xc
+ 3029 0929 01       		.uleb128 0x1
+ 3030 092a 50       		.byte	0x50
+ 3031 092b 01       		.uleb128 0x1
+ 3032 092c 31       		.byte	0x31
+ 3033 092d 0C       		.uleb128 0xc
+ 3034 092e 01       		.uleb128 0x1
+ 3035 092f 51       		.byte	0x51
+ 3036 0930 01       		.uleb128 0x1
+ 3037 0931 33       		.byte	0x33
+ 3038 0932 00       		.byte	0
+ 3039 0933 0B       		.uleb128 0xb
+ 3040 0934 E6020000 		.4byte	.LVL169
+ 3041 0938 230E0000 		.4byte	0xe23
+ 3042 093c 4A090000 		.4byte	0x94a
+ 3043 0940 0C       		.uleb128 0xc
+ 3044 0941 01       		.uleb128 0x1
+ 3045 0942 50       		.byte	0x50
+ 3046 0943 05       		.uleb128 0x5
+ 3047 0944 03       		.byte	0x3
+ 3048 0945 F8000000 		.4byte	.LC39
+ 3049 0949 00       		.byte	0
+ 3050 094a 0B       		.uleb128 0xb
+ 3051 094b F0020000 		.4byte	.LVL170
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 61
+
+
+ 3052 094f 180E0000 		.4byte	0xe18
+ 3053 0953 62090000 		.4byte	0x962
+ 3054 0957 0C       		.uleb128 0xc
+ 3055 0958 01       		.uleb128 0x1
+ 3056 0959 50       		.byte	0x50
+ 3057 095a 01       		.uleb128 0x1
+ 3058 095b 30       		.byte	0x30
+ 3059 095c 0C       		.uleb128 0xc
+ 3060 095d 01       		.uleb128 0x1
+ 3061 095e 51       		.byte	0x51
+ 3062 095f 01       		.uleb128 0x1
+ 3063 0960 37       		.byte	0x37
+ 3064 0961 00       		.byte	0
+ 3065 0962 0B       		.uleb128 0xb
+ 3066 0963 F6020000 		.4byte	.LVL171
+ 3067 0967 230E0000 		.4byte	0xe23
+ 3068 096b 79090000 		.4byte	0x979
+ 3069 096f 0C       		.uleb128 0xc
+ 3070 0970 01       		.uleb128 0x1
+ 3071 0971 50       		.byte	0x50
+ 3072 0972 05       		.uleb128 0x5
+ 3073 0973 03       		.byte	0x3
+ 3074 0974 04010000 		.4byte	.LC40
+ 3075 0978 00       		.byte	0
+ 3076 0979 0B       		.uleb128 0xb
+ 3077 097a FE020000 		.4byte	.LVL172
+ 3078 097e 180E0000 		.4byte	0xe18
+ 3079 0982 91090000 		.4byte	0x991
+ 3080 0986 0C       		.uleb128 0xc
+ 3081 0987 01       		.uleb128 0x1
+ 3082 0988 50       		.byte	0x50
+ 3083 0989 01       		.uleb128 0x1
+ 3084 098a 31       		.byte	0x31
+ 3085 098b 0C       		.uleb128 0xc
+ 3086 098c 01       		.uleb128 0x1
+ 3087 098d 51       		.byte	0x51
+ 3088 098e 01       		.uleb128 0x1
+ 3089 098f 35       		.byte	0x35
+ 3090 0990 00       		.byte	0
+ 3091 0991 0B       		.uleb128 0xb
+ 3092 0992 04030000 		.4byte	.LVL173
+ 3093 0996 230E0000 		.4byte	0xe23
+ 3094 099a A8090000 		.4byte	0x9a8
+ 3095 099e 0C       		.uleb128 0xc
+ 3096 099f 01       		.uleb128 0x1
+ 3097 09a0 50       		.byte	0x50
+ 3098 09a1 05       		.uleb128 0x5
+ 3099 09a2 03       		.byte	0x3
+ 3100 09a3 08010000 		.4byte	.LC41
+ 3101 09a7 00       		.byte	0
+ 3102 09a8 0B       		.uleb128 0xb
+ 3103 09a9 0E030000 		.4byte	.LVL174
+ 3104 09ad 180E0000 		.4byte	0xe18
+ 3105 09b1 C0090000 		.4byte	0x9c0
+ 3106 09b5 0C       		.uleb128 0xc
+ 3107 09b6 01       		.uleb128 0x1
+ 3108 09b7 50       		.byte	0x50
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 62
+
+
+ 3109 09b8 01       		.uleb128 0x1
+ 3110 09b9 30       		.byte	0x30
+ 3111 09ba 0C       		.uleb128 0xc
+ 3112 09bb 01       		.uleb128 0x1
+ 3113 09bc 51       		.byte	0x51
+ 3114 09bd 01       		.uleb128 0x1
+ 3115 09be 37       		.byte	0x37
+ 3116 09bf 00       		.byte	0
+ 3117 09c0 0B       		.uleb128 0xb
+ 3118 09c1 14030000 		.4byte	.LVL175
+ 3119 09c5 230E0000 		.4byte	0xe23
+ 3120 09c9 D7090000 		.4byte	0x9d7
+ 3121 09cd 0C       		.uleb128 0xc
+ 3122 09ce 01       		.uleb128 0x1
+ 3123 09cf 50       		.byte	0x50
+ 3124 09d0 05       		.uleb128 0x5
+ 3125 09d1 03       		.byte	0x3
+ 3126 09d2 10010000 		.4byte	.LC42
+ 3127 09d6 00       		.byte	0
+ 3128 09d7 0B       		.uleb128 0xb
+ 3129 09d8 1C030000 		.4byte	.LVL176
+ 3130 09dc 180E0000 		.4byte	0xe18
+ 3131 09e0 EF090000 		.4byte	0x9ef
+ 3132 09e4 0C       		.uleb128 0xc
+ 3133 09e5 01       		.uleb128 0x1
+ 3134 09e6 50       		.byte	0x50
+ 3135 09e7 01       		.uleb128 0x1
+ 3136 09e8 31       		.byte	0x31
+ 3137 09e9 0C       		.uleb128 0xc
+ 3138 09ea 01       		.uleb128 0x1
+ 3139 09eb 51       		.byte	0x51
+ 3140 09ec 01       		.uleb128 0x1
+ 3141 09ed 33       		.byte	0x33
+ 3142 09ee 00       		.byte	0
+ 3143 09ef 0B       		.uleb128 0xb
+ 3144 09f0 22030000 		.4byte	.LVL177
+ 3145 09f4 230E0000 		.4byte	0xe23
+ 3146 09f8 060A0000 		.4byte	0xa06
+ 3147 09fc 0C       		.uleb128 0xc
+ 3148 09fd 01       		.uleb128 0x1
+ 3149 09fe 50       		.byte	0x50
+ 3150 09ff 05       		.uleb128 0x5
+ 3151 0a00 03       		.byte	0x3
+ 3152 0a01 14010000 		.4byte	.LC43
+ 3153 0a05 00       		.byte	0
+ 3154 0a06 0B       		.uleb128 0xb
+ 3155 0a07 2C030000 		.4byte	.LVL178
+ 3156 0a0b 180E0000 		.4byte	0xe18
+ 3157 0a0f 1E0A0000 		.4byte	0xa1e
+ 3158 0a13 0C       		.uleb128 0xc
+ 3159 0a14 01       		.uleb128 0x1
+ 3160 0a15 50       		.byte	0x50
+ 3161 0a16 01       		.uleb128 0x1
+ 3162 0a17 30       		.byte	0x30
+ 3163 0a18 0C       		.uleb128 0xc
+ 3164 0a19 01       		.uleb128 0x1
+ 3165 0a1a 51       		.byte	0x51
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 63
+
+
+ 3166 0a1b 01       		.uleb128 0x1
+ 3167 0a1c 37       		.byte	0x37
+ 3168 0a1d 00       		.byte	0
+ 3169 0a1e 0B       		.uleb128 0xb
+ 3170 0a1f 32030000 		.4byte	.LVL179
+ 3171 0a23 230E0000 		.4byte	0xe23
+ 3172 0a27 350A0000 		.4byte	0xa35
+ 3173 0a2b 0C       		.uleb128 0xc
+ 3174 0a2c 01       		.uleb128 0x1
+ 3175 0a2d 50       		.byte	0x50
+ 3176 0a2e 05       		.uleb128 0x5
+ 3177 0a2f 03       		.byte	0x3
+ 3178 0a30 20010000 		.4byte	.LC44
+ 3179 0a34 00       		.byte	0
+ 3180 0a35 0B       		.uleb128 0xb
+ 3181 0a36 3A030000 		.4byte	.LVL180
+ 3182 0a3a 180E0000 		.4byte	0xe18
+ 3183 0a3e 4D0A0000 		.4byte	0xa4d
+ 3184 0a42 0C       		.uleb128 0xc
+ 3185 0a43 01       		.uleb128 0x1
+ 3186 0a44 50       		.byte	0x50
+ 3187 0a45 01       		.uleb128 0x1
+ 3188 0a46 31       		.byte	0x31
+ 3189 0a47 0C       		.uleb128 0xc
+ 3190 0a48 01       		.uleb128 0x1
+ 3191 0a49 51       		.byte	0x51
+ 3192 0a4a 01       		.uleb128 0x1
+ 3193 0a4b 33       		.byte	0x33
+ 3194 0a4c 00       		.byte	0
+ 3195 0a4d 0B       		.uleb128 0xb
+ 3196 0a4e 40030000 		.4byte	.LVL181
+ 3197 0a52 230E0000 		.4byte	0xe23
+ 3198 0a56 640A0000 		.4byte	0xa64
+ 3199 0a5a 0C       		.uleb128 0xc
+ 3200 0a5b 01       		.uleb128 0x1
+ 3201 0a5c 50       		.byte	0x50
+ 3202 0a5d 05       		.uleb128 0x5
+ 3203 0a5e 03       		.byte	0x3
+ 3204 0a5f 24010000 		.4byte	.LC45
+ 3205 0a63 00       		.byte	0
+ 3206 0a64 0B       		.uleb128 0xb
+ 3207 0a65 4A030000 		.4byte	.LVL182
+ 3208 0a69 180E0000 		.4byte	0xe18
+ 3209 0a6d 7C0A0000 		.4byte	0xa7c
+ 3210 0a71 0C       		.uleb128 0xc
+ 3211 0a72 01       		.uleb128 0x1
+ 3212 0a73 50       		.byte	0x50
+ 3213 0a74 01       		.uleb128 0x1
+ 3214 0a75 30       		.byte	0x30
+ 3215 0a76 0C       		.uleb128 0xc
+ 3216 0a77 01       		.uleb128 0x1
+ 3217 0a78 51       		.byte	0x51
+ 3218 0a79 01       		.uleb128 0x1
+ 3219 0a7a 37       		.byte	0x37
+ 3220 0a7b 00       		.byte	0
+ 3221 0a7c 0B       		.uleb128 0xb
+ 3222 0a7d 50030000 		.4byte	.LVL183
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 64
+
+
+ 3223 0a81 230E0000 		.4byte	0xe23
+ 3224 0a85 930A0000 		.4byte	0xa93
+ 3225 0a89 0C       		.uleb128 0xc
+ 3226 0a8a 01       		.uleb128 0x1
+ 3227 0a8b 50       		.byte	0x50
+ 3228 0a8c 05       		.uleb128 0x5
+ 3229 0a8d 03       		.byte	0x3
+ 3230 0a8e 30010000 		.4byte	.LC46
+ 3231 0a92 00       		.byte	0
+ 3232 0a93 0B       		.uleb128 0xb
+ 3233 0a94 58030000 		.4byte	.LVL184
+ 3234 0a98 180E0000 		.4byte	0xe18
+ 3235 0a9c AB0A0000 		.4byte	0xaab
+ 3236 0aa0 0C       		.uleb128 0xc
+ 3237 0aa1 01       		.uleb128 0x1
+ 3238 0aa2 50       		.byte	0x50
+ 3239 0aa3 01       		.uleb128 0x1
+ 3240 0aa4 31       		.byte	0x31
+ 3241 0aa5 0C       		.uleb128 0xc
+ 3242 0aa6 01       		.uleb128 0x1
+ 3243 0aa7 51       		.byte	0x51
+ 3244 0aa8 01       		.uleb128 0x1
+ 3245 0aa9 33       		.byte	0x33
+ 3246 0aaa 00       		.byte	0
+ 3247 0aab 0B       		.uleb128 0xb
+ 3248 0aac 5E030000 		.4byte	.LVL185
+ 3249 0ab0 230E0000 		.4byte	0xe23
+ 3250 0ab4 C20A0000 		.4byte	0xac2
+ 3251 0ab8 0C       		.uleb128 0xc
+ 3252 0ab9 01       		.uleb128 0x1
+ 3253 0aba 50       		.byte	0x50
+ 3254 0abb 05       		.uleb128 0x5
+ 3255 0abc 03       		.byte	0x3
+ 3256 0abd 34010000 		.4byte	.LC47
+ 3257 0ac1 00       		.byte	0
+ 3258 0ac2 0B       		.uleb128 0xb
+ 3259 0ac3 68030000 		.4byte	.LVL186
+ 3260 0ac7 180E0000 		.4byte	0xe18
+ 3261 0acb DA0A0000 		.4byte	0xada
+ 3262 0acf 0C       		.uleb128 0xc
+ 3263 0ad0 01       		.uleb128 0x1
+ 3264 0ad1 50       		.byte	0x50
+ 3265 0ad2 01       		.uleb128 0x1
+ 3266 0ad3 30       		.byte	0x30
+ 3267 0ad4 0C       		.uleb128 0xc
+ 3268 0ad5 01       		.uleb128 0x1
+ 3269 0ad6 51       		.byte	0x51
+ 3270 0ad7 01       		.uleb128 0x1
+ 3271 0ad8 37       		.byte	0x37
+ 3272 0ad9 00       		.byte	0
+ 3273 0ada 0B       		.uleb128 0xb
+ 3274 0adb 6E030000 		.4byte	.LVL187
+ 3275 0adf 230E0000 		.4byte	0xe23
+ 3276 0ae3 F10A0000 		.4byte	0xaf1
+ 3277 0ae7 0C       		.uleb128 0xc
+ 3278 0ae8 01       		.uleb128 0x1
+ 3279 0ae9 50       		.byte	0x50
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 65
+
+
+ 3280 0aea 05       		.uleb128 0x5
+ 3281 0aeb 03       		.byte	0x3
+ 3282 0aec 40010000 		.4byte	.LC48
+ 3283 0af0 00       		.byte	0
+ 3284 0af1 0B       		.uleb128 0xb
+ 3285 0af2 76030000 		.4byte	.LVL188
+ 3286 0af6 180E0000 		.4byte	0xe18
+ 3287 0afa 090B0000 		.4byte	0xb09
+ 3288 0afe 0C       		.uleb128 0xc
+ 3289 0aff 01       		.uleb128 0x1
+ 3290 0b00 50       		.byte	0x50
+ 3291 0b01 01       		.uleb128 0x1
+ 3292 0b02 31       		.byte	0x31
+ 3293 0b03 0C       		.uleb128 0xc
+ 3294 0b04 01       		.uleb128 0x1
+ 3295 0b05 51       		.byte	0x51
+ 3296 0b06 01       		.uleb128 0x1
+ 3297 0b07 32       		.byte	0x32
+ 3298 0b08 00       		.byte	0
+ 3299 0b09 0B       		.uleb128 0xb
+ 3300 0b0a 7C030000 		.4byte	.LVL189
+ 3301 0b0e 230E0000 		.4byte	0xe23
+ 3302 0b12 200B0000 		.4byte	0xb20
+ 3303 0b16 0C       		.uleb128 0xc
+ 3304 0b17 01       		.uleb128 0x1
+ 3305 0b18 50       		.byte	0x50
+ 3306 0b19 05       		.uleb128 0x5
+ 3307 0b1a 03       		.byte	0x3
+ 3308 0b1b 44010000 		.4byte	.LC49
+ 3309 0b1f 00       		.byte	0
+ 3310 0b20 0B       		.uleb128 0xb
+ 3311 0b21 86030000 		.4byte	.LVL190
+ 3312 0b25 180E0000 		.4byte	0xe18
+ 3313 0b29 380B0000 		.4byte	0xb38
+ 3314 0b2d 0C       		.uleb128 0xc
+ 3315 0b2e 01       		.uleb128 0x1
+ 3316 0b2f 50       		.byte	0x50
+ 3317 0b30 01       		.uleb128 0x1
+ 3318 0b31 30       		.byte	0x30
+ 3319 0b32 0C       		.uleb128 0xc
+ 3320 0b33 01       		.uleb128 0x1
+ 3321 0b34 51       		.byte	0x51
+ 3322 0b35 01       		.uleb128 0x1
+ 3323 0b36 37       		.byte	0x37
+ 3324 0b37 00       		.byte	0
+ 3325 0b38 0B       		.uleb128 0xb
+ 3326 0b39 8C030000 		.4byte	.LVL191
+ 3327 0b3d 230E0000 		.4byte	0xe23
+ 3328 0b41 4F0B0000 		.4byte	0xb4f
+ 3329 0b45 0C       		.uleb128 0xc
+ 3330 0b46 01       		.uleb128 0x1
+ 3331 0b47 50       		.byte	0x50
+ 3332 0b48 05       		.uleb128 0x5
+ 3333 0b49 03       		.byte	0x3
+ 3334 0b4a 54010000 		.4byte	.LC50
+ 3335 0b4e 00       		.byte	0
+ 3336 0b4f 0B       		.uleb128 0xb
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 66
+
+
+ 3337 0b50 94030000 		.4byte	.LVL192
+ 3338 0b54 180E0000 		.4byte	0xe18
+ 3339 0b58 670B0000 		.4byte	0xb67
+ 3340 0b5c 0C       		.uleb128 0xc
+ 3341 0b5d 01       		.uleb128 0x1
+ 3342 0b5e 50       		.byte	0x50
+ 3343 0b5f 01       		.uleb128 0x1
+ 3344 0b60 31       		.byte	0x31
+ 3345 0b61 0C       		.uleb128 0xc
+ 3346 0b62 01       		.uleb128 0x1
+ 3347 0b63 51       		.byte	0x51
+ 3348 0b64 01       		.uleb128 0x1
+ 3349 0b65 33       		.byte	0x33
+ 3350 0b66 00       		.byte	0
+ 3351 0b67 0B       		.uleb128 0xb
+ 3352 0b68 9A030000 		.4byte	.LVL193
+ 3353 0b6c 230E0000 		.4byte	0xe23
+ 3354 0b70 7E0B0000 		.4byte	0xb7e
+ 3355 0b74 0C       		.uleb128 0xc
+ 3356 0b75 01       		.uleb128 0x1
+ 3357 0b76 50       		.byte	0x50
+ 3358 0b77 05       		.uleb128 0x5
+ 3359 0b78 03       		.byte	0x3
+ 3360 0b79 58010000 		.4byte	.LC51
+ 3361 0b7d 00       		.byte	0
+ 3362 0b7e 0B       		.uleb128 0xb
+ 3363 0b7f A4030000 		.4byte	.LVL194
+ 3364 0b83 180E0000 		.4byte	0xe18
+ 3365 0b87 960B0000 		.4byte	0xb96
+ 3366 0b8b 0C       		.uleb128 0xc
+ 3367 0b8c 01       		.uleb128 0x1
+ 3368 0b8d 50       		.byte	0x50
+ 3369 0b8e 01       		.uleb128 0x1
+ 3370 0b8f 30       		.byte	0x30
+ 3371 0b90 0C       		.uleb128 0xc
+ 3372 0b91 01       		.uleb128 0x1
+ 3373 0b92 51       		.byte	0x51
+ 3374 0b93 01       		.uleb128 0x1
+ 3375 0b94 37       		.byte	0x37
+ 3376 0b95 00       		.byte	0
+ 3377 0b96 0B       		.uleb128 0xb
+ 3378 0b97 AA030000 		.4byte	.LVL195
+ 3379 0b9b 230E0000 		.4byte	0xe23
+ 3380 0b9f AD0B0000 		.4byte	0xbad
+ 3381 0ba3 0C       		.uleb128 0xc
+ 3382 0ba4 01       		.uleb128 0x1
+ 3383 0ba5 50       		.byte	0x50
+ 3384 0ba6 05       		.uleb128 0x5
+ 3385 0ba7 03       		.byte	0x3
+ 3386 0ba8 64010000 		.4byte	.LC52
+ 3387 0bac 00       		.byte	0
+ 3388 0bad 0B       		.uleb128 0xb
+ 3389 0bae B2030000 		.4byte	.LVL196
+ 3390 0bb2 180E0000 		.4byte	0xe18
+ 3391 0bb6 C50B0000 		.4byte	0xbc5
+ 3392 0bba 0C       		.uleb128 0xc
+ 3393 0bbb 01       		.uleb128 0x1
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 67
+
+
+ 3394 0bbc 50       		.byte	0x50
+ 3395 0bbd 01       		.uleb128 0x1
+ 3396 0bbe 31       		.byte	0x31
+ 3397 0bbf 0C       		.uleb128 0xc
+ 3398 0bc0 01       		.uleb128 0x1
+ 3399 0bc1 51       		.byte	0x51
+ 3400 0bc2 01       		.uleb128 0x1
+ 3401 0bc3 33       		.byte	0x33
+ 3402 0bc4 00       		.byte	0
+ 3403 0bc5 0B       		.uleb128 0xb
+ 3404 0bc6 B8030000 		.4byte	.LVL197
+ 3405 0bca 230E0000 		.4byte	0xe23
+ 3406 0bce DC0B0000 		.4byte	0xbdc
+ 3407 0bd2 0C       		.uleb128 0xc
+ 3408 0bd3 01       		.uleb128 0x1
+ 3409 0bd4 50       		.byte	0x50
+ 3410 0bd5 05       		.uleb128 0x5
+ 3411 0bd6 03       		.byte	0x3
+ 3412 0bd7 68010000 		.4byte	.LC53
+ 3413 0bdb 00       		.byte	0
+ 3414 0bdc 0B       		.uleb128 0xb
+ 3415 0bdd C2030000 		.4byte	.LVL198
+ 3416 0be1 180E0000 		.4byte	0xe18
+ 3417 0be5 F40B0000 		.4byte	0xbf4
+ 3418 0be9 0C       		.uleb128 0xc
+ 3419 0bea 01       		.uleb128 0x1
+ 3420 0beb 50       		.byte	0x50
+ 3421 0bec 01       		.uleb128 0x1
+ 3422 0bed 30       		.byte	0x30
+ 3423 0bee 0C       		.uleb128 0xc
+ 3424 0bef 01       		.uleb128 0x1
+ 3425 0bf0 51       		.byte	0x51
+ 3426 0bf1 01       		.uleb128 0x1
+ 3427 0bf2 37       		.byte	0x37
+ 3428 0bf3 00       		.byte	0
+ 3429 0bf4 0B       		.uleb128 0xb
+ 3430 0bf5 C8030000 		.4byte	.LVL199
+ 3431 0bf9 230E0000 		.4byte	0xe23
+ 3432 0bfd 0B0C0000 		.4byte	0xc0b
+ 3433 0c01 0C       		.uleb128 0xc
+ 3434 0c02 01       		.uleb128 0x1
+ 3435 0c03 50       		.byte	0x50
+ 3436 0c04 05       		.uleb128 0x5
+ 3437 0c05 03       		.byte	0x3
+ 3438 0c06 74010000 		.4byte	.LC54
+ 3439 0c0a 00       		.byte	0
+ 3440 0c0b 0B       		.uleb128 0xb
+ 3441 0c0c D0030000 		.4byte	.LVL200
+ 3442 0c10 180E0000 		.4byte	0xe18
+ 3443 0c14 230C0000 		.4byte	0xc23
+ 3444 0c18 0C       		.uleb128 0xc
+ 3445 0c19 01       		.uleb128 0x1
+ 3446 0c1a 50       		.byte	0x50
+ 3447 0c1b 01       		.uleb128 0x1
+ 3448 0c1c 31       		.byte	0x31
+ 3449 0c1d 0C       		.uleb128 0xc
+ 3450 0c1e 01       		.uleb128 0x1
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 68
+
+
+ 3451 0c1f 51       		.byte	0x51
+ 3452 0c20 01       		.uleb128 0x1
+ 3453 0c21 32       		.byte	0x32
+ 3454 0c22 00       		.byte	0
+ 3455 0c23 0B       		.uleb128 0xb
+ 3456 0c24 D6030000 		.4byte	.LVL201
+ 3457 0c28 230E0000 		.4byte	0xe23
+ 3458 0c2c 3A0C0000 		.4byte	0xc3a
+ 3459 0c30 0C       		.uleb128 0xc
+ 3460 0c31 01       		.uleb128 0x1
+ 3461 0c32 50       		.byte	0x50
+ 3462 0c33 05       		.uleb128 0x5
+ 3463 0c34 03       		.byte	0x3
+ 3464 0c35 78010000 		.4byte	.LC55
+ 3465 0c39 00       		.byte	0
+ 3466 0c3a 0B       		.uleb128 0xb
+ 3467 0c3b C0040000 		.4byte	.LVL202
+ 3468 0c3f 180E0000 		.4byte	0xe18
+ 3469 0c43 520C0000 		.4byte	0xc52
+ 3470 0c47 0C       		.uleb128 0xc
+ 3471 0c48 01       		.uleb128 0x1
+ 3472 0c49 50       		.byte	0x50
+ 3473 0c4a 01       		.uleb128 0x1
+ 3474 0c4b 30       		.byte	0x30
+ 3475 0c4c 0C       		.uleb128 0xc
+ 3476 0c4d 01       		.uleb128 0x1
+ 3477 0c4e 51       		.byte	0x51
+ 3478 0c4f 01       		.uleb128 0x1
+ 3479 0c50 37       		.byte	0x37
+ 3480 0c51 00       		.byte	0
+ 3481 0c52 0B       		.uleb128 0xb
+ 3482 0c53 C6040000 		.4byte	.LVL203
+ 3483 0c57 230E0000 		.4byte	0xe23
+ 3484 0c5b 690C0000 		.4byte	0xc69
+ 3485 0c5f 0C       		.uleb128 0xc
+ 3486 0c60 01       		.uleb128 0x1
+ 3487 0c61 50       		.byte	0x50
+ 3488 0c62 05       		.uleb128 0x5
+ 3489 0c63 03       		.byte	0x3
+ 3490 0c64 84010000 		.4byte	.LC56
+ 3491 0c68 00       		.byte	0
+ 3492 0c69 0B       		.uleb128 0xb
+ 3493 0c6a CE040000 		.4byte	.LVL204
+ 3494 0c6e 180E0000 		.4byte	0xe18
+ 3495 0c72 810C0000 		.4byte	0xc81
+ 3496 0c76 0C       		.uleb128 0xc
+ 3497 0c77 01       		.uleb128 0x1
+ 3498 0c78 50       		.byte	0x50
+ 3499 0c79 01       		.uleb128 0x1
+ 3500 0c7a 31       		.byte	0x31
+ 3501 0c7b 0C       		.uleb128 0xc
+ 3502 0c7c 01       		.uleb128 0x1
+ 3503 0c7d 51       		.byte	0x51
+ 3504 0c7e 01       		.uleb128 0x1
+ 3505 0c7f 33       		.byte	0x33
+ 3506 0c80 00       		.byte	0
+ 3507 0c81 0B       		.uleb128 0xb
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 69
+
+
+ 3508 0c82 D4040000 		.4byte	.LVL205
+ 3509 0c86 230E0000 		.4byte	0xe23
+ 3510 0c8a 980C0000 		.4byte	0xc98
+ 3511 0c8e 0C       		.uleb128 0xc
+ 3512 0c8f 01       		.uleb128 0x1
+ 3513 0c90 50       		.byte	0x50
+ 3514 0c91 05       		.uleb128 0x5
+ 3515 0c92 03       		.byte	0x3
+ 3516 0c93 88010000 		.4byte	.LC57
+ 3517 0c97 00       		.byte	0
+ 3518 0c98 0B       		.uleb128 0xb
+ 3519 0c99 DE040000 		.4byte	.LVL206
+ 3520 0c9d 180E0000 		.4byte	0xe18
+ 3521 0ca1 B00C0000 		.4byte	0xcb0
+ 3522 0ca5 0C       		.uleb128 0xc
+ 3523 0ca6 01       		.uleb128 0x1
+ 3524 0ca7 50       		.byte	0x50
+ 3525 0ca8 01       		.uleb128 0x1
+ 3526 0ca9 30       		.byte	0x30
+ 3527 0caa 0C       		.uleb128 0xc
+ 3528 0cab 01       		.uleb128 0x1
+ 3529 0cac 51       		.byte	0x51
+ 3530 0cad 01       		.uleb128 0x1
+ 3531 0cae 37       		.byte	0x37
+ 3532 0caf 00       		.byte	0
+ 3533 0cb0 0B       		.uleb128 0xb
+ 3534 0cb1 E4040000 		.4byte	.LVL207
+ 3535 0cb5 230E0000 		.4byte	0xe23
+ 3536 0cb9 C70C0000 		.4byte	0xcc7
+ 3537 0cbd 0C       		.uleb128 0xc
+ 3538 0cbe 01       		.uleb128 0x1
+ 3539 0cbf 50       		.byte	0x50
+ 3540 0cc0 05       		.uleb128 0x5
+ 3541 0cc1 03       		.byte	0x3
+ 3542 0cc2 94010000 		.4byte	.LC58
+ 3543 0cc6 00       		.byte	0
+ 3544 0cc7 0B       		.uleb128 0xb
+ 3545 0cc8 EC040000 		.4byte	.LVL208
+ 3546 0ccc 180E0000 		.4byte	0xe18
+ 3547 0cd0 DF0C0000 		.4byte	0xcdf
+ 3548 0cd4 0C       		.uleb128 0xc
+ 3549 0cd5 01       		.uleb128 0x1
+ 3550 0cd6 50       		.byte	0x50
+ 3551 0cd7 01       		.uleb128 0x1
+ 3552 0cd8 31       		.byte	0x31
+ 3553 0cd9 0C       		.uleb128 0xc
+ 3554 0cda 01       		.uleb128 0x1
+ 3555 0cdb 51       		.byte	0x51
+ 3556 0cdc 01       		.uleb128 0x1
+ 3557 0cdd 32       		.byte	0x32
+ 3558 0cde 00       		.byte	0
+ 3559 0cdf 0B       		.uleb128 0xb
+ 3560 0ce0 F2040000 		.4byte	.LVL209
+ 3561 0ce4 230E0000 		.4byte	0xe23
+ 3562 0ce8 F60C0000 		.4byte	0xcf6
+ 3563 0cec 0C       		.uleb128 0xc
+ 3564 0ced 01       		.uleb128 0x1
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 70
+
+
+ 3565 0cee 50       		.byte	0x50
+ 3566 0cef 05       		.uleb128 0x5
+ 3567 0cf0 03       		.byte	0x3
+ 3568 0cf1 98010000 		.4byte	.LC59
+ 3569 0cf5 00       		.byte	0
+ 3570 0cf6 0B       		.uleb128 0xb
+ 3571 0cf7 FC040000 		.4byte	.LVL210
+ 3572 0cfb 180E0000 		.4byte	0xe18
+ 3573 0cff 0E0D0000 		.4byte	0xd0e
+ 3574 0d03 0C       		.uleb128 0xc
+ 3575 0d04 01       		.uleb128 0x1
+ 3576 0d05 50       		.byte	0x50
+ 3577 0d06 01       		.uleb128 0x1
+ 3578 0d07 30       		.byte	0x30
+ 3579 0d08 0C       		.uleb128 0xc
+ 3580 0d09 01       		.uleb128 0x1
+ 3581 0d0a 51       		.byte	0x51
+ 3582 0d0b 01       		.uleb128 0x1
+ 3583 0d0c 37       		.byte	0x37
+ 3584 0d0d 00       		.byte	0
+ 3585 0d0e 0B       		.uleb128 0xb
+ 3586 0d0f 02050000 		.4byte	.LVL211
+ 3587 0d13 230E0000 		.4byte	0xe23
+ 3588 0d17 250D0000 		.4byte	0xd25
+ 3589 0d1b 0C       		.uleb128 0xc
+ 3590 0d1c 01       		.uleb128 0x1
+ 3591 0d1d 50       		.byte	0x50
+ 3592 0d1e 05       		.uleb128 0x5
+ 3593 0d1f 03       		.byte	0x3
+ 3594 0d20 A4010000 		.4byte	.LC60
+ 3595 0d24 00       		.byte	0
+ 3596 0d25 0B       		.uleb128 0xb
+ 3597 0d26 0A050000 		.4byte	.LVL212
+ 3598 0d2a 180E0000 		.4byte	0xe18
+ 3599 0d2e 3D0D0000 		.4byte	0xd3d
+ 3600 0d32 0C       		.uleb128 0xc
+ 3601 0d33 01       		.uleb128 0x1
+ 3602 0d34 50       		.byte	0x50
+ 3603 0d35 01       		.uleb128 0x1
+ 3604 0d36 31       		.byte	0x31
+ 3605 0d37 0C       		.uleb128 0xc
+ 3606 0d38 01       		.uleb128 0x1
+ 3607 0d39 51       		.byte	0x51
+ 3608 0d3a 01       		.uleb128 0x1
+ 3609 0d3b 35       		.byte	0x35
+ 3610 0d3c 00       		.byte	0
+ 3611 0d3d 0B       		.uleb128 0xb
+ 3612 0d3e 10050000 		.4byte	.LVL213
+ 3613 0d42 230E0000 		.4byte	0xe23
+ 3614 0d46 540D0000 		.4byte	0xd54
+ 3615 0d4a 0C       		.uleb128 0xc
+ 3616 0d4b 01       		.uleb128 0x1
+ 3617 0d4c 50       		.byte	0x50
+ 3618 0d4d 05       		.uleb128 0x5
+ 3619 0d4e 03       		.byte	0x3
+ 3620 0d4f A8010000 		.4byte	.LC61
+ 3621 0d53 00       		.byte	0
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 71
+
+
+ 3622 0d54 0B       		.uleb128 0xb
+ 3623 0d55 1A050000 		.4byte	.LVL214
+ 3624 0d59 180E0000 		.4byte	0xe18
+ 3625 0d5d 6C0D0000 		.4byte	0xd6c
+ 3626 0d61 0C       		.uleb128 0xc
+ 3627 0d62 01       		.uleb128 0x1
+ 3628 0d63 50       		.byte	0x50
+ 3629 0d64 01       		.uleb128 0x1
+ 3630 0d65 30       		.byte	0x30
+ 3631 0d66 0C       		.uleb128 0xc
+ 3632 0d67 01       		.uleb128 0x1
+ 3633 0d68 51       		.byte	0x51
+ 3634 0d69 01       		.uleb128 0x1
+ 3635 0d6a 37       		.byte	0x37
+ 3636 0d6b 00       		.byte	0
+ 3637 0d6c 0B       		.uleb128 0xb
+ 3638 0d6d 20050000 		.4byte	.LVL215
+ 3639 0d71 230E0000 		.4byte	0xe23
+ 3640 0d75 830D0000 		.4byte	0xd83
+ 3641 0d79 0C       		.uleb128 0xc
+ 3642 0d7a 01       		.uleb128 0x1
+ 3643 0d7b 50       		.byte	0x50
+ 3644 0d7c 05       		.uleb128 0x5
+ 3645 0d7d 03       		.byte	0x3
+ 3646 0d7e B0010000 		.4byte	.LC62
+ 3647 0d82 00       		.byte	0
+ 3648 0d83 0B       		.uleb128 0xb
+ 3649 0d84 28050000 		.4byte	.LVL216
+ 3650 0d88 180E0000 		.4byte	0xe18
+ 3651 0d8c 9B0D0000 		.4byte	0xd9b
+ 3652 0d90 0C       		.uleb128 0xc
+ 3653 0d91 01       		.uleb128 0x1
+ 3654 0d92 50       		.byte	0x50
+ 3655 0d93 01       		.uleb128 0x1
+ 3656 0d94 31       		.byte	0x31
+ 3657 0d95 0C       		.uleb128 0xc
+ 3658 0d96 01       		.uleb128 0x1
+ 3659 0d97 51       		.byte	0x51
+ 3660 0d98 01       		.uleb128 0x1
+ 3661 0d99 32       		.byte	0x32
+ 3662 0d9a 00       		.byte	0
+ 3663 0d9b 0D       		.uleb128 0xd
+ 3664 0d9c 2E050000 		.4byte	.LVL217
+ 3665 0da0 230E0000 		.4byte	0xe23
+ 3666 0da4 0C       		.uleb128 0xc
+ 3667 0da5 01       		.uleb128 0x1
+ 3668 0da6 50       		.byte	0x50
+ 3669 0da7 05       		.uleb128 0x5
+ 3670 0da8 03       		.byte	0x3
+ 3671 0da9 B4010000 		.4byte	.LC63
+ 3672 0dad 00       		.byte	0
+ 3673 0dae 00       		.byte	0
+ 3674 0daf 0E       		.uleb128 0xe
+ 3675 0db0 F5000000 		.4byte	.LASF31
+ 3676 0db4 0B       		.byte	0xb
+ 3677 0db5 1207     		.2byte	0x712
+ 3678 0db7 BB0D0000 		.4byte	0xdbb
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 72
+
+
+ 3679 0dbb 0F       		.uleb128 0xf
+ 3680 0dbc 76000000 		.4byte	0x76
+ 3681 0dc0 10       		.uleb128 0x10
+ 3682 0dc1 4F000000 		.4byte	.LASF16
+ 3683 0dc5 4F000000 		.4byte	.LASF16
+ 3684 0dc9 04       		.byte	0x4
+ 3685 0dca 38       		.byte	0x38
+ 3686 0dcb 10       		.uleb128 0x10
+ 3687 0dcc 81010000 		.4byte	.LASF17
+ 3688 0dd0 81010000 		.4byte	.LASF17
+ 3689 0dd4 05       		.byte	0x5
+ 3690 0dd5 29       		.byte	0x29
+ 3691 0dd6 10       		.uleb128 0x10
+ 3692 0dd7 00000000 		.4byte	.LASF18
+ 3693 0ddb 00000000 		.4byte	.LASF18
+ 3694 0ddf 06       		.byte	0x6
+ 3695 0de0 29       		.byte	0x29
+ 3696 0de1 10       		.uleb128 0x10
+ 3697 0de2 02010000 		.4byte	.LASF19
+ 3698 0de6 02010000 		.4byte	.LASF19
+ 3699 0dea 07       		.byte	0x7
+ 3700 0deb 29       		.byte	0x29
+ 3701 0dec 10       		.uleb128 0x10
+ 3702 0ded 65010000 		.4byte	.LASF20
+ 3703 0df1 65010000 		.4byte	.LASF20
+ 3704 0df5 08       		.byte	0x8
+ 3705 0df6 29       		.byte	0x29
+ 3706 0df7 10       		.uleb128 0x10
+ 3707 0df8 1C020000 		.4byte	.LASF21
+ 3708 0dfc 1C020000 		.4byte	.LASF21
+ 3709 0e00 09       		.byte	0x9
+ 3710 0e01 29       		.byte	0x29
+ 3711 0e02 10       		.uleb128 0x10
+ 3712 0e03 14020000 		.4byte	.LASF22
+ 3713 0e07 14020000 		.4byte	.LASF22
+ 3714 0e0b 0A       		.byte	0xa
+ 3715 0e0c 76       		.byte	0x76
+ 3716 0e0d 10       		.uleb128 0x10
+ 3717 0e0e 0B000000 		.4byte	.LASF23
+ 3718 0e12 0B000000 		.4byte	.LASF23
+ 3719 0e16 04       		.byte	0x4
+ 3720 0e17 3A       		.byte	0x3a
+ 3721 0e18 10       		.uleb128 0x10
+ 3722 0e19 58010000 		.4byte	.LASF24
+ 3723 0e1d 58010000 		.4byte	.LASF24
+ 3724 0e21 04       		.byte	0x4
+ 3725 0e22 3D       		.byte	0x3d
+ 3726 0e23 10       		.uleb128 0x10
+ 3727 0e24 24010000 		.4byte	.LASF25
+ 3728 0e28 24010000 		.4byte	.LASF25
+ 3729 0e2c 04       		.byte	0x4
+ 3730 0e2d 3C       		.byte	0x3c
+ 3731 0e2e 00       		.byte	0
+ 3732              		.section	.debug_abbrev,"",%progbits
+ 3733              	.Ldebug_abbrev0:
+ 3734 0000 01       		.uleb128 0x1
+ 3735 0001 11       		.uleb128 0x11
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 73
+
+
+ 3736 0002 01       		.byte	0x1
+ 3737 0003 25       		.uleb128 0x25
+ 3738 0004 0E       		.uleb128 0xe
+ 3739 0005 13       		.uleb128 0x13
+ 3740 0006 0B       		.uleb128 0xb
+ 3741 0007 03       		.uleb128 0x3
+ 3742 0008 0E       		.uleb128 0xe
+ 3743 0009 1B       		.uleb128 0x1b
+ 3744 000a 0E       		.uleb128 0xe
+ 3745 000b 55       		.uleb128 0x55
+ 3746 000c 17       		.uleb128 0x17
+ 3747 000d 11       		.uleb128 0x11
+ 3748 000e 01       		.uleb128 0x1
+ 3749 000f 10       		.uleb128 0x10
+ 3750 0010 17       		.uleb128 0x17
+ 3751 0011 00       		.byte	0
+ 3752 0012 00       		.byte	0
+ 3753 0013 02       		.uleb128 0x2
+ 3754 0014 24       		.uleb128 0x24
+ 3755 0015 00       		.byte	0
+ 3756 0016 0B       		.uleb128 0xb
+ 3757 0017 0B       		.uleb128 0xb
+ 3758 0018 3E       		.uleb128 0x3e
+ 3759 0019 0B       		.uleb128 0xb
+ 3760 001a 03       		.uleb128 0x3
+ 3761 001b 0E       		.uleb128 0xe
+ 3762 001c 00       		.byte	0
+ 3763 001d 00       		.byte	0
+ 3764 001e 03       		.uleb128 0x3
+ 3765 001f 16       		.uleb128 0x16
+ 3766 0020 00       		.byte	0
+ 3767 0021 03       		.uleb128 0x3
+ 3768 0022 0E       		.uleb128 0xe
+ 3769 0023 3A       		.uleb128 0x3a
+ 3770 0024 0B       		.uleb128 0xb
+ 3771 0025 3B       		.uleb128 0x3b
+ 3772 0026 0B       		.uleb128 0xb
+ 3773 0027 49       		.uleb128 0x49
+ 3774 0028 13       		.uleb128 0x13
+ 3775 0029 00       		.byte	0
+ 3776 002a 00       		.byte	0
+ 3777 002b 04       		.uleb128 0x4
+ 3778 002c 24       		.uleb128 0x24
+ 3779 002d 00       		.byte	0
+ 3780 002e 0B       		.uleb128 0xb
+ 3781 002f 0B       		.uleb128 0xb
+ 3782 0030 3E       		.uleb128 0x3e
+ 3783 0031 0B       		.uleb128 0xb
+ 3784 0032 03       		.uleb128 0x3
+ 3785 0033 08       		.uleb128 0x8
+ 3786 0034 00       		.byte	0
+ 3787 0035 00       		.byte	0
+ 3788 0036 05       		.uleb128 0x5
+ 3789 0037 2E       		.uleb128 0x2e
+ 3790 0038 01       		.byte	0x1
+ 3791 0039 3F       		.uleb128 0x3f
+ 3792 003a 19       		.uleb128 0x19
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 74
+
+
+ 3793 003b 03       		.uleb128 0x3
+ 3794 003c 0E       		.uleb128 0xe
+ 3795 003d 3A       		.uleb128 0x3a
+ 3796 003e 0B       		.uleb128 0xb
+ 3797 003f 3B       		.uleb128 0x3b
+ 3798 0040 0B       		.uleb128 0xb
+ 3799 0041 27       		.uleb128 0x27
+ 3800 0042 19       		.uleb128 0x19
+ 3801 0043 49       		.uleb128 0x49
+ 3802 0044 13       		.uleb128 0x13
+ 3803 0045 11       		.uleb128 0x11
+ 3804 0046 01       		.uleb128 0x1
+ 3805 0047 12       		.uleb128 0x12
+ 3806 0048 06       		.uleb128 0x6
+ 3807 0049 40       		.uleb128 0x40
+ 3808 004a 18       		.uleb128 0x18
+ 3809 004b 9742     		.uleb128 0x2117
+ 3810 004d 19       		.uleb128 0x19
+ 3811 004e 01       		.uleb128 0x1
+ 3812 004f 13       		.uleb128 0x13
+ 3813 0050 00       		.byte	0
+ 3814 0051 00       		.byte	0
+ 3815 0052 06       		.uleb128 0x6
+ 3816 0053 05       		.uleb128 0x5
+ 3817 0054 00       		.byte	0
+ 3818 0055 03       		.uleb128 0x3
+ 3819 0056 08       		.uleb128 0x8
+ 3820 0057 3A       		.uleb128 0x3a
+ 3821 0058 0B       		.uleb128 0xb
+ 3822 0059 3B       		.uleb128 0x3b
+ 3823 005a 0B       		.uleb128 0xb
+ 3824 005b 49       		.uleb128 0x49
+ 3825 005c 13       		.uleb128 0x13
+ 3826 005d 02       		.uleb128 0x2
+ 3827 005e 17       		.uleb128 0x17
+ 3828 005f 00       		.byte	0
+ 3829 0060 00       		.byte	0
+ 3830 0061 07       		.uleb128 0x7
+ 3831 0062 05       		.uleb128 0x5
+ 3832 0063 00       		.byte	0
+ 3833 0064 03       		.uleb128 0x3
+ 3834 0065 08       		.uleb128 0x8
+ 3835 0066 3A       		.uleb128 0x3a
+ 3836 0067 0B       		.uleb128 0xb
+ 3837 0068 3B       		.uleb128 0x3b
+ 3838 0069 0B       		.uleb128 0xb
+ 3839 006a 49       		.uleb128 0x49
+ 3840 006b 13       		.uleb128 0x13
+ 3841 006c 02       		.uleb128 0x2
+ 3842 006d 18       		.uleb128 0x18
+ 3843 006e 00       		.byte	0
+ 3844 006f 00       		.byte	0
+ 3845 0070 08       		.uleb128 0x8
+ 3846 0071 2E       		.uleb128 0x2e
+ 3847 0072 01       		.byte	0x1
+ 3848 0073 3F       		.uleb128 0x3f
+ 3849 0074 19       		.uleb128 0x19
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 75
+
+
+ 3850 0075 03       		.uleb128 0x3
+ 3851 0076 0E       		.uleb128 0xe
+ 3852 0077 3A       		.uleb128 0x3a
+ 3853 0078 0B       		.uleb128 0xb
+ 3854 0079 3B       		.uleb128 0x3b
+ 3855 007a 0B       		.uleb128 0xb
+ 3856 007b 27       		.uleb128 0x27
+ 3857 007c 19       		.uleb128 0x19
+ 3858 007d 49       		.uleb128 0x49
+ 3859 007e 13       		.uleb128 0x13
+ 3860 007f 8701     		.uleb128 0x87
+ 3861 0081 19       		.uleb128 0x19
+ 3862 0082 11       		.uleb128 0x11
+ 3863 0083 01       		.uleb128 0x1
+ 3864 0084 12       		.uleb128 0x12
+ 3865 0085 06       		.uleb128 0x6
+ 3866 0086 40       		.uleb128 0x40
+ 3867 0087 18       		.uleb128 0x18
+ 3868 0088 9742     		.uleb128 0x2117
+ 3869 008a 19       		.uleb128 0x19
+ 3870 008b 01       		.uleb128 0x1
+ 3871 008c 13       		.uleb128 0x13
+ 3872 008d 00       		.byte	0
+ 3873 008e 00       		.byte	0
+ 3874 008f 09       		.uleb128 0x9
+ 3875 0090 34       		.uleb128 0x34
+ 3876 0091 00       		.byte	0
+ 3877 0092 03       		.uleb128 0x3
+ 3878 0093 08       		.uleb128 0x8
+ 3879 0094 3A       		.uleb128 0x3a
+ 3880 0095 0B       		.uleb128 0xb
+ 3881 0096 3B       		.uleb128 0x3b
+ 3882 0097 0B       		.uleb128 0xb
+ 3883 0098 49       		.uleb128 0x49
+ 3884 0099 13       		.uleb128 0x13
+ 3885 009a 02       		.uleb128 0x2
+ 3886 009b 17       		.uleb128 0x17
+ 3887 009c 00       		.byte	0
+ 3888 009d 00       		.byte	0
+ 3889 009e 0A       		.uleb128 0xa
+ 3890 009f 898201   		.uleb128 0x4109
+ 3891 00a2 00       		.byte	0
+ 3892 00a3 11       		.uleb128 0x11
+ 3893 00a4 01       		.uleb128 0x1
+ 3894 00a5 31       		.uleb128 0x31
+ 3895 00a6 13       		.uleb128 0x13
+ 3896 00a7 00       		.byte	0
+ 3897 00a8 00       		.byte	0
+ 3898 00a9 0B       		.uleb128 0xb
+ 3899 00aa 898201   		.uleb128 0x4109
+ 3900 00ad 01       		.byte	0x1
+ 3901 00ae 11       		.uleb128 0x11
+ 3902 00af 01       		.uleb128 0x1
+ 3903 00b0 31       		.uleb128 0x31
+ 3904 00b1 13       		.uleb128 0x13
+ 3905 00b2 01       		.uleb128 0x1
+ 3906 00b3 13       		.uleb128 0x13
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 76
+
+
+ 3907 00b4 00       		.byte	0
+ 3908 00b5 00       		.byte	0
+ 3909 00b6 0C       		.uleb128 0xc
+ 3910 00b7 8A8201   		.uleb128 0x410a
+ 3911 00ba 00       		.byte	0
+ 3912 00bb 02       		.uleb128 0x2
+ 3913 00bc 18       		.uleb128 0x18
+ 3914 00bd 9142     		.uleb128 0x2111
+ 3915 00bf 18       		.uleb128 0x18
+ 3916 00c0 00       		.byte	0
+ 3917 00c1 00       		.byte	0
+ 3918 00c2 0D       		.uleb128 0xd
+ 3919 00c3 898201   		.uleb128 0x4109
+ 3920 00c6 01       		.byte	0x1
+ 3921 00c7 11       		.uleb128 0x11
+ 3922 00c8 01       		.uleb128 0x1
+ 3923 00c9 31       		.uleb128 0x31
+ 3924 00ca 13       		.uleb128 0x13
+ 3925 00cb 00       		.byte	0
+ 3926 00cc 00       		.byte	0
+ 3927 00cd 0E       		.uleb128 0xe
+ 3928 00ce 34       		.uleb128 0x34
+ 3929 00cf 00       		.byte	0
+ 3930 00d0 03       		.uleb128 0x3
+ 3931 00d1 0E       		.uleb128 0xe
+ 3932 00d2 3A       		.uleb128 0x3a
+ 3933 00d3 0B       		.uleb128 0xb
+ 3934 00d4 3B       		.uleb128 0x3b
+ 3935 00d5 05       		.uleb128 0x5
+ 3936 00d6 49       		.uleb128 0x49
+ 3937 00d7 13       		.uleb128 0x13
+ 3938 00d8 3F       		.uleb128 0x3f
+ 3939 00d9 19       		.uleb128 0x19
+ 3940 00da 3C       		.uleb128 0x3c
+ 3941 00db 19       		.uleb128 0x19
+ 3942 00dc 00       		.byte	0
+ 3943 00dd 00       		.byte	0
+ 3944 00de 0F       		.uleb128 0xf
+ 3945 00df 35       		.uleb128 0x35
+ 3946 00e0 00       		.byte	0
+ 3947 00e1 49       		.uleb128 0x49
+ 3948 00e2 13       		.uleb128 0x13
+ 3949 00e3 00       		.byte	0
+ 3950 00e4 00       		.byte	0
+ 3951 00e5 10       		.uleb128 0x10
+ 3952 00e6 2E       		.uleb128 0x2e
+ 3953 00e7 00       		.byte	0
+ 3954 00e8 3F       		.uleb128 0x3f
+ 3955 00e9 19       		.uleb128 0x19
+ 3956 00ea 3C       		.uleb128 0x3c
+ 3957 00eb 19       		.uleb128 0x19
+ 3958 00ec 6E       		.uleb128 0x6e
+ 3959 00ed 0E       		.uleb128 0xe
+ 3960 00ee 03       		.uleb128 0x3
+ 3961 00ef 0E       		.uleb128 0xe
+ 3962 00f0 3A       		.uleb128 0x3a
+ 3963 00f1 0B       		.uleb128 0xb
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 77
+
+
+ 3964 00f2 3B       		.uleb128 0x3b
+ 3965 00f3 0B       		.uleb128 0xb
+ 3966 00f4 00       		.byte	0
+ 3967 00f5 00       		.byte	0
+ 3968 00f6 00       		.byte	0
+ 3969              		.section	.debug_loc,"",%progbits
+ 3970              	.Ldebug_loc0:
+ 3971              	.LLST0:
+ 3972 0000 00000000 		.4byte	.LVL0
+ 3973 0004 36020000 		.4byte	.LVL1
+ 3974 0008 0100     		.2byte	0x1
+ 3975 000a 50       		.byte	0x50
+ 3976 000b 36020000 		.4byte	.LVL1
+ 3977 000f 38020000 		.4byte	.LVL2
+ 3978 0013 0100     		.2byte	0x1
+ 3979 0015 54       		.byte	0x54
+ 3980 0016 38020000 		.4byte	.LVL2
+ 3981 001a 3A020000 		.4byte	.LVL3
+ 3982 001e 0100     		.2byte	0x1
+ 3983 0020 50       		.byte	0x50
+ 3984 0021 3A020000 		.4byte	.LVL3
+ 3985 0025 3C020000 		.4byte	.LVL4
+ 3986 0029 0100     		.2byte	0x1
+ 3987 002b 54       		.byte	0x54
+ 3988 002c 3C020000 		.4byte	.LVL4
+ 3989 0030 3E020000 		.4byte	.LVL5
+ 3990 0034 0100     		.2byte	0x1
+ 3991 0036 50       		.byte	0x50
+ 3992 0037 3E020000 		.4byte	.LVL5
+ 3993 003b 40020000 		.4byte	.LVL6
+ 3994 003f 0100     		.2byte	0x1
+ 3995 0041 54       		.byte	0x54
+ 3996 0042 40020000 		.4byte	.LVL6
+ 3997 0046 42020000 		.4byte	.LVL7
+ 3998 004a 0100     		.2byte	0x1
+ 3999 004c 50       		.byte	0x50
+ 4000 004d 42020000 		.4byte	.LVL7
+ 4001 0051 44020000 		.4byte	.LVL8
+ 4002 0055 0100     		.2byte	0x1
+ 4003 0057 54       		.byte	0x54
+ 4004 0058 44020000 		.4byte	.LVL8
+ 4005 005c 46020000 		.4byte	.LVL9
+ 4006 0060 0100     		.2byte	0x1
+ 4007 0062 50       		.byte	0x50
+ 4008 0063 46020000 		.4byte	.LVL9
+ 4009 0067 48020000 		.4byte	.LVL10
+ 4010 006b 0100     		.2byte	0x1
+ 4011 006d 54       		.byte	0x54
+ 4012 006e 48020000 		.4byte	.LVL10
+ 4013 0072 4A020000 		.4byte	.LVL11
+ 4014 0076 0100     		.2byte	0x1
+ 4015 0078 50       		.byte	0x50
+ 4016 0079 4A020000 		.4byte	.LVL11
+ 4017 007d 4C020000 		.4byte	.LVL12
+ 4018 0081 0100     		.2byte	0x1
+ 4019 0083 54       		.byte	0x54
+ 4020 0084 4C020000 		.4byte	.LVL12
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 78
+
+
+ 4021 0088 4E020000 		.4byte	.LVL13
+ 4022 008c 0100     		.2byte	0x1
+ 4023 008e 50       		.byte	0x50
+ 4024 008f 4E020000 		.4byte	.LVL13
+ 4025 0093 50020000 		.4byte	.LVL14
+ 4026 0097 0100     		.2byte	0x1
+ 4027 0099 54       		.byte	0x54
+ 4028 009a 50020000 		.4byte	.LVL14
+ 4029 009e 52020000 		.4byte	.LVL15
+ 4030 00a2 0100     		.2byte	0x1
+ 4031 00a4 50       		.byte	0x50
+ 4032 00a5 52020000 		.4byte	.LVL15
+ 4033 00a9 54020000 		.4byte	.LVL16
+ 4034 00ad 0100     		.2byte	0x1
+ 4035 00af 54       		.byte	0x54
+ 4036 00b0 54020000 		.4byte	.LVL16
+ 4037 00b4 56020000 		.4byte	.LVL17
+ 4038 00b8 0100     		.2byte	0x1
+ 4039 00ba 50       		.byte	0x50
+ 4040 00bb 56020000 		.4byte	.LVL17
+ 4041 00bf 58020000 		.4byte	.LVL18
+ 4042 00c3 0100     		.2byte	0x1
+ 4043 00c5 54       		.byte	0x54
+ 4044 00c6 58020000 		.4byte	.LVL18
+ 4045 00ca 5A020000 		.4byte	.LVL19
+ 4046 00ce 0100     		.2byte	0x1
+ 4047 00d0 50       		.byte	0x50
+ 4048 00d1 5A020000 		.4byte	.LVL19
+ 4049 00d5 5C020000 		.4byte	.LVL20
+ 4050 00d9 0100     		.2byte	0x1
+ 4051 00db 54       		.byte	0x54
+ 4052 00dc 5C020000 		.4byte	.LVL20
+ 4053 00e0 5E020000 		.4byte	.LVL21
+ 4054 00e4 0100     		.2byte	0x1
+ 4055 00e6 50       		.byte	0x50
+ 4056 00e7 5E020000 		.4byte	.LVL21
+ 4057 00eb 60020000 		.4byte	.LVL22
+ 4058 00ef 0100     		.2byte	0x1
+ 4059 00f1 54       		.byte	0x54
+ 4060 00f2 60020000 		.4byte	.LVL22
+ 4061 00f6 62020000 		.4byte	.LVL23
+ 4062 00fa 0100     		.2byte	0x1
+ 4063 00fc 50       		.byte	0x50
+ 4064 00fd 62020000 		.4byte	.LVL23
+ 4065 0101 64020000 		.4byte	.LVL24
+ 4066 0105 0100     		.2byte	0x1
+ 4067 0107 54       		.byte	0x54
+ 4068 0108 64020000 		.4byte	.LVL24
+ 4069 010c 66020000 		.4byte	.LVL25
+ 4070 0110 0100     		.2byte	0x1
+ 4071 0112 50       		.byte	0x50
+ 4072 0113 66020000 		.4byte	.LVL25
+ 4073 0117 68020000 		.4byte	.LVL26
+ 4074 011b 0100     		.2byte	0x1
+ 4075 011d 54       		.byte	0x54
+ 4076 011e 68020000 		.4byte	.LVL26
+ 4077 0122 6A020000 		.4byte	.LVL27
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 79
+
+
+ 4078 0126 0100     		.2byte	0x1
+ 4079 0128 50       		.byte	0x50
+ 4080 0129 6A020000 		.4byte	.LVL27
+ 4081 012d 6C020000 		.4byte	.LVL28
+ 4082 0131 0100     		.2byte	0x1
+ 4083 0133 54       		.byte	0x54
+ 4084 0134 6C020000 		.4byte	.LVL28
+ 4085 0138 6E020000 		.4byte	.LVL29
+ 4086 013c 0100     		.2byte	0x1
+ 4087 013e 50       		.byte	0x50
+ 4088 013f 6E020000 		.4byte	.LVL29
+ 4089 0143 70020000 		.4byte	.LVL30
+ 4090 0147 0100     		.2byte	0x1
+ 4091 0149 54       		.byte	0x54
+ 4092 014a 70020000 		.4byte	.LVL30
+ 4093 014e 72020000 		.4byte	.LVL31
+ 4094 0152 0100     		.2byte	0x1
+ 4095 0154 50       		.byte	0x50
+ 4096 0155 72020000 		.4byte	.LVL31
+ 4097 0159 74020000 		.4byte	.LVL32
+ 4098 015d 0100     		.2byte	0x1
+ 4099 015f 54       		.byte	0x54
+ 4100 0160 74020000 		.4byte	.LVL32
+ 4101 0164 76020000 		.4byte	.LVL33
+ 4102 0168 0100     		.2byte	0x1
+ 4103 016a 50       		.byte	0x50
+ 4104 016b 76020000 		.4byte	.LVL33
+ 4105 016f 78020000 		.4byte	.LVL34
+ 4106 0173 0100     		.2byte	0x1
+ 4107 0175 54       		.byte	0x54
+ 4108 0176 78020000 		.4byte	.LVL34
+ 4109 017a 7A020000 		.4byte	.LVL35
+ 4110 017e 0100     		.2byte	0x1
+ 4111 0180 50       		.byte	0x50
+ 4112 0181 7A020000 		.4byte	.LVL35
+ 4113 0185 7C020000 		.4byte	.LVL36
+ 4114 0189 0100     		.2byte	0x1
+ 4115 018b 54       		.byte	0x54
+ 4116 018c 7C020000 		.4byte	.LVL36
+ 4117 0190 7E020000 		.4byte	.LVL37
+ 4118 0194 0100     		.2byte	0x1
+ 4119 0196 50       		.byte	0x50
+ 4120 0197 7E020000 		.4byte	.LVL37
+ 4121 019b 80020000 		.4byte	.LVL38
+ 4122 019f 0100     		.2byte	0x1
+ 4123 01a1 54       		.byte	0x54
+ 4124 01a2 80020000 		.4byte	.LVL38
+ 4125 01a6 82020000 		.4byte	.LVL39
+ 4126 01aa 0100     		.2byte	0x1
+ 4127 01ac 50       		.byte	0x50
+ 4128 01ad 82020000 		.4byte	.LVL39
+ 4129 01b1 84020000 		.4byte	.LVL40
+ 4130 01b5 0100     		.2byte	0x1
+ 4131 01b7 54       		.byte	0x54
+ 4132 01b8 84020000 		.4byte	.LVL40
+ 4133 01bc 86020000 		.4byte	.LVL41
+ 4134 01c0 0100     		.2byte	0x1
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 80
+
+
+ 4135 01c2 50       		.byte	0x50
+ 4136 01c3 86020000 		.4byte	.LVL41
+ 4137 01c7 88020000 		.4byte	.LVL42
+ 4138 01cb 0100     		.2byte	0x1
+ 4139 01cd 54       		.byte	0x54
+ 4140 01ce 88020000 		.4byte	.LVL42
+ 4141 01d2 8A020000 		.4byte	.LVL43
+ 4142 01d6 0100     		.2byte	0x1
+ 4143 01d8 50       		.byte	0x50
+ 4144 01d9 8A020000 		.4byte	.LVL43
+ 4145 01dd 8C020000 		.4byte	.LVL44
+ 4146 01e1 0100     		.2byte	0x1
+ 4147 01e3 54       		.byte	0x54
+ 4148 01e4 8C020000 		.4byte	.LVL44
+ 4149 01e8 8E020000 		.4byte	.LVL45
+ 4150 01ec 0100     		.2byte	0x1
+ 4151 01ee 50       		.byte	0x50
+ 4152 01ef 8E020000 		.4byte	.LVL45
+ 4153 01f3 90020000 		.4byte	.LVL46
+ 4154 01f7 0100     		.2byte	0x1
+ 4155 01f9 54       		.byte	0x54
+ 4156 01fa 90020000 		.4byte	.LVL46
+ 4157 01fe 92020000 		.4byte	.LVL47
+ 4158 0202 0100     		.2byte	0x1
+ 4159 0204 50       		.byte	0x50
+ 4160 0205 92020000 		.4byte	.LVL47
+ 4161 0209 94020000 		.4byte	.LVL48
+ 4162 020d 0100     		.2byte	0x1
+ 4163 020f 54       		.byte	0x54
+ 4164 0210 94020000 		.4byte	.LVL48
+ 4165 0214 96020000 		.4byte	.LVL49
+ 4166 0218 0100     		.2byte	0x1
+ 4167 021a 50       		.byte	0x50
+ 4168 021b 96020000 		.4byte	.LVL49
+ 4169 021f 98020000 		.4byte	.LVL50
+ 4170 0223 0100     		.2byte	0x1
+ 4171 0225 54       		.byte	0x54
+ 4172 0226 98020000 		.4byte	.LVL50
+ 4173 022a 9A020000 		.4byte	.LVL51
+ 4174 022e 0100     		.2byte	0x1
+ 4175 0230 50       		.byte	0x50
+ 4176 0231 9A020000 		.4byte	.LVL51
+ 4177 0235 9C020000 		.4byte	.LVL52
+ 4178 0239 0100     		.2byte	0x1
+ 4179 023b 54       		.byte	0x54
+ 4180 023c 9C020000 		.4byte	.LVL52
+ 4181 0240 9E020000 		.4byte	.LVL53
+ 4182 0244 0100     		.2byte	0x1
+ 4183 0246 50       		.byte	0x50
+ 4184 0247 9E020000 		.4byte	.LVL53
+ 4185 024b A0020000 		.4byte	.LVL54
+ 4186 024f 0100     		.2byte	0x1
+ 4187 0251 54       		.byte	0x54
+ 4188 0252 A0020000 		.4byte	.LVL54
+ 4189 0256 A2020000 		.4byte	.LVL55
+ 4190 025a 0100     		.2byte	0x1
+ 4191 025c 50       		.byte	0x50
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 81
+
+
+ 4192 025d A2020000 		.4byte	.LVL55
+ 4193 0261 A4020000 		.4byte	.LVL56
+ 4194 0265 0100     		.2byte	0x1
+ 4195 0267 54       		.byte	0x54
+ 4196 0268 A4020000 		.4byte	.LVL56
+ 4197 026c A6020000 		.4byte	.LVL57
+ 4198 0270 0100     		.2byte	0x1
+ 4199 0272 50       		.byte	0x50
+ 4200 0273 A6020000 		.4byte	.LVL57
+ 4201 0277 A8020000 		.4byte	.LVL58
+ 4202 027b 0100     		.2byte	0x1
+ 4203 027d 54       		.byte	0x54
+ 4204 027e A8020000 		.4byte	.LVL58
+ 4205 0282 AA020000 		.4byte	.LVL59
+ 4206 0286 0100     		.2byte	0x1
+ 4207 0288 50       		.byte	0x50
+ 4208 0289 AA020000 		.4byte	.LVL59
+ 4209 028d AC020000 		.4byte	.LVL60
+ 4210 0291 0100     		.2byte	0x1
+ 4211 0293 54       		.byte	0x54
+ 4212 0294 AC020000 		.4byte	.LVL60
+ 4213 0298 AE020000 		.4byte	.LVL61
+ 4214 029c 0100     		.2byte	0x1
+ 4215 029e 50       		.byte	0x50
+ 4216 029f AE020000 		.4byte	.LVL61
+ 4217 02a3 B0020000 		.4byte	.LVL62
+ 4218 02a7 0100     		.2byte	0x1
+ 4219 02a9 54       		.byte	0x54
+ 4220 02aa B0020000 		.4byte	.LVL62
+ 4221 02ae B2020000 		.4byte	.LVL63
+ 4222 02b2 0100     		.2byte	0x1
+ 4223 02b4 50       		.byte	0x50
+ 4224 02b5 B2020000 		.4byte	.LVL63
+ 4225 02b9 B4020000 		.4byte	.LVL64
+ 4226 02bd 0100     		.2byte	0x1
+ 4227 02bf 54       		.byte	0x54
+ 4228 02c0 B4020000 		.4byte	.LVL64
+ 4229 02c4 B8020000 		.4byte	.LVL65
+ 4230 02c8 0100     		.2byte	0x1
+ 4231 02ca 50       		.byte	0x50
+ 4232 02cb B8020000 		.4byte	.LVL65
+ 4233 02cf BA020000 		.4byte	.LVL66
+ 4234 02d3 0100     		.2byte	0x1
+ 4235 02d5 54       		.byte	0x54
+ 4236 02d6 BA020000 		.4byte	.LVL66
+ 4237 02da BE020000 		.4byte	.LVL67
+ 4238 02de 0100     		.2byte	0x1
+ 4239 02e0 50       		.byte	0x50
+ 4240 02e1 BE020000 		.4byte	.LVL67
+ 4241 02e5 C0020000 		.4byte	.LVL68
+ 4242 02e9 0100     		.2byte	0x1
+ 4243 02eb 54       		.byte	0x54
+ 4244 02ec C0020000 		.4byte	.LVL68
+ 4245 02f0 C4020000 		.4byte	.LVL69
+ 4246 02f4 0100     		.2byte	0x1
+ 4247 02f6 50       		.byte	0x50
+ 4248 02f7 C4020000 		.4byte	.LVL69
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 82
+
+
+ 4249 02fb C6020000 		.4byte	.LVL70
+ 4250 02ff 0100     		.2byte	0x1
+ 4251 0301 54       		.byte	0x54
+ 4252 0302 C6020000 		.4byte	.LVL70
+ 4253 0306 CA020000 		.4byte	.LVL71
+ 4254 030a 0100     		.2byte	0x1
+ 4255 030c 50       		.byte	0x50
+ 4256 030d CA020000 		.4byte	.LVL71
+ 4257 0311 CC020000 		.4byte	.LVL72
+ 4258 0315 0100     		.2byte	0x1
+ 4259 0317 54       		.byte	0x54
+ 4260 0318 CC020000 		.4byte	.LVL72
+ 4261 031c CE020000 		.4byte	.LVL73
+ 4262 0320 0100     		.2byte	0x1
+ 4263 0322 50       		.byte	0x50
+ 4264 0323 CE020000 		.4byte	.LVL73
+ 4265 0327 D0020000 		.4byte	.LVL74
+ 4266 032b 0100     		.2byte	0x1
+ 4267 032d 54       		.byte	0x54
+ 4268 032e D0020000 		.4byte	.LVL74
+ 4269 0332 D2020000 		.4byte	.LFE63
+ 4270 0336 0400     		.2byte	0x4
+ 4271 0338 F3       		.byte	0xf3
+ 4272 0339 01       		.uleb128 0x1
+ 4273 033a 50       		.byte	0x50
+ 4274 033b 9F       		.byte	0x9f
+ 4275 033c 00000000 		.4byte	0
+ 4276 0340 00000000 		.4byte	0
+ 4277              	.LLST1:
+ 4278 0344 00000000 		.4byte	.LVL0
+ 4279 0348 D0020000 		.4byte	.LVL74
+ 4280 034c 0200     		.2byte	0x2
+ 4281 034e 91       		.byte	0x91
+ 4282 034f 00       		.sleb128 0
+ 4283 0350 D0020000 		.4byte	.LVL74
+ 4284 0354 D2020000 		.4byte	.LFE63
+ 4285 0358 0200     		.2byte	0x2
+ 4286 035a 7D       		.byte	0x7d
+ 4287 035b 00       		.sleb128 0
+ 4288 035c 00000000 		.4byte	0
+ 4289 0360 00000000 		.4byte	0
+ 4290              	.LLST2:
+ 4291 0364 12000000 		.4byte	.LVL77
+ 4292 0368 15000000 		.4byte	.LVL78-1
+ 4293 036c 0100     		.2byte	0x1
+ 4294 036e 50       		.byte	0x50
+ 4295 036f 15000000 		.4byte	.LVL78-1
+ 4296 0373 50050000 		.4byte	.LFE64
+ 4297 0377 0100     		.2byte	0x1
+ 4298 0379 54       		.byte	0x54
+ 4299 037a 00000000 		.4byte	0
+ 4300 037e 00000000 		.4byte	0
+ 4301              	.LLST3:
+ 4302 0382 18000000 		.4byte	.LVL79
+ 4303 0386 1B000000 		.4byte	.LVL80-1
+ 4304 038a 0100     		.2byte	0x1
+ 4305 038c 50       		.byte	0x50
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 83
+
+
+ 4306 038d 1B000000 		.4byte	.LVL80-1
+ 4307 0391 50050000 		.4byte	.LFE64
+ 4308 0395 0100     		.2byte	0x1
+ 4309 0397 55       		.byte	0x55
+ 4310 0398 00000000 		.4byte	0
+ 4311 039c 00000000 		.4byte	0
+ 4312              	.LLST4:
+ 4313 03a0 1E000000 		.4byte	.LVL81
+ 4314 03a4 21000000 		.4byte	.LVL82-1
+ 4315 03a8 0100     		.2byte	0x1
+ 4316 03aa 50       		.byte	0x50
+ 4317 03ab 21000000 		.4byte	.LVL82-1
+ 4318 03af 50050000 		.4byte	.LFE64
+ 4319 03b3 0100     		.2byte	0x1
+ 4320 03b5 56       		.byte	0x56
+ 4321 03b6 00000000 		.4byte	0
+ 4322 03ba 00000000 		.4byte	0
+ 4323              	.LLST5:
+ 4324 03be 24000000 		.4byte	.LVL83
+ 4325 03c2 27000000 		.4byte	.LVL84-1
+ 4326 03c6 0100     		.2byte	0x1
+ 4327 03c8 50       		.byte	0x50
+ 4328 03c9 27000000 		.4byte	.LVL84-1
+ 4329 03cd 50050000 		.4byte	.LFE64
+ 4330 03d1 0100     		.2byte	0x1
+ 4331 03d3 57       		.byte	0x57
+ 4332 03d4 00000000 		.4byte	0
+ 4333 03d8 00000000 		.4byte	0
+ 4334              	.LLST6:
+ 4335 03dc 2A000000 		.4byte	.LVL85
+ 4336 03e0 2E000000 		.4byte	.LVL86
+ 4337 03e4 0100     		.2byte	0x1
+ 4338 03e6 50       		.byte	0x50
+ 4339 03e7 2E000000 		.4byte	.LVL86
+ 4340 03eb 50050000 		.4byte	.LFE64
+ 4341 03ef 0100     		.2byte	0x1
+ 4342 03f1 58       		.byte	0x58
+ 4343 03f2 00000000 		.4byte	0
+ 4344 03f6 00000000 		.4byte	0
+ 4345              		.section	.debug_aranges,"",%progbits
+ 4346 0000 24000000 		.4byte	0x24
+ 4347 0004 0200     		.2byte	0x2
+ 4348 0006 00000000 		.4byte	.Ldebug_info0
+ 4349 000a 04       		.byte	0x4
+ 4350 000b 00       		.byte	0
+ 4351 000c 0000     		.2byte	0
+ 4352 000e 0000     		.2byte	0
+ 4353 0010 00000000 		.4byte	.LFB63
+ 4354 0014 D2020000 		.4byte	.LFE63-.LFB63
+ 4355 0018 00000000 		.4byte	.LFB64
+ 4356 001c 50050000 		.4byte	.LFE64-.LFB64
+ 4357 0020 00000000 		.4byte	0
+ 4358 0024 00000000 		.4byte	0
+ 4359              		.section	.debug_ranges,"",%progbits
+ 4360              	.Ldebug_ranges0:
+ 4361 0000 00000000 		.4byte	.LFB63
+ 4362 0004 D2020000 		.4byte	.LFE63
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 84
+
+
+ 4363 0008 00000000 		.4byte	.LFB64
+ 4364 000c 50050000 		.4byte	.LFE64
+ 4365 0010 00000000 		.4byte	0
+ 4366 0014 00000000 		.4byte	0
+ 4367              		.section	.debug_line,"",%progbits
+ 4368              	.Ldebug_line0:
+ 4369 0000 60050000 		.section	.debug_str,"MS",%progbits,1
+ 4369      02008A01 
+ 4369      00000201 
+ 4369      FB0E0D00 
+ 4369      01010101 
+ 4370              	.LASF18:
+ 4371 0000 50696E5F 		.ascii	"Pin_2_Read\000"
+ 4371      325F5265 
+ 4371      616400
+ 4372              	.LASF23:
+ 4373 000b 4C43445F 		.ascii	"LCD_WriteControl\000"
+ 4373      57726974 
+ 4373      65436F6E 
+ 4373      74726F6C 
+ 4373      00
+ 4374              	.LASF9:
+ 4375 001c 5F5F696E 		.ascii	"__int32_t\000"
+ 4375      7433325F 
+ 4375      7400
+ 4376              	.LASF3:
+ 4377 0026 73686F72 		.ascii	"short unsigned int\000"
+ 4377      7420756E 
+ 4377      7369676E 
+ 4377      65642069 
+ 4377      6E7400
+ 4378              	.LASF12:
+ 4379 0039 646F7562 		.ascii	"double\000"
+ 4379      6C6500
+ 4380              	.LASF29:
+ 4381 0040 67657456 		.ascii	"getValue\000"
+ 4381      616C7565 
+ 4381      00
+ 4382              	.LASF11:
+ 4383 0049 666C6F61 		.ascii	"float\000"
+ 4383      7400
+ 4384              	.LASF16:
+ 4385 004f 4C43445F 		.ascii	"LCD_Start\000"
+ 4385      53746172 
+ 4385      7400
+ 4386              	.LASF1:
+ 4387 0059 756E7369 		.ascii	"unsigned char\000"
+ 4387      676E6564 
+ 4387      20636861 
+ 4387      7200
+ 4388              	.LASF26:
+ 4389 0067 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 4389      43313120 
+ 4389      352E342E 
+ 4389      31203230 
+ 4389      31363036 
+ 4390 009a 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 85
+
+
+ 4390      20726576 
+ 4390      6973696F 
+ 4390      6E203233 
+ 4390      37373135 
+ 4391 00cd 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 4391      66756E63 
+ 4391      74696F6E 
+ 4391      2D736563 
+ 4391      74696F6E 
+ 4392              	.LASF31:
+ 4393 00f5 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 4393      52784275 
+ 4393      66666572 
+ 4393      00
+ 4394              	.LASF19:
+ 4395 0102 50696E5F 		.ascii	"Pin_3_Read\000"
+ 4395      335F5265 
+ 4395      616400
+ 4396              	.LASF5:
+ 4397 010d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 4397      20756E73 
+ 4397      69676E65 
+ 4397      6420696E 
+ 4397      7400
+ 4398              	.LASF30:
+ 4399 011f 6D61696E 		.ascii	"main\000"
+ 4399      00
+ 4400              	.LASF25:
+ 4401 0124 4C43445F 		.ascii	"LCD_PrintString\000"
+ 4401      5072696E 
+ 4401      74537472 
+ 4401      696E6700 
+ 4402              	.LASF8:
+ 4403 0134 756E7369 		.ascii	"unsigned int\000"
+ 4403      676E6564 
+ 4403      20696E74 
+ 4403      00
+ 4404              	.LASF7:
+ 4405 0141 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 4405      206C6F6E 
+ 4405      6720756E 
+ 4405      7369676E 
+ 4405      65642069 
+ 4406              	.LASF24:
+ 4407 0158 4C43445F 		.ascii	"LCD_Position\000"
+ 4407      506F7369 
+ 4407      74696F6E 
+ 4407      00
+ 4408              	.LASF20:
+ 4409 0165 50696E5F 		.ascii	"Pin_4_Read\000"
+ 4409      345F5265 
+ 4409      616400
+ 4410              	.LASF10:
+ 4411 0170 696E7433 		.ascii	"int32_t\000"
+ 4411      325F7400 
+ 4412              	.LASF14:
+ 4413 0178 73697A65 		.ascii	"sizetype\000"
+ARM GAS  C:\Users\acer\AppData\Local\Temp\ccQEWjNP.s 			page 86
+
+
+ 4413      74797065 
+ 4413      00
+ 4414              	.LASF17:
+ 4415 0181 50696E5F 		.ascii	"Pin_1_Read\000"
+ 4415      315F5265 
+ 4415      616400
+ 4416              	.LASF6:
+ 4417 018c 6C6F6E67 		.ascii	"long long int\000"
+ 4417      206C6F6E 
+ 4417      6720696E 
+ 4417      7400
+ 4418              	.LASF27:
+ 4419 019a 6D61696E 		.ascii	"main.c\000"
+ 4419      2E6300
+ 4420              	.LASF13:
+ 4421 01a1 63686172 		.ascii	"char\000"
+ 4421      00
+ 4422              	.LASF28:
+ 4423 01a6 433A5C55 		.ascii	"C:\\Users\\acer\\Documents\\Embebidos\\Practica 2\\"
+ 4423      73657273 
+ 4423      5C616365 
+ 4423      725C446F 
+ 4423      63756D65 
+ 4424 01d3 30325F4C 		.ascii	"02_LCD\\Design01.cydsn\000"
+ 4424      43445C44 
+ 4424      65736967 
+ 4424      6E30312E 
+ 4424      63796473 
+ 4425              	.LASF2:
+ 4426 01e9 73686F72 		.ascii	"short int\000"
+ 4426      7420696E 
+ 4426      7400
+ 4427              	.LASF4:
+ 4428 01f3 6C6F6E67 		.ascii	"long int\000"
+ 4428      20696E74 
+ 4428      00
+ 4429              	.LASF15:
+ 4430 01fc 6C6F6E67 		.ascii	"long double\000"
+ 4430      20646F75 
+ 4430      626C6500 
+ 4431              	.LASF0:
+ 4432 0208 7369676E 		.ascii	"signed char\000"
+ 4432      65642063 
+ 4432      68617200 
+ 4433              	.LASF22:
+ 4434 0214 43794465 		.ascii	"CyDelay\000"
+ 4434      6C617900 
+ 4435              	.LASF21:
+ 4436 021c 50696E5F 		.ascii	"Pin_5_Read\000"
+ 4436      355F5265 
+ 4436      616400
+ 4437              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

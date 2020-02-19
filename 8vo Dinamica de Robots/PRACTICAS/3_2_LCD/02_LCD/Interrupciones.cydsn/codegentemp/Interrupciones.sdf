@@ -1,0 +1,22 @@
+(DELAYFILE
+ (SDFVERSION "IEEE 1497 4.0")
+ (DATE "2020-02-07T17:31:09Z")
+ (DESIGN "Interrupciones")
+ (VENDOR "Cypress Semiconductor")
+ (PROGRAM "PSoC Creator")
+ (VERSION " 4.2")
+ (DIVIDER .)
+ (TIMESCALE 1 ns)
+ (CELL
+  (CELLTYPE "Interrupciones")
+  (INSTANCE *)
+  (DELAY
+   (ABSOLUTE
+    (INTERCONNECT ClockBlock.clk_bus_glb ISR_Sw.clock (0.000:0.000:0.000))
+    (INTERCONNECT Sw.interrupt ISR_Sw.interrupt (1.000:1.000:1.000))
+    (INTERCONNECT Sw\(0\)_PAD Sw\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Led_0\(0\)_PAD Led_0\(0\).pad_in (0.000:0.000:0.000))
+   )
+  )
+ )
+)
