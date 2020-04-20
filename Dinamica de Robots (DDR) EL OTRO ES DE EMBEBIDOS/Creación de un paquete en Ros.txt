@@ -1,0 +1,8 @@
+#creación de un pakete en Ros
+catkin_ create_pkg package-name[dependencia]
+#        Programa          nombre del pakete a crear
+cd ~/catkin_ws_apps/src
+catkin_create_pkg package_robot roscpp rospy std_msgs message_generation actionlib actionlib_msgs
+cd ~/catkin_ws_upps/
+catkin_make
+source devel/setup.bash

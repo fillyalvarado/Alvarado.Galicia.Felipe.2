@@ -1,0 +1,11 @@
+#Creación del espacio de trabajo en Ros
+
+mkdir-P ~/catkin~apps/src
+cd ~/catkin_ws_apps
+#opcional recomendado
+ls
+catkin_make
+#opcional
+ls
+source devel/setup.bash
+echo $Ros_PACKAGE_PATH

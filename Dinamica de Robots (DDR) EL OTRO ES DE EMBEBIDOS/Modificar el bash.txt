@@ -1,0 +1,6 @@
+#Modificar el bash
+echo "source ~/catkin_ws_apps/devel/setup.bash">>~/.bashrc
+source ~/.bashrc
+cat .bashrc
+#Sí te equibocas puedes utilizar  el siguiente comando
+#$nano ~/.bashrc     y     ctrl-x  para salir
